@@ -1,0 +1,10 @@
+# OpenAPI Generator Configuration for Go
+# https://openapi-generator.tech/docs/generators/go/
+
+# Package information
+packageName: conductor
+packageVersion: 1.0.0
+gitUserId: Munchpass
+gitRepoId: conductor-go
+
+withGoMod: true

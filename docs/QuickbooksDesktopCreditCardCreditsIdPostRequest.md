@@ -1,0 +1,363 @@
+# QuickbooksDesktopCreditCardCreditsIdPostRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**RevisionNumber** | **string** | The current QuickBooks-assigned revision number of the credit card credit object you are updating, which you can get by fetching the object first. Provide the most recent &#x60;revisionNumber&#x60; to ensure you&#39;re working with the latest data; otherwise, the update will return an error. | 
+**AccountId** | Pointer to **string** | The bank or credit card account to which this credit card credit is posted. | [optional] 
+**PayeeId** | Pointer to **string** | The vendor or company from whom this credit card credit was received for purchased merchandise or services. | [optional] 
+**TransactionDate** | Pointer to **string** | The date of this credit card credit, in ISO 8601 format (YYYY-MM-DD). | [optional] 
+**RefNumber** | Pointer to **string** | The case-sensitive user-defined reference number for this credit card credit, which can be used to identify the transaction in QuickBooks. This value is not required to be unique and can be arbitrarily changed by the QuickBooks user. | [optional] 
+**Memo** | Pointer to **string** | A memo or note for this credit card credit. | [optional] 
+**SalesTaxCodeId** | Pointer to **string** | The sales-tax code for this credit card credit, determining whether it is taxable or non-taxable. If set, this overrides any sales-tax codes defined on the payee. This can be overridden on the credit card credit&#39;s individual lines.  Default codes include \&quot;Non\&quot; (non-taxable) and \&quot;Tax\&quot; (taxable), but custom codes can also be created in QuickBooks. If QuickBooks is not set up to charge sales tax (via the \&quot;Do You Charge Sales Tax?\&quot; preference), it will assign the default non-taxable code to all sales. | [optional] 
+**ExchangeRate** | Pointer to **float32** | The market exchange rate between this credit card credit&#39;s currency and the home currency in QuickBooks at the time of this transaction. Represented as a decimal value (e.g., 1.2345 for 1 EUR &#x3D; 1.2345 USD if USD is the home currency). | [optional] 
+**ClearExpenseLines** | Pointer to **bool** | When &#x60;true&#x60;, removes all existing expense lines associated with this credit card credit. To modify or add individual expense lines, use the field &#x60;expenseLines&#x60; instead. | [optional] 
+**ExpenseLines** | Pointer to [**[]QuickbooksDesktopBillsIdPostRequestExpenseLinesInner**](QuickbooksDesktopBillsIdPostRequestExpenseLinesInner.md) | The credit card credit&#39;s expense lines, each representing one line in this expense.  **IMPORTANT**:  1. Including this array in your update request will **REPLACE** all existing expense lines for the credit card credit with this array. To keep any existing expense lines, you must include them in this array even if they have not changed. **Any expense lines not included will be removed.**  2. To add a new expense line, include it here with the &#x60;id&#x60; field set to &#x60;-1&#x60;.  3. If you do not wish to modify any expense lines, omit this field entirely to keep them unchanged. | [optional] 
+**ClearItemLines** | Pointer to **bool** | When &#x60;true&#x60;, removes all existing item lines associated with this credit card credit. To modify or add individual item lines, use the field &#x60;itemLines&#x60; instead. | [optional] 
+**ItemLines** | Pointer to [**[]QuickbooksDesktopBillsIdPostRequestItemLinesInner**](QuickbooksDesktopBillsIdPostRequestItemLinesInner.md) | The credit card credit&#39;s item lines, each representing the purchase of a specific item or service.  **IMPORTANT**:  1. Including this array in your update request will **REPLACE** all existing item lines for the credit card credit with this array. To keep any existing item lines, you must include them in this array even if they have not changed. **Any item lines not included will be removed.**  2. To add a new item line, include it here with the &#x60;id&#x60; field set to &#x60;-1&#x60;.  3. If you do not wish to modify any item lines, omit this field entirely to keep them unchanged. | [optional] 
+**ItemLineGroups** | Pointer to [**[]QuickbooksDesktopBillsIdPostRequestItemLineGroupsInner**](QuickbooksDesktopBillsIdPostRequestItemLineGroupsInner.md) | The credit card credit&#39;s item group lines, each representing a predefined set of items bundled together because they are commonly purchased together or grouped for faster entry.  **IMPORTANT**:  1. Including this array in your update request will **REPLACE** all existing item group lines for the credit card credit with this array. To keep any existing item group lines, you must include them in this array even if they have not changed. **Any item group lines not included will be removed.**  2. To add a new item group line, include it here with the &#x60;id&#x60; field set to &#x60;-1&#x60;.  3. If you do not wish to modify any item group lines, omit this field entirely to keep them unchanged. | [optional] 
+
+## Methods
+
+### NewQuickbooksDesktopCreditCardCreditsIdPostRequest
+
+`func NewQuickbooksDesktopCreditCardCreditsIdPostRequest(revisionNumber string, ) *QuickbooksDesktopCreditCardCreditsIdPostRequest`
+
+NewQuickbooksDesktopCreditCardCreditsIdPostRequest instantiates a new QuickbooksDesktopCreditCardCreditsIdPostRequest object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewQuickbooksDesktopCreditCardCreditsIdPostRequestWithDefaults
+
+`func NewQuickbooksDesktopCreditCardCreditsIdPostRequestWithDefaults() *QuickbooksDesktopCreditCardCreditsIdPostRequest`
+
+NewQuickbooksDesktopCreditCardCreditsIdPostRequestWithDefaults instantiates a new QuickbooksDesktopCreditCardCreditsIdPostRequest object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetRevisionNumber
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetRevisionNumber() string`
+
+GetRevisionNumber returns the RevisionNumber field if non-nil, zero value otherwise.
+
+### GetRevisionNumberOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetRevisionNumberOk() (*string, bool)`
+
+GetRevisionNumberOk returns a tuple with the RevisionNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRevisionNumber
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetRevisionNumber(v string)`
+
+SetRevisionNumber sets RevisionNumber field to given value.
+
+
+### GetAccountId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetAccountId() string`
+
+GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+
+### GetAccountIdOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetAccountIdOk() (*string, bool)`
+
+GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetAccountId(v string)`
+
+SetAccountId sets AccountId field to given value.
+
+### HasAccountId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasAccountId() bool`
+
+HasAccountId returns a boolean if a field has been set.
+
+### GetPayeeId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetPayeeId() string`
+
+GetPayeeId returns the PayeeId field if non-nil, zero value otherwise.
+
+### GetPayeeIdOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetPayeeIdOk() (*string, bool)`
+
+GetPayeeIdOk returns a tuple with the PayeeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayeeId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetPayeeId(v string)`
+
+SetPayeeId sets PayeeId field to given value.
+
+### HasPayeeId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasPayeeId() bool`
+
+HasPayeeId returns a boolean if a field has been set.
+
+### GetTransactionDate
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetTransactionDate() string`
+
+GetTransactionDate returns the TransactionDate field if non-nil, zero value otherwise.
+
+### GetTransactionDateOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetTransactionDateOk() (*string, bool)`
+
+GetTransactionDateOk returns a tuple with the TransactionDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTransactionDate
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetTransactionDate(v string)`
+
+SetTransactionDate sets TransactionDate field to given value.
+
+### HasTransactionDate
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasTransactionDate() bool`
+
+HasTransactionDate returns a boolean if a field has been set.
+
+### GetRefNumber
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetRefNumber() string`
+
+GetRefNumber returns the RefNumber field if non-nil, zero value otherwise.
+
+### GetRefNumberOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetRefNumberOk() (*string, bool)`
+
+GetRefNumberOk returns a tuple with the RefNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRefNumber
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetRefNumber(v string)`
+
+SetRefNumber sets RefNumber field to given value.
+
+### HasRefNumber
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasRefNumber() bool`
+
+HasRefNumber returns a boolean if a field has been set.
+
+### GetMemo
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetMemo() string`
+
+GetMemo returns the Memo field if non-nil, zero value otherwise.
+
+### GetMemoOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetMemoOk() (*string, bool)`
+
+GetMemoOk returns a tuple with the Memo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMemo
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetMemo(v string)`
+
+SetMemo sets Memo field to given value.
+
+### HasMemo
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasMemo() bool`
+
+HasMemo returns a boolean if a field has been set.
+
+### GetSalesTaxCodeId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetSalesTaxCodeId() string`
+
+GetSalesTaxCodeId returns the SalesTaxCodeId field if non-nil, zero value otherwise.
+
+### GetSalesTaxCodeIdOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetSalesTaxCodeIdOk() (*string, bool)`
+
+GetSalesTaxCodeIdOk returns a tuple with the SalesTaxCodeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSalesTaxCodeId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetSalesTaxCodeId(v string)`
+
+SetSalesTaxCodeId sets SalesTaxCodeId field to given value.
+
+### HasSalesTaxCodeId
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasSalesTaxCodeId() bool`
+
+HasSalesTaxCodeId returns a boolean if a field has been set.
+
+### GetExchangeRate
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetExchangeRate() float32`
+
+GetExchangeRate returns the ExchangeRate field if non-nil, zero value otherwise.
+
+### GetExchangeRateOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetExchangeRateOk() (*float32, bool)`
+
+GetExchangeRateOk returns a tuple with the ExchangeRate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExchangeRate
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetExchangeRate(v float32)`
+
+SetExchangeRate sets ExchangeRate field to given value.
+
+### HasExchangeRate
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasExchangeRate() bool`
+
+HasExchangeRate returns a boolean if a field has been set.
+
+### GetClearExpenseLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetClearExpenseLines() bool`
+
+GetClearExpenseLines returns the ClearExpenseLines field if non-nil, zero value otherwise.
+
+### GetClearExpenseLinesOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetClearExpenseLinesOk() (*bool, bool)`
+
+GetClearExpenseLinesOk returns a tuple with the ClearExpenseLines field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClearExpenseLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetClearExpenseLines(v bool)`
+
+SetClearExpenseLines sets ClearExpenseLines field to given value.
+
+### HasClearExpenseLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasClearExpenseLines() bool`
+
+HasClearExpenseLines returns a boolean if a field has been set.
+
+### GetExpenseLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetExpenseLines() []QuickbooksDesktopBillsIdPostRequestExpenseLinesInner`
+
+GetExpenseLines returns the ExpenseLines field if non-nil, zero value otherwise.
+
+### GetExpenseLinesOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetExpenseLinesOk() (*[]QuickbooksDesktopBillsIdPostRequestExpenseLinesInner, bool)`
+
+GetExpenseLinesOk returns a tuple with the ExpenseLines field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpenseLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetExpenseLines(v []QuickbooksDesktopBillsIdPostRequestExpenseLinesInner)`
+
+SetExpenseLines sets ExpenseLines field to given value.
+
+### HasExpenseLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasExpenseLines() bool`
+
+HasExpenseLines returns a boolean if a field has been set.
+
+### GetClearItemLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetClearItemLines() bool`
+
+GetClearItemLines returns the ClearItemLines field if non-nil, zero value otherwise.
+
+### GetClearItemLinesOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetClearItemLinesOk() (*bool, bool)`
+
+GetClearItemLinesOk returns a tuple with the ClearItemLines field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClearItemLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetClearItemLines(v bool)`
+
+SetClearItemLines sets ClearItemLines field to given value.
+
+### HasClearItemLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasClearItemLines() bool`
+
+HasClearItemLines returns a boolean if a field has been set.
+
+### GetItemLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetItemLines() []QuickbooksDesktopBillsIdPostRequestItemLinesInner`
+
+GetItemLines returns the ItemLines field if non-nil, zero value otherwise.
+
+### GetItemLinesOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetItemLinesOk() (*[]QuickbooksDesktopBillsIdPostRequestItemLinesInner, bool)`
+
+GetItemLinesOk returns a tuple with the ItemLines field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItemLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetItemLines(v []QuickbooksDesktopBillsIdPostRequestItemLinesInner)`
+
+SetItemLines sets ItemLines field to given value.
+
+### HasItemLines
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasItemLines() bool`
+
+HasItemLines returns a boolean if a field has been set.
+
+### GetItemLineGroups
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetItemLineGroups() []QuickbooksDesktopBillsIdPostRequestItemLineGroupsInner`
+
+GetItemLineGroups returns the ItemLineGroups field if non-nil, zero value otherwise.
+
+### GetItemLineGroupsOk
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) GetItemLineGroupsOk() (*[]QuickbooksDesktopBillsIdPostRequestItemLineGroupsInner, bool)`
+
+GetItemLineGroupsOk returns a tuple with the ItemLineGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItemLineGroups
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) SetItemLineGroups(v []QuickbooksDesktopBillsIdPostRequestItemLineGroupsInner)`
+
+SetItemLineGroups sets ItemLineGroups field to given value.
+
+### HasItemLineGroups
+
+`func (o *QuickbooksDesktopCreditCardCreditsIdPostRequest) HasItemLineGroups() bool`
+
+HasItemLineGroups returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
