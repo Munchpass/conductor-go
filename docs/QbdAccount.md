@@ -12,27 +12,27 @@ Name | Type | Description | Notes
 **Name** | **string** | The case-insensitive name of this account. Not guaranteed to be unique because it does not include the names of its hierarchical parent objects like &#x60;fullName&#x60; does. For example, two accounts could both have the &#x60;name&#x60; \&quot;Accounts-Payable\&quot;, but they could have unique &#x60;fullName&#x60; values, such as \&quot;Corporate:Accounts-Payable\&quot; and \&quot;Finance:Accounts-Payable\&quot;. | 
 **FullName** | **string** | The case-insensitive fully-qualified unique name of this account, formed by combining the names of its hierarchical parent objects with its own &#x60;name&#x60;, separated by colons. For example, if an account is under \&quot;Corporate\&quot; and has the &#x60;name&#x60; \&quot;Accounts-Payable\&quot;, its &#x60;fullName&#x60; would be \&quot;Corporate:Accounts-Payable\&quot;.  **NOTE**: Unlike &#x60;name&#x60;, &#x60;fullName&#x60; is guaranteed to be unique across all account objects. However, &#x60;fullName&#x60; can still be arbitrarily changed by the QuickBooks user when they modify the underlying &#x60;name&#x60; field. | 
 **IsActive** | **bool** | Indicates whether this account is active. Inactive objects are typically hidden from views and reports in QuickBooks. Defaults to &#x60;true&#x60;. | 
-**Parent** | [**QbdAccountParent**](QbdAccountParent.md) |  | 
+**Parent** | Pointer to [**QbdAccountParent**](QbdAccountParent.md) |  | [optional] 
 **Sublevel** | **float32** | The depth level of this account in the hierarchy. A top-level account has a &#x60;sublevel&#x60; of 0; each subsequent sublevel increases this number by 1. For example, an account with a &#x60;fullName&#x60; of \&quot;Corporate:Accounts-Payable\&quot; would have a &#x60;sublevel&#x60; of 1. | 
 **AccountType** | **string** | The classification of this account, indicating its purpose within the chart of accounts.  **NOTE**: You cannot create an account of type &#x60;non_posting&#x60; through the API because QuickBooks creates these accounts behind the scenes. | 
 **SpecialAccountType** | **string** | Indicates if this account is a special account automatically created by QuickBooks for specific purposes. | 
-**IsTaxAccount** | **bool** | Indicates whether this account is used for tracking taxes. | 
+**IsTaxAccount** | Pointer to **bool** | Indicates whether this account is used for tracking taxes. | [optional] 
 **AccountNumber** | **string** | The account&#39;s account number, which appears in the QuickBooks chart of accounts, reports, and graphs.  Note that if the \&quot;Use Account Numbers\&quot; preference is turned off in QuickBooks, the account number may not be visible in the user interface, but it can still be set and retrieved through the API. | 
-**BankAccountNumber** | **string** | The bank account number or identifying note for this account. Access to this field may be restricted based on permissions. | 
+**BankAccountNumber** | Pointer to **string** | The bank account number or identifying note for this account. Access to this field may be restricted based on permissions. | [optional] 
 **Description** | **string** | A description of this account. | 
 **Balance** | **string** | The current balance of this account only, excluding balances from any subordinate accounts, represented as a decimal string. Compare with &#x60;totalBalance&#x60;. Note that income accounts and balance sheet accounts may not have balances. | 
 **TotalBalance** | **string** | The combined balance of this account and all its sub-accounts, represented as a decimal string. For example, the &#x60;totalBalance&#x60; for XYZ Bank would be the total of the balances of all its sub-accounts (checking, savings, and so on). If XYZ Bank did not have any sub-accounts, &#x60;totalBalance&#x60; and &#x60;balance&#x60; would be the same. | 
-**SalesTaxCode** | [**QbdAccountSalesTaxCode**](QbdAccountSalesTaxCode.md) |  | 
+**SalesTaxCode** | Pointer to [**QbdAccountSalesTaxCode**](QbdAccountSalesTaxCode.md) |  | [optional] 
 **TaxLineDetails** | [**QbdAccountTaxLineDetails**](QbdAccountTaxLineDetails.md) |  | 
 **CashFlowClassification** | **string** | Indicates how this account is classified for cash flow reporting. If &#x60;none&#x60;, the account has not been classified. If &#x60;not_applicable&#x60;, the account does not qualify to be classified (e.g., a bank account tracking cash transactions is not part of a cash flow report). | 
-**Currency** | [**QbdAccountCurrency**](QbdAccountCurrency.md) |  | 
+**Currency** | Pointer to [**QbdAccountCurrency**](QbdAccountCurrency.md) |  | [optional] 
 **CustomFields** | [**[]QbdCustomField**](QbdCustomField.md) | The custom fields for the account object, added as user-defined data extensions, not included in the standard QuickBooks object. | 
 
 ## Methods
 
 ### NewQbdAccount
 
-`func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, parent QbdAccountParent, sublevel float32, accountType string, specialAccountType string, isTaxAccount bool, accountNumber string, bankAccountNumber string, description string, balance string, totalBalance string, salesTaxCode QbdAccountSalesTaxCode, taxLineDetails QbdAccountTaxLineDetails, cashFlowClassification string, currency QbdAccountCurrency, customFields []QbdCustomField, ) *QbdAccount`
+`func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, sublevel float32, accountType string, specialAccountType string, accountNumber string, description string, balance string, totalBalance string, taxLineDetails QbdAccountTaxLineDetails, cashFlowClassification string, customFields []QbdCustomField, ) *QbdAccount`
 
 NewQbdAccount instantiates a new QbdAccount object
 This constructor will assign default values to properties that have it defined,
@@ -226,6 +226,11 @@ and a boolean to check if the value has been set.
 
 SetParent sets Parent field to given value.
 
+### HasParent
+
+`func (o *QbdAccount) HasParent() bool`
+
+HasParent returns a boolean if a field has been set.
 
 ### GetSublevel
 
@@ -306,6 +311,11 @@ and a boolean to check if the value has been set.
 
 SetIsTaxAccount sets IsTaxAccount field to given value.
 
+### HasIsTaxAccount
+
+`func (o *QbdAccount) HasIsTaxAccount() bool`
+
+HasIsTaxAccount returns a boolean if a field has been set.
 
 ### GetAccountNumber
 
@@ -346,6 +356,11 @@ and a boolean to check if the value has been set.
 
 SetBankAccountNumber sets BankAccountNumber field to given value.
 
+### HasBankAccountNumber
+
+`func (o *QbdAccount) HasBankAccountNumber() bool`
+
+HasBankAccountNumber returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -426,6 +441,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxCode sets SalesTaxCode field to given value.
 
+### HasSalesTaxCode
+
+`func (o *QbdAccount) HasSalesTaxCode() bool`
+
+HasSalesTaxCode returns a boolean if a field has been set.
 
 ### GetTaxLineDetails
 
@@ -486,6 +506,11 @@ and a boolean to check if the value has been set.
 
 SetCurrency sets Currency field to given value.
 
+### HasCurrency
+
+`func (o *QbdAccount) HasCurrency() bool`
+
+HasCurrency returns a boolean if a field has been set.
 
 ### GetCustomFields
 

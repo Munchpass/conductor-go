@@ -36,7 +36,7 @@ type QbdAccount struct {
 	FullName string `json:"fullName"`
 	// Indicates whether this account is active. Inactive objects are typically hidden from views and reports in QuickBooks. Defaults to `true`.
 	IsActive bool `json:"isActive"`
-	Parent QbdAccountParent `json:"parent"`
+	Parent *QbdAccountParent `json:"parent,omitempty"`
 	// The depth level of this account in the hierarchy. A top-level account has a `sublevel` of 0; each subsequent sublevel increases this number by 1. For example, an account with a `fullName` of \"Corporate:Accounts-Payable\" would have a `sublevel` of 1.
 	Sublevel float32 `json:"sublevel"`
 	// The classification of this account, indicating its purpose within the chart of accounts.  **NOTE**: You cannot create an account of type `non_posting` through the API because QuickBooks creates these accounts behind the scenes.
@@ -44,22 +44,22 @@ type QbdAccount struct {
 	// Indicates if this account is a special account automatically created by QuickBooks for specific purposes.
 	SpecialAccountType string `json:"specialAccountType"`
 	// Indicates whether this account is used for tracking taxes.
-	IsTaxAccount bool `json:"isTaxAccount"`
+	IsTaxAccount *bool `json:"isTaxAccount,omitempty"`
 	// The account's account number, which appears in the QuickBooks chart of accounts, reports, and graphs.  Note that if the \"Use Account Numbers\" preference is turned off in QuickBooks, the account number may not be visible in the user interface, but it can still be set and retrieved through the API.
 	AccountNumber string `json:"accountNumber"`
 	// The bank account number or identifying note for this account. Access to this field may be restricted based on permissions.
-	BankAccountNumber string `json:"bankAccountNumber"`
+	BankAccountNumber *string `json:"bankAccountNumber,omitempty"`
 	// A description of this account.
 	Description string `json:"description"`
 	// The current balance of this account only, excluding balances from any subordinate accounts, represented as a decimal string. Compare with `totalBalance`. Note that income accounts and balance sheet accounts may not have balances.
 	Balance string `json:"balance"`
 	// The combined balance of this account and all its sub-accounts, represented as a decimal string. For example, the `totalBalance` for XYZ Bank would be the total of the balances of all its sub-accounts (checking, savings, and so on). If XYZ Bank did not have any sub-accounts, `totalBalance` and `balance` would be the same.
 	TotalBalance string `json:"totalBalance"`
-	SalesTaxCode QbdAccountSalesTaxCode `json:"salesTaxCode"`
+	SalesTaxCode *QbdAccountSalesTaxCode `json:"salesTaxCode,omitempty"`
 	TaxLineDetails QbdAccountTaxLineDetails `json:"taxLineDetails"`
 	// Indicates how this account is classified for cash flow reporting. If `none`, the account has not been classified. If `not_applicable`, the account does not qualify to be classified (e.g., a bank account tracking cash transactions is not part of a cash flow report).
 	CashFlowClassification string `json:"cashFlowClassification"`
-	Currency QbdAccountCurrency `json:"currency"`
+	Currency *QbdAccountCurrency `json:"currency,omitempty"`
 	// The custom fields for the account object, added as user-defined data extensions, not included in the standard QuickBooks object.
 	CustomFields []QbdCustomField `json:"customFields"`
 	AdditionalProperties map[string]interface{}
@@ -71,7 +71,7 @@ type _QbdAccount QbdAccount
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, parent QbdAccountParent, sublevel float32, accountType string, specialAccountType string, isTaxAccount bool, accountNumber string, bankAccountNumber string, description string, balance string, totalBalance string, salesTaxCode QbdAccountSalesTaxCode, taxLineDetails QbdAccountTaxLineDetails, cashFlowClassification string, currency QbdAccountCurrency, customFields []QbdCustomField) *QbdAccount {
+func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, sublevel float32, accountType string, specialAccountType string, accountNumber string, description string, balance string, totalBalance string, taxLineDetails QbdAccountTaxLineDetails, cashFlowClassification string, customFields []QbdCustomField) *QbdAccount {
 	this := QbdAccount{}
 	this.Id = id
 	this.ObjectType = objectType
@@ -81,20 +81,15 @@ func NewQbdAccount(id string, objectType string, createdAt string, updatedAt str
 	this.Name = name
 	this.FullName = fullName
 	this.IsActive = isActive
-	this.Parent = parent
 	this.Sublevel = sublevel
 	this.AccountType = accountType
 	this.SpecialAccountType = specialAccountType
-	this.IsTaxAccount = isTaxAccount
 	this.AccountNumber = accountNumber
-	this.BankAccountNumber = bankAccountNumber
 	this.Description = description
 	this.Balance = balance
 	this.TotalBalance = totalBalance
-	this.SalesTaxCode = salesTaxCode
 	this.TaxLineDetails = taxLineDetails
 	this.CashFlowClassification = cashFlowClassification
-	this.Currency = currency
 	this.CustomFields = customFields
 	return &this
 }
@@ -299,28 +294,36 @@ func (o *QbdAccount) SetIsActive(v bool) {
 	o.IsActive = v
 }
 
-// GetParent returns the Parent field value
+// GetParent returns the Parent field value if set, zero value otherwise.
 func (o *QbdAccount) GetParent() QbdAccountParent {
-	if o == nil {
+	if o == nil || IsNil(o.Parent) {
 		var ret QbdAccountParent
 		return ret
 	}
-
-	return o.Parent
+	return *o.Parent
 }
 
-// GetParentOk returns a tuple with the Parent field value
+// GetParentOk returns a tuple with the Parent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdAccount) GetParentOk() (*QbdAccountParent, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Parent) {
 		return nil, false
 	}
-	return &o.Parent, true
+	return o.Parent, true
 }
 
-// SetParent sets field value
+// HasParent returns a boolean if a field has been set.
+func (o *QbdAccount) HasParent() bool {
+	if o != nil && !IsNil(o.Parent) {
+		return true
+	}
+
+	return false
+}
+
+// SetParent gets a reference to the given QbdAccountParent and assigns it to the Parent field.
 func (o *QbdAccount) SetParent(v QbdAccountParent) {
-	o.Parent = v
+	o.Parent = &v
 }
 
 // GetSublevel returns the Sublevel field value
@@ -395,28 +398,36 @@ func (o *QbdAccount) SetSpecialAccountType(v string) {
 	o.SpecialAccountType = v
 }
 
-// GetIsTaxAccount returns the IsTaxAccount field value
+// GetIsTaxAccount returns the IsTaxAccount field value if set, zero value otherwise.
 func (o *QbdAccount) GetIsTaxAccount() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsTaxAccount) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsTaxAccount
+	return *o.IsTaxAccount
 }
 
-// GetIsTaxAccountOk returns a tuple with the IsTaxAccount field value
+// GetIsTaxAccountOk returns a tuple with the IsTaxAccount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdAccount) GetIsTaxAccountOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsTaxAccount) {
 		return nil, false
 	}
-	return &o.IsTaxAccount, true
+	return o.IsTaxAccount, true
 }
 
-// SetIsTaxAccount sets field value
+// HasIsTaxAccount returns a boolean if a field has been set.
+func (o *QbdAccount) HasIsTaxAccount() bool {
+	if o != nil && !IsNil(o.IsTaxAccount) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsTaxAccount gets a reference to the given bool and assigns it to the IsTaxAccount field.
 func (o *QbdAccount) SetIsTaxAccount(v bool) {
-	o.IsTaxAccount = v
+	o.IsTaxAccount = &v
 }
 
 // GetAccountNumber returns the AccountNumber field value
@@ -443,28 +454,36 @@ func (o *QbdAccount) SetAccountNumber(v string) {
 	o.AccountNumber = v
 }
 
-// GetBankAccountNumber returns the BankAccountNumber field value
+// GetBankAccountNumber returns the BankAccountNumber field value if set, zero value otherwise.
 func (o *QbdAccount) GetBankAccountNumber() string {
-	if o == nil {
+	if o == nil || IsNil(o.BankAccountNumber) {
 		var ret string
 		return ret
 	}
-
-	return o.BankAccountNumber
+	return *o.BankAccountNumber
 }
 
-// GetBankAccountNumberOk returns a tuple with the BankAccountNumber field value
+// GetBankAccountNumberOk returns a tuple with the BankAccountNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdAccount) GetBankAccountNumberOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.BankAccountNumber) {
 		return nil, false
 	}
-	return &o.BankAccountNumber, true
+	return o.BankAccountNumber, true
 }
 
-// SetBankAccountNumber sets field value
+// HasBankAccountNumber returns a boolean if a field has been set.
+func (o *QbdAccount) HasBankAccountNumber() bool {
+	if o != nil && !IsNil(o.BankAccountNumber) {
+		return true
+	}
+
+	return false
+}
+
+// SetBankAccountNumber gets a reference to the given string and assigns it to the BankAccountNumber field.
 func (o *QbdAccount) SetBankAccountNumber(v string) {
-	o.BankAccountNumber = v
+	o.BankAccountNumber = &v
 }
 
 // GetDescription returns the Description field value
@@ -539,28 +558,36 @@ func (o *QbdAccount) SetTotalBalance(v string) {
 	o.TotalBalance = v
 }
 
-// GetSalesTaxCode returns the SalesTaxCode field value
+// GetSalesTaxCode returns the SalesTaxCode field value if set, zero value otherwise.
 func (o *QbdAccount) GetSalesTaxCode() QbdAccountSalesTaxCode {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxCode) {
 		var ret QbdAccountSalesTaxCode
 		return ret
 	}
-
-	return o.SalesTaxCode
+	return *o.SalesTaxCode
 }
 
-// GetSalesTaxCodeOk returns a tuple with the SalesTaxCode field value
+// GetSalesTaxCodeOk returns a tuple with the SalesTaxCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdAccount) GetSalesTaxCodeOk() (*QbdAccountSalesTaxCode, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxCode) {
 		return nil, false
 	}
-	return &o.SalesTaxCode, true
+	return o.SalesTaxCode, true
 }
 
-// SetSalesTaxCode sets field value
+// HasSalesTaxCode returns a boolean if a field has been set.
+func (o *QbdAccount) HasSalesTaxCode() bool {
+	if o != nil && !IsNil(o.SalesTaxCode) {
+		return true
+	}
+
+	return false
+}
+
+// SetSalesTaxCode gets a reference to the given QbdAccountSalesTaxCode and assigns it to the SalesTaxCode field.
 func (o *QbdAccount) SetSalesTaxCode(v QbdAccountSalesTaxCode) {
-	o.SalesTaxCode = v
+	o.SalesTaxCode = &v
 }
 
 // GetTaxLineDetails returns the TaxLineDetails field value
@@ -611,28 +638,36 @@ func (o *QbdAccount) SetCashFlowClassification(v string) {
 	o.CashFlowClassification = v
 }
 
-// GetCurrency returns the Currency field value
+// GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *QbdAccount) GetCurrency() QbdAccountCurrency {
-	if o == nil {
+	if o == nil || IsNil(o.Currency) {
 		var ret QbdAccountCurrency
 		return ret
 	}
-
-	return o.Currency
+	return *o.Currency
 }
 
-// GetCurrencyOk returns a tuple with the Currency field value
+// GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdAccount) GetCurrencyOk() (*QbdAccountCurrency, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Currency) {
 		return nil, false
 	}
-	return &o.Currency, true
+	return o.Currency, true
 }
 
-// SetCurrency sets field value
+// HasCurrency returns a boolean if a field has been set.
+func (o *QbdAccount) HasCurrency() bool {
+	if o != nil && !IsNil(o.Currency) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrency gets a reference to the given QbdAccountCurrency and assigns it to the Currency field.
 func (o *QbdAccount) SetCurrency(v QbdAccountCurrency) {
-	o.Currency = v
+	o.Currency = &v
 }
 
 // GetCustomFields returns the CustomFields field value
@@ -677,20 +712,30 @@ func (o QbdAccount) ToMap() (map[string]interface{}, error) {
 	toSerialize["name"] = o.Name
 	toSerialize["fullName"] = o.FullName
 	toSerialize["isActive"] = o.IsActive
-	toSerialize["parent"] = o.Parent
+	if !IsNil(o.Parent) {
+		toSerialize["parent"] = o.Parent
+	}
 	toSerialize["sublevel"] = o.Sublevel
 	toSerialize["accountType"] = o.AccountType
 	toSerialize["specialAccountType"] = o.SpecialAccountType
-	toSerialize["isTaxAccount"] = o.IsTaxAccount
+	if !IsNil(o.IsTaxAccount) {
+		toSerialize["isTaxAccount"] = o.IsTaxAccount
+	}
 	toSerialize["accountNumber"] = o.AccountNumber
-	toSerialize["bankAccountNumber"] = o.BankAccountNumber
+	if !IsNil(o.BankAccountNumber) {
+		toSerialize["bankAccountNumber"] = o.BankAccountNumber
+	}
 	toSerialize["description"] = o.Description
 	toSerialize["balance"] = o.Balance
 	toSerialize["totalBalance"] = o.TotalBalance
-	toSerialize["salesTaxCode"] = o.SalesTaxCode
+	if !IsNil(o.SalesTaxCode) {
+		toSerialize["salesTaxCode"] = o.SalesTaxCode
+	}
 	toSerialize["taxLineDetails"] = o.TaxLineDetails
 	toSerialize["cashFlowClassification"] = o.CashFlowClassification
-	toSerialize["currency"] = o.Currency
+	if !IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
 	toSerialize["customFields"] = o.CustomFields
 
 	for key, value := range o.AdditionalProperties {
@@ -713,20 +758,15 @@ func (o *QbdAccount) UnmarshalJSON(data []byte) (err error) {
 		"name",
 		"fullName",
 		"isActive",
-		"parent",
 		"sublevel",
 		"accountType",
 		"specialAccountType",
-		"isTaxAccount",
 		"accountNumber",
-		"bankAccountNumber",
 		"description",
 		"balance",
 		"totalBalance",
-		"salesTaxCode",
 		"taxLineDetails",
 		"cashFlowClassification",
-		"currency",
 		"customFields",
 	}
 

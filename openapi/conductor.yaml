@@ -48137,20 +48137,15 @@ components:
         - name
         - fullName
         - isActive
-        - parent
         - sublevel
         - accountType
         - specialAccountType
-        - isTaxAccount
         - accountNumber
-        - bankAccountNumber
         - description
         - balance
         - totalBalance
-        - salesTaxCode
         - taxLineDetails
         - cashFlowClassification
-        - currency
         - customFields
       additionalProperties: false
       title: The Account object
