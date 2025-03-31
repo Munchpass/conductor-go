@@ -23400,7 +23400,6 @@ components:
       - revisionNumber
       - specialAccountType
       - sublevel
-      - taxLineDetails
       - totalBalance
       - updatedAt
       title: The Account object

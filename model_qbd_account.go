@@ -56,7 +56,7 @@ type QbdAccount struct {
 	// The combined balance of this account and all its sub-accounts, represented as a decimal string. For example, the `totalBalance` for XYZ Bank would be the total of the balances of all its sub-accounts (checking, savings, and so on). If XYZ Bank did not have any sub-accounts, `totalBalance` and `balance` would be the same.
 	TotalBalance string `json:"totalBalance"`
 	SalesTaxCode *QbdAccountSalesTaxCode `json:"salesTaxCode,omitempty"`
-	TaxLineDetails QbdAccountTaxLineDetails `json:"taxLineDetails"`
+	TaxLineDetails *QbdAccountTaxLineDetails `json:"taxLineDetails,omitempty"`
 	// Indicates how this account is classified for cash flow reporting. If `none`, the account has not been classified. If `not_applicable`, the account does not qualify to be classified (e.g., a bank account tracking cash transactions is not part of a cash flow report).
 	CashFlowClassification string `json:"cashFlowClassification"`
 	Currency *QbdAccountCurrency `json:"currency,omitempty"`
@@ -71,7 +71,7 @@ type _QbdAccount QbdAccount
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, sublevel float32, accountType string, specialAccountType string, accountNumber string, description string, balance string, totalBalance string, taxLineDetails QbdAccountTaxLineDetails, cashFlowClassification string, customFields []QbdCustomField) *QbdAccount {
+func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, sublevel float32, accountType string, specialAccountType string, accountNumber string, description string, balance string, totalBalance string, cashFlowClassification string, customFields []QbdCustomField) *QbdAccount {
 	this := QbdAccount{}
 	this.Id = id
 	this.ObjectType = objectType
@@ -88,7 +88,6 @@ func NewQbdAccount(id string, objectType string, createdAt string, updatedAt str
 	this.Description = description
 	this.Balance = balance
 	this.TotalBalance = totalBalance
-	this.TaxLineDetails = taxLineDetails
 	this.CashFlowClassification = cashFlowClassification
 	this.CustomFields = customFields
 	return &this
@@ -590,28 +589,36 @@ func (o *QbdAccount) SetSalesTaxCode(v QbdAccountSalesTaxCode) {
 	o.SalesTaxCode = &v
 }
 
-// GetTaxLineDetails returns the TaxLineDetails field value
+// GetTaxLineDetails returns the TaxLineDetails field value if set, zero value otherwise.
 func (o *QbdAccount) GetTaxLineDetails() QbdAccountTaxLineDetails {
-	if o == nil {
+	if o == nil || IsNil(o.TaxLineDetails) {
 		var ret QbdAccountTaxLineDetails
 		return ret
 	}
-
-	return o.TaxLineDetails
+	return *o.TaxLineDetails
 }
 
-// GetTaxLineDetailsOk returns a tuple with the TaxLineDetails field value
+// GetTaxLineDetailsOk returns a tuple with the TaxLineDetails field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdAccount) GetTaxLineDetailsOk() (*QbdAccountTaxLineDetails, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.TaxLineDetails) {
 		return nil, false
 	}
-	return &o.TaxLineDetails, true
+	return o.TaxLineDetails, true
 }
 
-// SetTaxLineDetails sets field value
+// HasTaxLineDetails returns a boolean if a field has been set.
+func (o *QbdAccount) HasTaxLineDetails() bool {
+	if o != nil && !IsNil(o.TaxLineDetails) {
+		return true
+	}
+
+	return false
+}
+
+// SetTaxLineDetails gets a reference to the given QbdAccountTaxLineDetails and assigns it to the TaxLineDetails field.
 func (o *QbdAccount) SetTaxLineDetails(v QbdAccountTaxLineDetails) {
-	o.TaxLineDetails = v
+	o.TaxLineDetails = &v
 }
 
 // GetCashFlowClassification returns the CashFlowClassification field value
@@ -731,7 +738,9 @@ func (o QbdAccount) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.SalesTaxCode) {
 		toSerialize["salesTaxCode"] = o.SalesTaxCode
 	}
-	toSerialize["taxLineDetails"] = o.TaxLineDetails
+	if !IsNil(o.TaxLineDetails) {
+		toSerialize["taxLineDetails"] = o.TaxLineDetails
+	}
 	toSerialize["cashFlowClassification"] = o.CashFlowClassification
 	if !IsNil(o.Currency) {
 		toSerialize["currency"] = o.Currency
@@ -765,7 +774,6 @@ func (o *QbdAccount) UnmarshalJSON(data []byte) (err error) {
 		"description",
 		"balance",
 		"totalBalance",
-		"taxLineDetails",
 		"cashFlowClassification",
 		"customFields",
 	}

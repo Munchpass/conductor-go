@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **Balance** | **string** | The current balance of this account only, excluding balances from any subordinate accounts, represented as a decimal string. Compare with &#x60;totalBalance&#x60;. Note that income accounts and balance sheet accounts may not have balances. | 
 **TotalBalance** | **string** | The combined balance of this account and all its sub-accounts, represented as a decimal string. For example, the &#x60;totalBalance&#x60; for XYZ Bank would be the total of the balances of all its sub-accounts (checking, savings, and so on). If XYZ Bank did not have any sub-accounts, &#x60;totalBalance&#x60; and &#x60;balance&#x60; would be the same. | 
 **SalesTaxCode** | Pointer to [**QbdAccountSalesTaxCode**](QbdAccountSalesTaxCode.md) |  | [optional] 
-**TaxLineDetails** | [**QbdAccountTaxLineDetails**](QbdAccountTaxLineDetails.md) |  | 
+**TaxLineDetails** | Pointer to [**QbdAccountTaxLineDetails**](QbdAccountTaxLineDetails.md) |  | [optional] 
 **CashFlowClassification** | **string** | Indicates how this account is classified for cash flow reporting. If &#x60;none&#x60;, the account has not been classified. If &#x60;not_applicable&#x60;, the account does not qualify to be classified (e.g., a bank account tracking cash transactions is not part of a cash flow report). | 
 **Currency** | Pointer to [**QbdAccountCurrency**](QbdAccountCurrency.md) |  | [optional] 
 **CustomFields** | [**[]QbdCustomField**](QbdCustomField.md) | The custom fields for the account object, added as user-defined data extensions, not included in the standard QuickBooks object. | 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 
 ### NewQbdAccount
 
-`func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, sublevel float32, accountType string, specialAccountType string, accountNumber string, description string, balance string, totalBalance string, taxLineDetails QbdAccountTaxLineDetails, cashFlowClassification string, customFields []QbdCustomField, ) *QbdAccount`
+`func NewQbdAccount(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, sublevel float32, accountType string, specialAccountType string, accountNumber string, description string, balance string, totalBalance string, cashFlowClassification string, customFields []QbdCustomField, ) *QbdAccount`
 
 NewQbdAccount instantiates a new QbdAccount object
 This constructor will assign default values to properties that have it defined,
@@ -466,6 +466,11 @@ and a boolean to check if the value has been set.
 
 SetTaxLineDetails sets TaxLineDetails field to given value.
 
+### HasTaxLineDetails
+
+`func (o *QbdAccount) HasTaxLineDetails() bool`
+
+HasTaxLineDetails returns a boolean if a field has been set.
 
 ### GetCashFlowClassification
 

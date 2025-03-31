@@ -48144,7 +48144,6 @@ components:
         - description
         - balance
         - totalBalance
-        - taxLineDetails
         - cashFlowClassification
         - customFields
       additionalProperties: false
