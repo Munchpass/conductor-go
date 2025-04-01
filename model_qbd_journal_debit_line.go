@@ -24,16 +24,16 @@ type QbdJournalDebitLine struct {
 	Id string `json:"id"`
 	// The type of object. This value is always `\"qbd_journal_debit_line\"`.
 	ObjectType string `json:"objectType"`
-	Account QbdJournalDebitLineAccount `json:"account"`
+	Account *QbdJournalDebitLineAccount `json:"account,omitempty"`
 	// The monetary amount of this journal debit line, represented as a decimal string.
-	Amount string `json:"amount"`
+	Amount *string `json:"amount,omitempty"`
 	// A memo or note for this journal debit line.
-	Memo string `json:"memo"`
-	Entity QbdJournalDebitLineEntity `json:"entity"`
-	Class QbdJournalDebitLineClass `json:"class"`
-	SalesTaxItem QbdJournalDebitLineSalesTaxItem `json:"salesTaxItem"`
+	Memo *string `json:"memo,omitempty"`
+	Entity *QbdJournalDebitLineEntity `json:"entity,omitempty"`
+	Class *QbdJournalDebitLineClass `json:"class,omitempty"`
+	SalesTaxItem *QbdJournalDebitLineSalesTaxItem `json:"salesTaxItem,omitempty"`
 	// The billing status of this journal debit line.
-	BillingStatus string `json:"billingStatus"`
+	BillingStatus *string `json:"billingStatus,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -43,17 +43,10 @@ type _QbdJournalDebitLine QbdJournalDebitLine
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewQbdJournalDebitLine(id string, objectType string, account QbdJournalDebitLineAccount, amount string, memo string, entity QbdJournalDebitLineEntity, class QbdJournalDebitLineClass, salesTaxItem QbdJournalDebitLineSalesTaxItem, billingStatus string) *QbdJournalDebitLine {
+func NewQbdJournalDebitLine(id string, objectType string) *QbdJournalDebitLine {
 	this := QbdJournalDebitLine{}
 	this.Id = id
 	this.ObjectType = objectType
-	this.Account = account
-	this.Amount = amount
-	this.Memo = memo
-	this.Entity = entity
-	this.Class = class
-	this.SalesTaxItem = salesTaxItem
-	this.BillingStatus = billingStatus
 	return &this
 }
 
@@ -113,172 +106,228 @@ func (o *QbdJournalDebitLine) SetObjectType(v string) {
 	o.ObjectType = v
 }
 
-// GetAccount returns the Account field value
+// GetAccount returns the Account field value if set, zero value otherwise.
 func (o *QbdJournalDebitLine) GetAccount() QbdJournalDebitLineAccount {
-	if o == nil {
+	if o == nil || IsNil(o.Account) {
 		var ret QbdJournalDebitLineAccount
 		return ret
 	}
-
-	return o.Account
+	return *o.Account
 }
 
-// GetAccountOk returns a tuple with the Account field value
+// GetAccountOk returns a tuple with the Account field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalDebitLine) GetAccountOk() (*QbdJournalDebitLineAccount, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Account) {
 		return nil, false
 	}
-	return &o.Account, true
+	return o.Account, true
 }
 
-// SetAccount sets field value
+// HasAccount returns a boolean if a field has been set.
+func (o *QbdJournalDebitLine) HasAccount() bool {
+	if o != nil && !IsNil(o.Account) {
+		return true
+	}
+
+	return false
+}
+
+// SetAccount gets a reference to the given QbdJournalDebitLineAccount and assigns it to the Account field.
 func (o *QbdJournalDebitLine) SetAccount(v QbdJournalDebitLineAccount) {
-	o.Account = v
+	o.Account = &v
 }
 
-// GetAmount returns the Amount field value
+// GetAmount returns the Amount field value if set, zero value otherwise.
 func (o *QbdJournalDebitLine) GetAmount() string {
-	if o == nil {
+	if o == nil || IsNil(o.Amount) {
 		var ret string
 		return ret
 	}
-
-	return o.Amount
+	return *o.Amount
 }
 
-// GetAmountOk returns a tuple with the Amount field value
+// GetAmountOk returns a tuple with the Amount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalDebitLine) GetAmountOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Amount) {
 		return nil, false
 	}
-	return &o.Amount, true
+	return o.Amount, true
 }
 
-// SetAmount sets field value
+// HasAmount returns a boolean if a field has been set.
+func (o *QbdJournalDebitLine) HasAmount() bool {
+	if o != nil && !IsNil(o.Amount) {
+		return true
+	}
+
+	return false
+}
+
+// SetAmount gets a reference to the given string and assigns it to the Amount field.
 func (o *QbdJournalDebitLine) SetAmount(v string) {
-	o.Amount = v
+	o.Amount = &v
 }
 
-// GetMemo returns the Memo field value
+// GetMemo returns the Memo field value if set, zero value otherwise.
 func (o *QbdJournalDebitLine) GetMemo() string {
-	if o == nil {
+	if o == nil || IsNil(o.Memo) {
 		var ret string
 		return ret
 	}
-
-	return o.Memo
+	return *o.Memo
 }
 
-// GetMemoOk returns a tuple with the Memo field value
+// GetMemoOk returns a tuple with the Memo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalDebitLine) GetMemoOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Memo) {
 		return nil, false
 	}
-	return &o.Memo, true
+	return o.Memo, true
 }
 
-// SetMemo sets field value
+// HasMemo returns a boolean if a field has been set.
+func (o *QbdJournalDebitLine) HasMemo() bool {
+	if o != nil && !IsNil(o.Memo) {
+		return true
+	}
+
+	return false
+}
+
+// SetMemo gets a reference to the given string and assigns it to the Memo field.
 func (o *QbdJournalDebitLine) SetMemo(v string) {
-	o.Memo = v
+	o.Memo = &v
 }
 
-// GetEntity returns the Entity field value
+// GetEntity returns the Entity field value if set, zero value otherwise.
 func (o *QbdJournalDebitLine) GetEntity() QbdJournalDebitLineEntity {
-	if o == nil {
+	if o == nil || IsNil(o.Entity) {
 		var ret QbdJournalDebitLineEntity
 		return ret
 	}
-
-	return o.Entity
+	return *o.Entity
 }
 
-// GetEntityOk returns a tuple with the Entity field value
+// GetEntityOk returns a tuple with the Entity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalDebitLine) GetEntityOk() (*QbdJournalDebitLineEntity, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Entity) {
 		return nil, false
 	}
-	return &o.Entity, true
+	return o.Entity, true
 }
 
-// SetEntity sets field value
+// HasEntity returns a boolean if a field has been set.
+func (o *QbdJournalDebitLine) HasEntity() bool {
+	if o != nil && !IsNil(o.Entity) {
+		return true
+	}
+
+	return false
+}
+
+// SetEntity gets a reference to the given QbdJournalDebitLineEntity and assigns it to the Entity field.
 func (o *QbdJournalDebitLine) SetEntity(v QbdJournalDebitLineEntity) {
-	o.Entity = v
+	o.Entity = &v
 }
 
-// GetClass returns the Class field value
+// GetClass returns the Class field value if set, zero value otherwise.
 func (o *QbdJournalDebitLine) GetClass() QbdJournalDebitLineClass {
-	if o == nil {
+	if o == nil || IsNil(o.Class) {
 		var ret QbdJournalDebitLineClass
 		return ret
 	}
-
-	return o.Class
+	return *o.Class
 }
 
-// GetClassOk returns a tuple with the Class field value
+// GetClassOk returns a tuple with the Class field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalDebitLine) GetClassOk() (*QbdJournalDebitLineClass, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Class) {
 		return nil, false
 	}
-	return &o.Class, true
+	return o.Class, true
 }
 
-// SetClass sets field value
+// HasClass returns a boolean if a field has been set.
+func (o *QbdJournalDebitLine) HasClass() bool {
+	if o != nil && !IsNil(o.Class) {
+		return true
+	}
+
+	return false
+}
+
+// SetClass gets a reference to the given QbdJournalDebitLineClass and assigns it to the Class field.
 func (o *QbdJournalDebitLine) SetClass(v QbdJournalDebitLineClass) {
-	o.Class = v
+	o.Class = &v
 }
 
-// GetSalesTaxItem returns the SalesTaxItem field value
+// GetSalesTaxItem returns the SalesTaxItem field value if set, zero value otherwise.
 func (o *QbdJournalDebitLine) GetSalesTaxItem() QbdJournalDebitLineSalesTaxItem {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxItem) {
 		var ret QbdJournalDebitLineSalesTaxItem
 		return ret
 	}
-
-	return o.SalesTaxItem
+	return *o.SalesTaxItem
 }
 
-// GetSalesTaxItemOk returns a tuple with the SalesTaxItem field value
+// GetSalesTaxItemOk returns a tuple with the SalesTaxItem field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalDebitLine) GetSalesTaxItemOk() (*QbdJournalDebitLineSalesTaxItem, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxItem) {
 		return nil, false
 	}
-	return &o.SalesTaxItem, true
+	return o.SalesTaxItem, true
 }
 
-// SetSalesTaxItem sets field value
+// HasSalesTaxItem returns a boolean if a field has been set.
+func (o *QbdJournalDebitLine) HasSalesTaxItem() bool {
+	if o != nil && !IsNil(o.SalesTaxItem) {
+		return true
+	}
+
+	return false
+}
+
+// SetSalesTaxItem gets a reference to the given QbdJournalDebitLineSalesTaxItem and assigns it to the SalesTaxItem field.
 func (o *QbdJournalDebitLine) SetSalesTaxItem(v QbdJournalDebitLineSalesTaxItem) {
-	o.SalesTaxItem = v
+	o.SalesTaxItem = &v
 }
 
-// GetBillingStatus returns the BillingStatus field value
+// GetBillingStatus returns the BillingStatus field value if set, zero value otherwise.
 func (o *QbdJournalDebitLine) GetBillingStatus() string {
-	if o == nil {
+	if o == nil || IsNil(o.BillingStatus) {
 		var ret string
 		return ret
 	}
-
-	return o.BillingStatus
+	return *o.BillingStatus
 }
 
-// GetBillingStatusOk returns a tuple with the BillingStatus field value
+// GetBillingStatusOk returns a tuple with the BillingStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalDebitLine) GetBillingStatusOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.BillingStatus) {
 		return nil, false
 	}
-	return &o.BillingStatus, true
+	return o.BillingStatus, true
 }
 
-// SetBillingStatus sets field value
+// HasBillingStatus returns a boolean if a field has been set.
+func (o *QbdJournalDebitLine) HasBillingStatus() bool {
+	if o != nil && !IsNil(o.BillingStatus) {
+		return true
+	}
+
+	return false
+}
+
+// SetBillingStatus gets a reference to the given string and assigns it to the BillingStatus field.
 func (o *QbdJournalDebitLine) SetBillingStatus(v string) {
-	o.BillingStatus = v
+	o.BillingStatus = &v
 }
 
 func (o QbdJournalDebitLine) MarshalJSON() ([]byte, error) {
@@ -293,13 +342,27 @@ func (o QbdJournalDebitLine) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["id"] = o.Id
 	toSerialize["objectType"] = o.ObjectType
-	toSerialize["account"] = o.Account
-	toSerialize["amount"] = o.Amount
-	toSerialize["memo"] = o.Memo
-	toSerialize["entity"] = o.Entity
-	toSerialize["class"] = o.Class
-	toSerialize["salesTaxItem"] = o.SalesTaxItem
-	toSerialize["billingStatus"] = o.BillingStatus
+	if !IsNil(o.Account) {
+		toSerialize["account"] = o.Account
+	}
+	if !IsNil(o.Amount) {
+		toSerialize["amount"] = o.Amount
+	}
+	if !IsNil(o.Memo) {
+		toSerialize["memo"] = o.Memo
+	}
+	if !IsNil(o.Entity) {
+		toSerialize["entity"] = o.Entity
+	}
+	if !IsNil(o.Class) {
+		toSerialize["class"] = o.Class
+	}
+	if !IsNil(o.SalesTaxItem) {
+		toSerialize["salesTaxItem"] = o.SalesTaxItem
+	}
+	if !IsNil(o.BillingStatus) {
+		toSerialize["billingStatus"] = o.BillingStatus
+	}
 
 	for key, value := range o.AdditionalProperties {
 		toSerialize[key] = value
@@ -315,13 +378,6 @@ func (o *QbdJournalDebitLine) UnmarshalJSON(data []byte) (err error) {
 	requiredProperties := []string{
 		"id",
 		"objectType",
-		"account",
-		"amount",
-		"memo",
-		"entity",
-		"class",
-		"salesTaxItem",
-		"billingStatus",
 	}
 
 	allProperties := make(map[string]interface{})

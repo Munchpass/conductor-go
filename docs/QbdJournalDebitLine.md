@@ -6,19 +6,19 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** | The unique identifier assigned by QuickBooks to this journal debit line. This ID is unique across all transaction line types. | 
 **ObjectType** | **string** | The type of object. This value is always &#x60;\&quot;qbd_journal_debit_line\&quot;&#x60;. | 
-**Account** | [**QbdJournalDebitLineAccount**](QbdJournalDebitLineAccount.md) |  | 
-**Amount** | **string** | The monetary amount of this journal debit line, represented as a decimal string. | 
-**Memo** | **string** | A memo or note for this journal debit line. | 
-**Entity** | [**QbdJournalDebitLineEntity**](QbdJournalDebitLineEntity.md) |  | 
-**Class** | [**QbdJournalDebitLineClass**](QbdJournalDebitLineClass.md) |  | 
-**SalesTaxItem** | [**QbdJournalDebitLineSalesTaxItem**](QbdJournalDebitLineSalesTaxItem.md) |  | 
-**BillingStatus** | **string** | The billing status of this journal debit line. | 
+**Account** | Pointer to [**QbdJournalDebitLineAccount**](QbdJournalDebitLineAccount.md) |  | [optional] 
+**Amount** | Pointer to **string** | The monetary amount of this journal debit line, represented as a decimal string. | [optional] 
+**Memo** | Pointer to **string** | A memo or note for this journal debit line. | [optional] 
+**Entity** | Pointer to [**QbdJournalDebitLineEntity**](QbdJournalDebitLineEntity.md) |  | [optional] 
+**Class** | Pointer to [**QbdJournalDebitLineClass**](QbdJournalDebitLineClass.md) |  | [optional] 
+**SalesTaxItem** | Pointer to [**QbdJournalDebitLineSalesTaxItem**](QbdJournalDebitLineSalesTaxItem.md) |  | [optional] 
+**BillingStatus** | Pointer to **string** | The billing status of this journal debit line. | [optional] 
 
 ## Methods
 
 ### NewQbdJournalDebitLine
 
-`func NewQbdJournalDebitLine(id string, objectType string, account QbdJournalDebitLineAccount, amount string, memo string, entity QbdJournalDebitLineEntity, class QbdJournalDebitLineClass, salesTaxItem QbdJournalDebitLineSalesTaxItem, billingStatus string, ) *QbdJournalDebitLine`
+`func NewQbdJournalDebitLine(id string, objectType string, ) *QbdJournalDebitLine`
 
 NewQbdJournalDebitLine instantiates a new QbdJournalDebitLine object
 This constructor will assign default values to properties that have it defined,
@@ -92,6 +92,11 @@ and a boolean to check if the value has been set.
 
 SetAccount sets Account field to given value.
 
+### HasAccount
+
+`func (o *QbdJournalDebitLine) HasAccount() bool`
+
+HasAccount returns a boolean if a field has been set.
 
 ### GetAmount
 
@@ -112,6 +117,11 @@ and a boolean to check if the value has been set.
 
 SetAmount sets Amount field to given value.
 
+### HasAmount
+
+`func (o *QbdJournalDebitLine) HasAmount() bool`
+
+HasAmount returns a boolean if a field has been set.
 
 ### GetMemo
 
@@ -132,6 +142,11 @@ and a boolean to check if the value has been set.
 
 SetMemo sets Memo field to given value.
 
+### HasMemo
+
+`func (o *QbdJournalDebitLine) HasMemo() bool`
+
+HasMemo returns a boolean if a field has been set.
 
 ### GetEntity
 
@@ -152,6 +167,11 @@ and a boolean to check if the value has been set.
 
 SetEntity sets Entity field to given value.
 
+### HasEntity
+
+`func (o *QbdJournalDebitLine) HasEntity() bool`
+
+HasEntity returns a boolean if a field has been set.
 
 ### GetClass
 
@@ -172,6 +192,11 @@ and a boolean to check if the value has been set.
 
 SetClass sets Class field to given value.
 
+### HasClass
+
+`func (o *QbdJournalDebitLine) HasClass() bool`
+
+HasClass returns a boolean if a field has been set.
 
 ### GetSalesTaxItem
 
@@ -192,6 +217,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxItem sets SalesTaxItem field to given value.
 
+### HasSalesTaxItem
+
+`func (o *QbdJournalDebitLine) HasSalesTaxItem() bool`
+
+HasSalesTaxItem returns a boolean if a field has been set.
 
 ### GetBillingStatus
 
@@ -212,6 +242,11 @@ and a boolean to check if the value has been set.
 
 SetBillingStatus sets BillingStatus field to given value.
 
+### HasBillingStatus
+
+`func (o *QbdJournalDebitLine) HasBillingStatus() bool`
+
+HasBillingStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

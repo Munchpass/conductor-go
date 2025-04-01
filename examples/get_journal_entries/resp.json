@@ -1,0 +1,5151 @@
+{
+  "objectType": "list",
+  "url": "/v1/quickbooks-desktop/journal-entries",
+  "data": [
+    {
+      "id": "5E40-1197715323",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T10:42:03+00:00",
+      "updatedAt": "2025-12-15T07:37:41+00:00",
+      "revisionNumber": "1765784261",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 13",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E41-1197715323",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "25000.00",
+          "memo": "Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E42-1197715323",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "25000.00",
+          "memo": "Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5E43-1197715357",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T10:42:37+00:00",
+      "updatedAt": "2025-12-15T07:37:41+00:00",
+      "revisionNumber": "1765784261",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 14",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E44-1197715357",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "60000.00",
+          "memo": "Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E45-1197715357",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "8000008F-1197954502",
+            "fullName": "Note Payable - Bank of Anycity"
+          },
+          "amount": "60000.00",
+          "memo": "Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5E46-1197715490",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T10:44:50+00:00",
+      "updatedAt": "2025-12-15T07:37:41+00:00",
+      "revisionNumber": "1765784261",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 15",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E47-1197715490",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "1603.00",
+          "memo": "Opening Balance Adjustment - Net of Sales Tax on Open Invoices as of Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E48-1197715490",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "100000-933270541",
+            "fullName": "Sales Tax Payable"
+          },
+          "amount": "1603.00",
+          "memo": "Opening Balance Adjustment - Net of Sales Tax on Open Invoices as of Start Date",
+          "entity": {
+            "id": "110000-933272656",
+            "fullName": "State Board of Equalization"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5E73-1197721756",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T12:29:16+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 18",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E74-1197721756",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "40203.88",
+          "memo": "To record accumulated depreciation as of QuickBooks start date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E75-1197721756",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "620000-1197756666",
+            "fullName": "Accumulated Depreciation"
+          },
+          "amount": "40203.88",
+          "memo": "To record accumulated depreciation as of QuickBooks start date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "A494-1182159722",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-06-18T09:42:02+00:00",
+      "updatedAt": "2025-12-15T07:38:15+00:00",
+      "revisionNumber": "1765784295",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 20",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "A495-1182159722",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "18470.43",
+          "memo": "To clear OBE - to complete setup",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "A496-1182159722",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "160000-933270541",
+            "fullName": "Retained Earnings"
+          },
+          "amount": "18470.43",
+          "memo": "To clear OBE - to complete setup",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5C18-1197711471",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T09:37:51+00:00",
+      "updatedAt": "2025-12-15T07:37:40+00:00",
+      "revisionNumber": "1765784260",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 7",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C19-1197711471",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "20000-933270541",
+            "fullName": "Checking"
+          },
+          "amount": "27874.62",
+          "memo": "Opening Balance - Bank Balance - Checking Account",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5C1A-1197711471",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "30000-933270541",
+            "fullName": "Savings"
+          },
+          "amount": "15600.00",
+          "memo": "Opening Balance - Bank Balance - Savings Account",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C1C-1197711471",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "43474.62",
+          "memo": "Opening Balance - Bank Balance - Checking Account",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5C20-1197711855",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T09:44:15+00:00",
+      "updatedAt": "2025-12-15T07:37:40+00:00",
+      "revisionNumber": "1765784260",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 8",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C21-1197711855",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "50000-933270541",
+            "fullName": "Employee Advances"
+          },
+          "amount": "450.00",
+          "memo": "Opening Balance Entry - Loan to Kati Reynolds",
+          "entity": {
+            "id": "800000AA-1197711777",
+            "fullName": "Miller, Dan"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5C22-1197711855",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "50000-933270541",
+            "fullName": "Employee Advances"
+          },
+          "amount": "320.00",
+          "memo": "Opening Balance Entry - Loan to Jim Moen",
+          "entity": {
+            "id": "800000AB-1197711791",
+            "fullName": "Mason, Elizabeth"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C23-1197711855",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "770.00",
+          "memo": "Opening Balance Entry - Loans to Employees",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "A48E-1182159710",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-06-18T09:41:50+00:00",
+      "updatedAt": "2025-12-15T07:38:14+00:00",
+      "revisionNumber": "1765784295",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 19",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "A48F-1182159710",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "90000-933270541",
+            "fullName": "Vehicles"
+          },
+          "amount": "78936.91",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "A490-1182159710",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "120000-933270541",
+            "fullName": "Loan - Vehicles (Van)"
+          },
+          "amount": "21692.00",
+          "memo": "Loan for Vehicle Purchase",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "A491-1182159710",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000075-1197719780",
+            "fullName": "Loan - Vehicles (Utility Truck)"
+          },
+          "amount": "19936.91",
+          "memo": "Loan for Vehicle Purchase",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "A492-1182159710",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000076-1197719828",
+            "fullName": "Loan - Vehicles (Pickup Truck)"
+          },
+          "amount": "22641.00",
+          "memo": "Loan for Vehicle Purchase",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "A493-1182159710",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "14667.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "CE7D-1323971971",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2011-12-15T17:59:31+00:00",
+      "updatedAt": "2025-12-15T07:38:15+00:00",
+      "revisionNumber": "1765784295",
+      "transactionDate": "2024-12-31",
+      "refNumber": "FAM2009",
+      "isAdjustment": true,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "CE7E-1323971971",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "250000-933270542",
+            "fullName": "Depreciation Expense"
+          },
+          "amount": "23519.10",
+          "memo": "Record 2009 Depreciation",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "CE7F-1323971971",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "620000-1197756666",
+            "fullName": "Accumulated Depreciation"
+          },
+          "amount": "23519.10",
+          "memo": "Record 2009 Depreciation",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "CE80-1323972480",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2011-12-15T18:08:00+00:00",
+      "updatedAt": "2025-12-15T07:38:15+00:00",
+      "revisionNumber": "1765784295",
+      "transactionDate": "2024-12-31",
+      "refNumber": "FAM2009",
+      "isAdjustment": true,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "CE81-1323972480",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "250000-933270542",
+            "fullName": "Depreciation Expense"
+          },
+          "amount": "2185.71",
+          "memo": "Record 2009 Depreciation",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "CE82-1323972480",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "620000-1197756666",
+            "fullName": "Accumulated Depreciation"
+          },
+          "amount": "2185.71",
+          "memo": "Record 2009 Depreciation",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5C24-1197711941",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T09:45:41+00:00",
+      "updatedAt": "2025-12-15T07:37:40+00:00",
+      "revisionNumber": "1765784260",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 9",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C25-1197711941",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "4050.00",
+          "memo": "Opening Balance - Prepaid Insurance",
+          "entity": {
+            "id": "120000-933272657",
+            "fullName": "Sergeant Insurance"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C26-1197711941",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "4050.00",
+          "memo": "Opening Balance - Prepaid Insurance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5E3D-1197715279",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T10:41:19+00:00",
+      "updatedAt": "2025-12-15T07:37:41+00:00",
+      "revisionNumber": "1765784261",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 12",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E3E-1197715279",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "550001-1071509830",
+            "fullName": "Petty Cash"
+          },
+          "amount": "500.00",
+          "memo": "Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E3F-1197715279",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "500.00",
+          "memo": "Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5E69-1197717858",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T11:24:18+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 17",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E6D-1197717858",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "21883.89",
+          "memo": "To Set Opening Credit Card Balances - As Shown on the Credit Card Statement",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E6A-1197717858",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "570000-1071509253",
+            "fullName": "QuickBooks Credit Card"
+          },
+          "amount": "12362.89",
+          "memo": "To Set Opening Credit Card Balances - As Shown on the Credit Card Statement",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E6B-1197717858",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "8000007E-1197732180",
+            "fullName": "CalOil Credit Card"
+          },
+          "amount": "6253.00",
+          "memo": "To Set Opening Credit Card Balances - As Shown on the Credit Card Statement",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E6C-1197717858",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "8000007E-1197732180",
+            "fullName": "CalOil Credit Card"
+          },
+          "amount": "3268.00",
+          "memo": "To Set Opening Credit Card Balances - As Shown on the Credit Card Statement",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5E3A-1197715200",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T10:40:00+00:00",
+      "updatedAt": "2025-12-15T07:37:41+00:00",
+      "revisionNumber": "1765784261",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 11",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E3B-1197715200",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "590000-1071511920",
+            "fullName": "Construction Equipment"
+          },
+          "amount": "15300.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E3C-1197715200",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "15300.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5019-1197774305",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-16T03:05:05+00:00",
+      "updatedAt": "2025-12-15T07:37:17+00:00",
+      "revisionNumber": "1765784237",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 1",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "501B-1197774305",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "14343.11",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "501A-1197774305",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "5B0000-1197774305",
+            "fullName": "Loan - Construction Equipment"
+          },
+          "amount": "14343.11",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5387-1197755560",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T21:52:40+00:00",
+      "updatedAt": "2025-12-15T07:37:18+00:00",
+      "revisionNumber": "1765784238",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 3",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C08-1197755560",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "5F0000-1197755449",
+            "fullName": "Furniture and Equipment"
+          },
+          "amount": "20726.00",
+          "memo": "Server - Purchased",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C09-1197755560",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "20726.00",
+          "memo": "Opening Balance - Furniture and Computers",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "537D-1197753544",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T21:19:04+00:00",
+      "updatedAt": "2025-12-15T07:37:17+00:00",
+      "revisionNumber": "1765784237",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 2",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "537E-1197753544",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "610000-1197756496",
+            "fullName": "Land"
+          },
+          "amount": "90000.00",
+          "memo": "Opening Balance Entry - Land",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "537F-1197753544",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "600000-1197756365",
+            "fullName": "Buildings and Improvements"
+          },
+          "amount": "325000.00",
+          "memo": "Opening Balance Entry - Building",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5380-1197753544",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "415000.00",
+          "memo": "Opening Balance - Land and Building",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5C7A-1197712931",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T10:02:11+00:00",
+      "updatedAt": "2025-12-15T07:37:40+00:00",
+      "revisionNumber": "1765784260",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 10",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C7B-1197712931",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "80000063-1197709076",
+            "fullName": "Security Deposits"
+          },
+          "amount": "1720.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C7C-1197712931",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "1720.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5C0C-1197709715",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T09:08:35+00:00",
+      "updatedAt": "2025-12-15T07:37:40+00:00",
+      "revisionNumber": "1765784260",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 4",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C0E-1197709715",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "500.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C0D-1197709715",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000066-1197709715",
+            "fullName": "Capital Stock"
+          },
+          "amount": "500.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5C15-1197711277",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T09:34:37+00:00",
+      "updatedAt": "2025-12-15T07:37:40+00:00",
+      "revisionNumber": "1765784260",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 6",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C17-1197711277",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "296283.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C16-1197711277",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000067-1197709946",
+            "fullName": "Mortgage - Office Building"
+          },
+          "amount": "296283.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5C12-1197710591",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T09:23:11+00:00",
+      "updatedAt": "2025-12-15T07:37:40+00:00",
+      "revisionNumber": "1765784260",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 5",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5C14-1197710591",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "21000.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5C13-1197710591",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000068-1197710590",
+            "fullName": "Loan - Furniture/Office Equip"
+          },
+          "amount": "21000.00",
+          "memo": "Account Opening Balance",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5E60-1197717742",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T11:22:22+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2024-12-31",
+      "refNumber": "Setup 16",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "5E68-1197717742",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "10000-933270541",
+            "fullName": "Opening Bal Equity"
+          },
+          "amount": "5326.56",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "5E61-1197717742",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "8000006E-1197716149",
+            "fullName": "Payroll Liabilities:Federal Withholding"
+          },
+          "amount": "1377.00",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E62-1197717742",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "8000006F-1197716183",
+            "fullName": "Payroll Liabilities:FICA Payable"
+          },
+          "amount": "2118.82",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E63-1197717742",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "8000006C-1197716105",
+            "fullName": "Payroll Liabilities:FUTA Payable"
+          },
+          "amount": "100.00",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E64-1197717742",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000071-1197716353",
+            "fullName": "Payroll Liabilities:State Withholding"
+          },
+          "amount": "308.34",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E65-1197717742",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000072-1197716383",
+            "fullName": "Payroll Liabilities:State Disability Payable"
+          },
+          "amount": "98.09",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E66-1197717742",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000073-1197716416",
+            "fullName": "Payroll Liabilities:SUTA Payable"
+          },
+          "amount": "110.00",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "5E67-1197717742",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "8000006A-1197716008",
+            "fullName": "Payroll Liabilities:Worker's Compensation"
+          },
+          "amount": "1214.31",
+          "memo": "To Set Opening PR Liabilities as of QB Start Date",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37A1-1071515211",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:06:51+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-01-01",
+      "refNumber": "1001",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "37A3-1071515211",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "has_been_billed"
+        },
+        {
+          "id": "37A4-1071515211",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "has_been_billed"
+        },
+        {
+          "id": "37A5-1071515211",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "has_been_billed"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37A2-1071515211",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "has_been_billed"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "2FBE0-1797318151",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2026-12-15T07:02:31+00:00",
+      "updatedAt": "2026-12-15T07:02:31+00:00",
+      "revisionNumber": "1797318151",
+      "transactionDate": "2025-01-06",
+      "refNumber": "FAM2011",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "2FBE1-1797318151",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "80000094-1797309018",
+            "fullName": "Grubhub Fees"
+          },
+          "amount": "138.75",
+          "memo": "Marketing",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "2FBE2-1797318151",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "80000094-1797309018",
+            "fullName": "Grubhub Fees"
+          },
+          "amount": "312.75",
+          "memo": "Delivery Commission",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "2FBE3-1797318151",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "80000094-1797309018",
+            "fullName": "Grubhub Fees"
+          },
+          "amount": "127.00",
+          "memo": "Promotions",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "2FBE4-1797318151",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "80000094-1797309018",
+            "fullName": "Grubhub Fees"
+          },
+          "amount": "112.14",
+          "memo": "Processing",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "2FBE5-1797318151",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "80000093-1797308958",
+            "fullName": "Undeposited Funds - Grubhub"
+          },
+          "amount": "2288.21",
+          "memo": null,
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "2FBE6-1797318151",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000095-1797309032",
+            "fullName": "Grub Hub Sales"
+          },
+          "amount": "2739.00",
+          "memo": null,
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "2FBE7-1797318151",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "80000096-1797311736",
+            "fullName": "Tips Payable"
+          },
+          "amount": "7.85",
+          "memo": "Grubhub",
+          "entity": {
+            "id": "800000DC-1797315127",
+            "fullName": "Grubhub"
+          },
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        },
+        {
+          "id": "2FBE8-1797318151",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "100000-933270541",
+            "fullName": "Sales Tax Payable"
+          },
+          "amount": "232.00",
+          "memo": "Grubhub",
+          "entity": {
+            "id": "800000DC-1797315127",
+            "fullName": "Grubhub"
+          },
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37A6-1071515211",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:06:51+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-02-01",
+      "refNumber": "1002",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "37A8-1071515211",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37A9-1071515211",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37AA-1071515211",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37A7-1071515211",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37E5-1071515548",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:28+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-03-01",
+      "refNumber": "1003",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "37E7-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37E8-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37E9-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37E6-1071515548",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37EA-1071515548",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:28+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-04-01",
+      "refNumber": "1004",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "37EC-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37ED-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37EE-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37EB-1071515548",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37EF-1071515548",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:28+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-05-01",
+      "refNumber": "1005",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "37F1-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37F2-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37F3-1071515548",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37F0-1071515548",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37F4-1071515549",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:29+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-06-01",
+      "refNumber": "1006",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "37F6-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37F7-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37F8-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37F5-1071515549",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37F9-1071515549",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:29+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-07-01",
+      "refNumber": "1007",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "37FB-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37FC-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "37FD-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37FA-1071515549",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "5359-1197761657",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:34:17+00:00",
+      "updatedAt": "2025-12-15T07:37:17+00:00",
+      "revisionNumber": "1765784237",
+      "transactionDate": "2025-07-31",
+      "refNumber": "1008",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "535A-1197761657",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "535B-1197761657",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "37FE-1071515549",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:29+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-08-01",
+      "refNumber": "1009",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "3800-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3801-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3802-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "37FF-1071515549",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "6685-1197759880",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:04:40+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2025-08-31",
+      "refNumber": "1010",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "6686-1197759880",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "6687-1197759880",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "3803-1071515549",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:29+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-09-01",
+      "refNumber": "1011",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "3805-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3806-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3807-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "3804-1071515549",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "6688-1197759893",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:04:53+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2025-09-30",
+      "refNumber": "1012",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "6689-1197759893",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "668A-1197759893",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "3808-1071515549",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:29+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-10-01",
+      "refNumber": "1013",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "380A-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "380B-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "380C-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "3809-1071515549",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "668B-1197759901",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:01+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2025-10-31",
+      "refNumber": "1014",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "668C-1197759901",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "668D-1197759901",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "380D-1071515549",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:29+00:00",
+      "updatedAt": "2025-12-15T07:36:33+00:00",
+      "revisionNumber": "1765784193",
+      "transactionDate": "2025-11-01",
+      "refNumber": "1015",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "380F-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3810-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3811-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "380E-1071515549",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "668E-1197759909",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:09+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2025-11-30",
+      "refNumber": "1016",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "668F-1197759909",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "6690-1197759909",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "3812-1071515549",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2003-12-15T19:12:29+00:00",
+      "updatedAt": "2025-12-15T07:36:34+00:00",
+      "revisionNumber": "1765784194",
+      "transactionDate": "2025-12-01",
+      "refNumber": "1017",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "3814-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3815-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "3816-1071515549",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Monthly Asset Adjust",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "3813-1071515549",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": null,
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "CE83-1323972739",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2011-12-15T18:12:19+00:00",
+      "updatedAt": "2025-12-15T07:38:15+00:00",
+      "revisionNumber": "1765784295",
+      "transactionDate": "2025-12-31",
+      "refNumber": "FAM2010",
+      "isAdjustment": true,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "CE84-1323972739",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "250000-933270542",
+            "fullName": "Depreciation Expense"
+          },
+          "amount": "44435.91",
+          "memo": "Record 2010 Depreciation",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "CE85-1323972739",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "620000-1197756666",
+            "fullName": "Accumulated Depreciation"
+          },
+          "amount": "44435.91",
+          "memo": "Record 2010 Depreciation",
+          "entity": null,
+          "class": null,
+          "salesTaxItem": null,
+          "billingStatus": null
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "6691-1197759914",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:14+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2025-12-31",
+      "refNumber": "1018",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "6692-1197759914",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "6693-1197759914",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "6694-1197759927",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:27+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-01-31",
+      "refNumber": "1100",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "6695-1197759927",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "6696-1197759927",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66C7-1197760210",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:10+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-01-31",
+      "refNumber": "1101",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66C9-1197760210",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66CA-1197760210",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66CB-1197760210",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66C8-1197760210",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "6697-1197759936",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:36+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-02-28",
+      "refNumber": "1102",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "6698-1197759936",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "6699-1197759936",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66CC-1197760219",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:19+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-02-28",
+      "refNumber": "1103",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66CE-1197760219",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66CF-1197760219",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66D0-1197760219",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66CD-1197760219",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "669A-1197759940",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:40+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-03-31",
+      "refNumber": "1104",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "669B-1197759940",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "669C-1197759940",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66D1-1197760225",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:25+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-03-31",
+      "refNumber": "1105",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66D3-1197760225",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66D4-1197760225",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66D5-1197760225",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66D2-1197760225",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "669D-1197759945",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:45+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-04-30",
+      "refNumber": "1106",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "669E-1197759945",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "669F-1197759945",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66D6-1197760234",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:34+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-04-30",
+      "refNumber": "1107",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66D8-1197760234",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66D9-1197760234",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66DA-1197760234",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66D7-1197760234",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66A0-1197759950",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:50+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-05-31",
+      "refNumber": "1108",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66A1-1197759950",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66A2-1197759950",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66DB-1197760238",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:38+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-05-31",
+      "refNumber": "1109",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66DD-1197760238",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66DE-1197760238",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66DF-1197760238",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66DC-1197760238",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66A3-1197759957",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:05:57+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-06-30",
+      "refNumber": "1110",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66A4-1197759957",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66A5-1197759957",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66E0-1197760242",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:42+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-06-30",
+      "refNumber": "1111",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66E2-1197760242",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66E3-1197760242",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66E4-1197760242",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66E1-1197760242",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66A6-1197759966",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:06:06+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-07-31",
+      "refNumber": "1112",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66A7-1197759966",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66A8-1197759966",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66E5-1197760247",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:47+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-07-31",
+      "refNumber": "1113",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66E7-1197760247",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66E8-1197760247",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66E9-1197760247",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66E6-1197760247",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66A9-1197759973",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:06:13+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-08-31",
+      "refNumber": "1114",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66AA-1197759973",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66AB-1197759973",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66EA-1197760255",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:10:55+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-08-31",
+      "refNumber": "1115",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66EC-1197760255",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66ED-1197760255",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66EE-1197760255",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66EB-1197760255",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66AC-1197759980",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:06:20+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-09-30",
+      "refNumber": "1116",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66AD-1197759980",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66AE-1197759980",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66AF-1197759987",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:06:27+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-09-30",
+      "refNumber": "1117",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66B0-1197759987",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66B1-1197759987",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66EF-1197760261",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:11:01+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-09-30",
+      "refNumber": "1118",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66F1-1197760261",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66F2-1197760261",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66F3-1197760261",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66F0-1197760261",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66B2-1197759991",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:06:31+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-10-31",
+      "refNumber": "1119",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66B3-1197759991",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66B4-1197759991",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66F4-1197760266",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:11:06+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-10-31",
+      "refNumber": "1120",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66F6-1197760266",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "275.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66F7-1197760266",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "50.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66F8-1197760266",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "350.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66F5-1197760266",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "675.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66B5-1197759997",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:06:37+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-11-30",
+      "refNumber": "1121",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66B6-1197759997",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66B7-1197759997",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "148.83",
+          "memo": "July allocation of prepaid rider policy",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    },
+    {
+      "id": "66F9-1197760272",
+      "objectType": "qbd_journal_entry",
+      "createdAt": "2007-12-15T23:11:12+00:00",
+      "updatedAt": "2025-12-15T07:37:42+00:00",
+      "revisionNumber": "1765784262",
+      "transactionDate": "2026-11-30",
+      "refNumber": "1122",
+      "isAdjustment": false,
+      "isHomeCurrencyAdjustment": null,
+      "areAmountsEnteredInHomeCurrency": null,
+      "currency": null,
+      "exchangeRate": null,
+      "externalId": null,
+      "debitLines": [
+        {
+          "id": "66FB-1197760272",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2C0000-933270542",
+            "fullName": "Insurance:Work Comp"
+          },
+          "amount": "175.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66FC-1197760272",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2A0000-933270542",
+            "fullName": "Insurance:Disability Insurance"
+          },
+          "amount": "32.06",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        },
+        {
+          "id": "66FD-1197760272",
+          "objectType": "qbd_journal_debit_line",
+          "account": {
+            "id": "2B0000-933270542",
+            "fullName": "Insurance:Liability Insurance"
+          },
+          "amount": "250.00",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "creditLines": [
+        {
+          "id": "66FA-1197760272",
+          "objectType": "qbd_journal_credit_line",
+          "account": {
+            "id": "370001-1071514466",
+            "fullName": "Pre-paid Insurance"
+          },
+          "amount": "457.06",
+          "memo": "Recurring Journal to Amortize Insurance Expense",
+          "entity": {
+            "id": "800000B0-1197755238",
+            "fullName": "Overhead"
+          },
+          "class": {
+            "id": "80000007-1197713802",
+            "fullName": "Overhead"
+          },
+          "salesTaxItem": null,
+          "billingStatus": "not_billable"
+        }
+      ],
+      "customFields": []
+    }
+  ],
+  "nextCursor": null,
+  "remainingCount": 0,
+  "hasMore": false
+}

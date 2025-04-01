@@ -58964,13 +58964,6 @@ components:
         - updatedAt
         - revisionNumber
         - transactionDate
-        - refNumber
-        - isAdjustment
-        - isHomeCurrencyAdjustment
-        - areAmountsEnteredInHomeCurrency
-        - currency
-        - exchangeRate
-        - externalId
         - debitLines
         - creditLines
         - customFields
@@ -59153,13 +59146,6 @@ components:
       required:
         - id
         - objectType
-        - account
-        - amount
-        - memo
-        - entity
-        - class
-        - salesTaxItem
-        - billingStatus
       additionalProperties: false
       title: The Journal Debit Line object
       x-conductor-object-type: nested
@@ -59334,12 +59320,6 @@ components:
         - id
         - objectType
         - account
-        - amount
-        - memo
-        - entity
-        - class
-        - salesTaxItem
-        - billingStatus
       additionalProperties: false
       title: The Journal Credit Line object
       x-conductor-object-type: nested

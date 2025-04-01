@@ -33,18 +33,18 @@ type QbdJournalEntry struct {
 	// The date of this journal entry, in ISO 8601 format (YYYY-MM-DD).
 	TransactionDate string `json:"transactionDate"`
 	// The case-sensitive user-defined reference number for this journal entry, which can be used to identify the transaction in QuickBooks. This value is not required to be unique and can be arbitrarily changed by the QuickBooks user.
-	RefNumber string `json:"refNumber"`
+	RefNumber *string `json:"refNumber,omitempty"`
 	// Indicates whether this journal entry is an adjustment entry. When `true`, QuickBooks retains the original entry information to maintain an audit trail of the adjustments.
-	IsAdjustment bool `json:"isAdjustment"`
+	IsAdjustment *bool `json:"isAdjustment,omitempty"`
 	// Indicates whether this journal entry is an adjustment made in the company's home currency for a transaction that was originally recorded in a foreign currency.
-	IsHomeCurrencyAdjustment bool `json:"isHomeCurrencyAdjustment"`
+	IsHomeCurrencyAdjustment *bool `json:"isHomeCurrencyAdjustment,omitempty"`
 	// Indicates whether the amounts in this journal entry were entered in the company's home currency rather than a foreign currency. When `true`, amounts are in the home currency regardless of the `currency` field.
-	AreAmountsEnteredInHomeCurrency bool `json:"areAmountsEnteredInHomeCurrency"`
-	Currency QbdJournalEntryCurrency `json:"currency"`
+	AreAmountsEnteredInHomeCurrency *bool `json:"areAmountsEnteredInHomeCurrency,omitempty"`
+	Currency *QbdJournalEntryCurrency `json:"currency,omitempty"`
 	// The market exchange rate between this journal entry's currency and the home currency in QuickBooks at the time of this transaction. Represented as a decimal value (e.g., 1.2345 for 1 EUR = 1.2345 USD if USD is the home currency).
-	ExchangeRate float32 `json:"exchangeRate"`
+	ExchangeRate *float32 `json:"exchangeRate,omitempty"`
 	// A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation.
-	ExternalId string `json:"externalId"`
+	ExternalId *string `json:"externalId,omitempty"`
 	// The journal entry's debit lines.
 	DebitLines []QbdJournalDebitLine `json:"debitLines"`
 	// The journal entry's credit lines.
@@ -60,7 +60,7 @@ type _QbdJournalEntry QbdJournalEntry
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewQbdJournalEntry(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, transactionDate string, refNumber string, isAdjustment bool, isHomeCurrencyAdjustment bool, areAmountsEnteredInHomeCurrency bool, currency QbdJournalEntryCurrency, exchangeRate float32, externalId string, debitLines []QbdJournalDebitLine, creditLines []QbdJournalCreditLine, customFields []QbdCustomField) *QbdJournalEntry {
+func NewQbdJournalEntry(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, transactionDate string, debitLines []QbdJournalDebitLine, creditLines []QbdJournalCreditLine, customFields []QbdCustomField) *QbdJournalEntry {
 	this := QbdJournalEntry{}
 	this.Id = id
 	this.ObjectType = objectType
@@ -68,13 +68,6 @@ func NewQbdJournalEntry(id string, objectType string, createdAt string, updatedA
 	this.UpdatedAt = updatedAt
 	this.RevisionNumber = revisionNumber
 	this.TransactionDate = transactionDate
-	this.RefNumber = refNumber
-	this.IsAdjustment = isAdjustment
-	this.IsHomeCurrencyAdjustment = isHomeCurrencyAdjustment
-	this.AreAmountsEnteredInHomeCurrency = areAmountsEnteredInHomeCurrency
-	this.Currency = currency
-	this.ExchangeRate = exchangeRate
-	this.ExternalId = externalId
 	this.DebitLines = debitLines
 	this.CreditLines = creditLines
 	this.CustomFields = customFields
@@ -233,172 +226,228 @@ func (o *QbdJournalEntry) SetTransactionDate(v string) {
 	o.TransactionDate = v
 }
 
-// GetRefNumber returns the RefNumber field value
+// GetRefNumber returns the RefNumber field value if set, zero value otherwise.
 func (o *QbdJournalEntry) GetRefNumber() string {
-	if o == nil {
+	if o == nil || IsNil(o.RefNumber) {
 		var ret string
 		return ret
 	}
-
-	return o.RefNumber
+	return *o.RefNumber
 }
 
-// GetRefNumberOk returns a tuple with the RefNumber field value
+// GetRefNumberOk returns a tuple with the RefNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalEntry) GetRefNumberOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.RefNumber) {
 		return nil, false
 	}
-	return &o.RefNumber, true
+	return o.RefNumber, true
 }
 
-// SetRefNumber sets field value
+// HasRefNumber returns a boolean if a field has been set.
+func (o *QbdJournalEntry) HasRefNumber() bool {
+	if o != nil && !IsNil(o.RefNumber) {
+		return true
+	}
+
+	return false
+}
+
+// SetRefNumber gets a reference to the given string and assigns it to the RefNumber field.
 func (o *QbdJournalEntry) SetRefNumber(v string) {
-	o.RefNumber = v
+	o.RefNumber = &v
 }
 
-// GetIsAdjustment returns the IsAdjustment field value
+// GetIsAdjustment returns the IsAdjustment field value if set, zero value otherwise.
 func (o *QbdJournalEntry) GetIsAdjustment() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsAdjustment) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsAdjustment
+	return *o.IsAdjustment
 }
 
-// GetIsAdjustmentOk returns a tuple with the IsAdjustment field value
+// GetIsAdjustmentOk returns a tuple with the IsAdjustment field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalEntry) GetIsAdjustmentOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsAdjustment) {
 		return nil, false
 	}
-	return &o.IsAdjustment, true
+	return o.IsAdjustment, true
 }
 
-// SetIsAdjustment sets field value
+// HasIsAdjustment returns a boolean if a field has been set.
+func (o *QbdJournalEntry) HasIsAdjustment() bool {
+	if o != nil && !IsNil(o.IsAdjustment) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsAdjustment gets a reference to the given bool and assigns it to the IsAdjustment field.
 func (o *QbdJournalEntry) SetIsAdjustment(v bool) {
-	o.IsAdjustment = v
+	o.IsAdjustment = &v
 }
 
-// GetIsHomeCurrencyAdjustment returns the IsHomeCurrencyAdjustment field value
+// GetIsHomeCurrencyAdjustment returns the IsHomeCurrencyAdjustment field value if set, zero value otherwise.
 func (o *QbdJournalEntry) GetIsHomeCurrencyAdjustment() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsHomeCurrencyAdjustment) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsHomeCurrencyAdjustment
+	return *o.IsHomeCurrencyAdjustment
 }
 
-// GetIsHomeCurrencyAdjustmentOk returns a tuple with the IsHomeCurrencyAdjustment field value
+// GetIsHomeCurrencyAdjustmentOk returns a tuple with the IsHomeCurrencyAdjustment field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalEntry) GetIsHomeCurrencyAdjustmentOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsHomeCurrencyAdjustment) {
 		return nil, false
 	}
-	return &o.IsHomeCurrencyAdjustment, true
+	return o.IsHomeCurrencyAdjustment, true
 }
 
-// SetIsHomeCurrencyAdjustment sets field value
+// HasIsHomeCurrencyAdjustment returns a boolean if a field has been set.
+func (o *QbdJournalEntry) HasIsHomeCurrencyAdjustment() bool {
+	if o != nil && !IsNil(o.IsHomeCurrencyAdjustment) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsHomeCurrencyAdjustment gets a reference to the given bool and assigns it to the IsHomeCurrencyAdjustment field.
 func (o *QbdJournalEntry) SetIsHomeCurrencyAdjustment(v bool) {
-	o.IsHomeCurrencyAdjustment = v
+	o.IsHomeCurrencyAdjustment = &v
 }
 
-// GetAreAmountsEnteredInHomeCurrency returns the AreAmountsEnteredInHomeCurrency field value
+// GetAreAmountsEnteredInHomeCurrency returns the AreAmountsEnteredInHomeCurrency field value if set, zero value otherwise.
 func (o *QbdJournalEntry) GetAreAmountsEnteredInHomeCurrency() bool {
-	if o == nil {
+	if o == nil || IsNil(o.AreAmountsEnteredInHomeCurrency) {
 		var ret bool
 		return ret
 	}
-
-	return o.AreAmountsEnteredInHomeCurrency
+	return *o.AreAmountsEnteredInHomeCurrency
 }
 
-// GetAreAmountsEnteredInHomeCurrencyOk returns a tuple with the AreAmountsEnteredInHomeCurrency field value
+// GetAreAmountsEnteredInHomeCurrencyOk returns a tuple with the AreAmountsEnteredInHomeCurrency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalEntry) GetAreAmountsEnteredInHomeCurrencyOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.AreAmountsEnteredInHomeCurrency) {
 		return nil, false
 	}
-	return &o.AreAmountsEnteredInHomeCurrency, true
+	return o.AreAmountsEnteredInHomeCurrency, true
 }
 
-// SetAreAmountsEnteredInHomeCurrency sets field value
+// HasAreAmountsEnteredInHomeCurrency returns a boolean if a field has been set.
+func (o *QbdJournalEntry) HasAreAmountsEnteredInHomeCurrency() bool {
+	if o != nil && !IsNil(o.AreAmountsEnteredInHomeCurrency) {
+		return true
+	}
+
+	return false
+}
+
+// SetAreAmountsEnteredInHomeCurrency gets a reference to the given bool and assigns it to the AreAmountsEnteredInHomeCurrency field.
 func (o *QbdJournalEntry) SetAreAmountsEnteredInHomeCurrency(v bool) {
-	o.AreAmountsEnteredInHomeCurrency = v
+	o.AreAmountsEnteredInHomeCurrency = &v
 }
 
-// GetCurrency returns the Currency field value
+// GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *QbdJournalEntry) GetCurrency() QbdJournalEntryCurrency {
-	if o == nil {
+	if o == nil || IsNil(o.Currency) {
 		var ret QbdJournalEntryCurrency
 		return ret
 	}
-
-	return o.Currency
+	return *o.Currency
 }
 
-// GetCurrencyOk returns a tuple with the Currency field value
+// GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalEntry) GetCurrencyOk() (*QbdJournalEntryCurrency, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Currency) {
 		return nil, false
 	}
-	return &o.Currency, true
+	return o.Currency, true
 }
 
-// SetCurrency sets field value
+// HasCurrency returns a boolean if a field has been set.
+func (o *QbdJournalEntry) HasCurrency() bool {
+	if o != nil && !IsNil(o.Currency) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrency gets a reference to the given QbdJournalEntryCurrency and assigns it to the Currency field.
 func (o *QbdJournalEntry) SetCurrency(v QbdJournalEntryCurrency) {
-	o.Currency = v
+	o.Currency = &v
 }
 
-// GetExchangeRate returns the ExchangeRate field value
+// GetExchangeRate returns the ExchangeRate field value if set, zero value otherwise.
 func (o *QbdJournalEntry) GetExchangeRate() float32 {
-	if o == nil {
+	if o == nil || IsNil(o.ExchangeRate) {
 		var ret float32
 		return ret
 	}
-
-	return o.ExchangeRate
+	return *o.ExchangeRate
 }
 
-// GetExchangeRateOk returns a tuple with the ExchangeRate field value
+// GetExchangeRateOk returns a tuple with the ExchangeRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalEntry) GetExchangeRateOk() (*float32, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ExchangeRate) {
 		return nil, false
 	}
-	return &o.ExchangeRate, true
+	return o.ExchangeRate, true
 }
 
-// SetExchangeRate sets field value
+// HasExchangeRate returns a boolean if a field has been set.
+func (o *QbdJournalEntry) HasExchangeRate() bool {
+	if o != nil && !IsNil(o.ExchangeRate) {
+		return true
+	}
+
+	return false
+}
+
+// SetExchangeRate gets a reference to the given float32 and assigns it to the ExchangeRate field.
 func (o *QbdJournalEntry) SetExchangeRate(v float32) {
-	o.ExchangeRate = v
+	o.ExchangeRate = &v
 }
 
-// GetExternalId returns the ExternalId field value
+// GetExternalId returns the ExternalId field value if set, zero value otherwise.
 func (o *QbdJournalEntry) GetExternalId() string {
-	if o == nil {
+	if o == nil || IsNil(o.ExternalId) {
 		var ret string
 		return ret
 	}
-
-	return o.ExternalId
+	return *o.ExternalId
 }
 
-// GetExternalIdOk returns a tuple with the ExternalId field value
+// GetExternalIdOk returns a tuple with the ExternalId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdJournalEntry) GetExternalIdOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ExternalId) {
 		return nil, false
 	}
-	return &o.ExternalId, true
+	return o.ExternalId, true
 }
 
-// SetExternalId sets field value
+// HasExternalId returns a boolean if a field has been set.
+func (o *QbdJournalEntry) HasExternalId() bool {
+	if o != nil && !IsNil(o.ExternalId) {
+		return true
+	}
+
+	return false
+}
+
+// SetExternalId gets a reference to the given string and assigns it to the ExternalId field.
 func (o *QbdJournalEntry) SetExternalId(v string) {
-	o.ExternalId = v
+	o.ExternalId = &v
 }
 
 // GetDebitLines returns the DebitLines field value
@@ -489,13 +538,27 @@ func (o QbdJournalEntry) ToMap() (map[string]interface{}, error) {
 	toSerialize["updatedAt"] = o.UpdatedAt
 	toSerialize["revisionNumber"] = o.RevisionNumber
 	toSerialize["transactionDate"] = o.TransactionDate
-	toSerialize["refNumber"] = o.RefNumber
-	toSerialize["isAdjustment"] = o.IsAdjustment
-	toSerialize["isHomeCurrencyAdjustment"] = o.IsHomeCurrencyAdjustment
-	toSerialize["areAmountsEnteredInHomeCurrency"] = o.AreAmountsEnteredInHomeCurrency
-	toSerialize["currency"] = o.Currency
-	toSerialize["exchangeRate"] = o.ExchangeRate
-	toSerialize["externalId"] = o.ExternalId
+	if !IsNil(o.RefNumber) {
+		toSerialize["refNumber"] = o.RefNumber
+	}
+	if !IsNil(o.IsAdjustment) {
+		toSerialize["isAdjustment"] = o.IsAdjustment
+	}
+	if !IsNil(o.IsHomeCurrencyAdjustment) {
+		toSerialize["isHomeCurrencyAdjustment"] = o.IsHomeCurrencyAdjustment
+	}
+	if !IsNil(o.AreAmountsEnteredInHomeCurrency) {
+		toSerialize["areAmountsEnteredInHomeCurrency"] = o.AreAmountsEnteredInHomeCurrency
+	}
+	if !IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
+	if !IsNil(o.ExchangeRate) {
+		toSerialize["exchangeRate"] = o.ExchangeRate
+	}
+	if !IsNil(o.ExternalId) {
+		toSerialize["externalId"] = o.ExternalId
+	}
 	toSerialize["debitLines"] = o.DebitLines
 	toSerialize["creditLines"] = o.CreditLines
 	toSerialize["customFields"] = o.CustomFields
@@ -518,13 +581,6 @@ func (o *QbdJournalEntry) UnmarshalJSON(data []byte) (err error) {
 		"updatedAt",
 		"revisionNumber",
 		"transactionDate",
-		"refNumber",
-		"isAdjustment",
-		"isHomeCurrencyAdjustment",
-		"areAmountsEnteredInHomeCurrency",
-		"currency",
-		"exchangeRate",
-		"externalId",
 		"debitLines",
 		"creditLines",
 		"customFields",

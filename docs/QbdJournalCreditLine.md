@@ -7,18 +7,18 @@ Name | Type | Description | Notes
 **Id** | **string** | The unique identifier assigned by QuickBooks to this journal credit line. This ID is unique across all transaction line types. | 
 **ObjectType** | **string** | The type of object. This value is always &#x60;\&quot;qbd_journal_credit_line\&quot;&#x60;. | 
 **Account** | [**QbdJournalCreditLineAccount**](QbdJournalCreditLineAccount.md) |  | 
-**Amount** | **string** | The monetary amount of this journal credit line, represented as a decimal string. | 
-**Memo** | **string** | A memo or note for this journal credit line. | 
-**Entity** | [**QbdJournalCreditLineEntity**](QbdJournalCreditLineEntity.md) |  | 
-**Class** | [**QbdJournalCreditLineClass**](QbdJournalCreditLineClass.md) |  | 
-**SalesTaxItem** | [**QbdJournalCreditLineSalesTaxItem**](QbdJournalCreditLineSalesTaxItem.md) |  | 
-**BillingStatus** | **string** | The billing status of this journal credit line. | 
+**Amount** | Pointer to **string** | The monetary amount of this journal credit line, represented as a decimal string. | [optional] 
+**Memo** | Pointer to **string** | A memo or note for this journal credit line. | [optional] 
+**Entity** | Pointer to [**QbdJournalCreditLineEntity**](QbdJournalCreditLineEntity.md) |  | [optional] 
+**Class** | Pointer to [**QbdJournalCreditLineClass**](QbdJournalCreditLineClass.md) |  | [optional] 
+**SalesTaxItem** | Pointer to [**QbdJournalCreditLineSalesTaxItem**](QbdJournalCreditLineSalesTaxItem.md) |  | [optional] 
+**BillingStatus** | Pointer to **string** | The billing status of this journal credit line. | [optional] 
 
 ## Methods
 
 ### NewQbdJournalCreditLine
 
-`func NewQbdJournalCreditLine(id string, objectType string, account QbdJournalCreditLineAccount, amount string, memo string, entity QbdJournalCreditLineEntity, class QbdJournalCreditLineClass, salesTaxItem QbdJournalCreditLineSalesTaxItem, billingStatus string, ) *QbdJournalCreditLine`
+`func NewQbdJournalCreditLine(id string, objectType string, account QbdJournalCreditLineAccount, ) *QbdJournalCreditLine`
 
 NewQbdJournalCreditLine instantiates a new QbdJournalCreditLine object
 This constructor will assign default values to properties that have it defined,
@@ -112,6 +112,11 @@ and a boolean to check if the value has been set.
 
 SetAmount sets Amount field to given value.
 
+### HasAmount
+
+`func (o *QbdJournalCreditLine) HasAmount() bool`
+
+HasAmount returns a boolean if a field has been set.
 
 ### GetMemo
 
@@ -132,6 +137,11 @@ and a boolean to check if the value has been set.
 
 SetMemo sets Memo field to given value.
 
+### HasMemo
+
+`func (o *QbdJournalCreditLine) HasMemo() bool`
+
+HasMemo returns a boolean if a field has been set.
 
 ### GetEntity
 
@@ -152,6 +162,11 @@ and a boolean to check if the value has been set.
 
 SetEntity sets Entity field to given value.
 
+### HasEntity
+
+`func (o *QbdJournalCreditLine) HasEntity() bool`
+
+HasEntity returns a boolean if a field has been set.
 
 ### GetClass
 
@@ -172,6 +187,11 @@ and a boolean to check if the value has been set.
 
 SetClass sets Class field to given value.
 
+### HasClass
+
+`func (o *QbdJournalCreditLine) HasClass() bool`
+
+HasClass returns a boolean if a field has been set.
 
 ### GetSalesTaxItem
 
@@ -192,6 +212,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxItem sets SalesTaxItem field to given value.
 
+### HasSalesTaxItem
+
+`func (o *QbdJournalCreditLine) HasSalesTaxItem() bool`
+
+HasSalesTaxItem returns a boolean if a field has been set.
 
 ### GetBillingStatus
 
@@ -212,6 +237,11 @@ and a boolean to check if the value has been set.
 
 SetBillingStatus sets BillingStatus field to given value.
 
+### HasBillingStatus
+
+`func (o *QbdJournalCreditLine) HasBillingStatus() bool`
+
+HasBillingStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

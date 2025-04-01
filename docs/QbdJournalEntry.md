@@ -10,13 +10,13 @@ Name | Type | Description | Notes
 **UpdatedAt** | **string** | The date and time when this journal entry was last updated, in ISO 8601 format (YYYY-MM-DDThh:mm:ss±hh:mm). The time zone is the same as the user&#39;s time zone in QuickBooks. | 
 **RevisionNumber** | **string** | The current QuickBooks-assigned revision number of this journal entry object, which changes each time the object is modified. When updating this object, you must provide the most recent &#x60;revisionNumber&#x60; to ensure you&#39;re working with the latest data; otherwise, the update will return an error. | 
 **TransactionDate** | **string** | The date of this journal entry, in ISO 8601 format (YYYY-MM-DD). | 
-**RefNumber** | **string** | The case-sensitive user-defined reference number for this journal entry, which can be used to identify the transaction in QuickBooks. This value is not required to be unique and can be arbitrarily changed by the QuickBooks user. | 
-**IsAdjustment** | **bool** | Indicates whether this journal entry is an adjustment entry. When &#x60;true&#x60;, QuickBooks retains the original entry information to maintain an audit trail of the adjustments. | 
-**IsHomeCurrencyAdjustment** | **bool** | Indicates whether this journal entry is an adjustment made in the company&#39;s home currency for a transaction that was originally recorded in a foreign currency. | 
-**AreAmountsEnteredInHomeCurrency** | **bool** | Indicates whether the amounts in this journal entry were entered in the company&#39;s home currency rather than a foreign currency. When &#x60;true&#x60;, amounts are in the home currency regardless of the &#x60;currency&#x60; field. | 
-**Currency** | [**QbdJournalEntryCurrency**](QbdJournalEntryCurrency.md) |  | 
-**ExchangeRate** | **float32** | The market exchange rate between this journal entry&#39;s currency and the home currency in QuickBooks at the time of this transaction. Represented as a decimal value (e.g., 1.2345 for 1 EUR &#x3D; 1.2345 USD if USD is the home currency). | 
-**ExternalId** | **string** | A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation. | 
+**RefNumber** | Pointer to **string** | The case-sensitive user-defined reference number for this journal entry, which can be used to identify the transaction in QuickBooks. This value is not required to be unique and can be arbitrarily changed by the QuickBooks user. | [optional] 
+**IsAdjustment** | Pointer to **bool** | Indicates whether this journal entry is an adjustment entry. When &#x60;true&#x60;, QuickBooks retains the original entry information to maintain an audit trail of the adjustments. | [optional] 
+**IsHomeCurrencyAdjustment** | Pointer to **bool** | Indicates whether this journal entry is an adjustment made in the company&#39;s home currency for a transaction that was originally recorded in a foreign currency. | [optional] 
+**AreAmountsEnteredInHomeCurrency** | Pointer to **bool** | Indicates whether the amounts in this journal entry were entered in the company&#39;s home currency rather than a foreign currency. When &#x60;true&#x60;, amounts are in the home currency regardless of the &#x60;currency&#x60; field. | [optional] 
+**Currency** | Pointer to [**QbdJournalEntryCurrency**](QbdJournalEntryCurrency.md) |  | [optional] 
+**ExchangeRate** | Pointer to **float32** | The market exchange rate between this journal entry&#39;s currency and the home currency in QuickBooks at the time of this transaction. Represented as a decimal value (e.g., 1.2345 for 1 EUR &#x3D; 1.2345 USD if USD is the home currency). | [optional] 
+**ExternalId** | Pointer to **string** | A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation. | [optional] 
 **DebitLines** | [**[]QbdJournalDebitLine**](QbdJournalDebitLine.md) | The journal entry&#39;s debit lines. | 
 **CreditLines** | [**[]QbdJournalCreditLine**](QbdJournalCreditLine.md) | The journal entry&#39;s credit lines. | 
 **CustomFields** | [**[]QbdCustomField**](QbdCustomField.md) | The custom fields for the journal entry object, added as user-defined data extensions, not included in the standard QuickBooks object. | 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 ### NewQbdJournalEntry
 
-`func NewQbdJournalEntry(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, transactionDate string, refNumber string, isAdjustment bool, isHomeCurrencyAdjustment bool, areAmountsEnteredInHomeCurrency bool, currency QbdJournalEntryCurrency, exchangeRate float32, externalId string, debitLines []QbdJournalDebitLine, creditLines []QbdJournalCreditLine, customFields []QbdCustomField, ) *QbdJournalEntry`
+`func NewQbdJournalEntry(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, transactionDate string, debitLines []QbdJournalDebitLine, creditLines []QbdJournalCreditLine, customFields []QbdCustomField, ) *QbdJournalEntry`
 
 NewQbdJournalEntry instantiates a new QbdJournalEntry object
 This constructor will assign default values to properties that have it defined,
@@ -179,6 +179,11 @@ and a boolean to check if the value has been set.
 
 SetRefNumber sets RefNumber field to given value.
 
+### HasRefNumber
+
+`func (o *QbdJournalEntry) HasRefNumber() bool`
+
+HasRefNumber returns a boolean if a field has been set.
 
 ### GetIsAdjustment
 
@@ -199,6 +204,11 @@ and a boolean to check if the value has been set.
 
 SetIsAdjustment sets IsAdjustment field to given value.
 
+### HasIsAdjustment
+
+`func (o *QbdJournalEntry) HasIsAdjustment() bool`
+
+HasIsAdjustment returns a boolean if a field has been set.
 
 ### GetIsHomeCurrencyAdjustment
 
@@ -219,6 +229,11 @@ and a boolean to check if the value has been set.
 
 SetIsHomeCurrencyAdjustment sets IsHomeCurrencyAdjustment field to given value.
 
+### HasIsHomeCurrencyAdjustment
+
+`func (o *QbdJournalEntry) HasIsHomeCurrencyAdjustment() bool`
+
+HasIsHomeCurrencyAdjustment returns a boolean if a field has been set.
 
 ### GetAreAmountsEnteredInHomeCurrency
 
@@ -239,6 +254,11 @@ and a boolean to check if the value has been set.
 
 SetAreAmountsEnteredInHomeCurrency sets AreAmountsEnteredInHomeCurrency field to given value.
 
+### HasAreAmountsEnteredInHomeCurrency
+
+`func (o *QbdJournalEntry) HasAreAmountsEnteredInHomeCurrency() bool`
+
+HasAreAmountsEnteredInHomeCurrency returns a boolean if a field has been set.
 
 ### GetCurrency
 
@@ -259,6 +279,11 @@ and a boolean to check if the value has been set.
 
 SetCurrency sets Currency field to given value.
 
+### HasCurrency
+
+`func (o *QbdJournalEntry) HasCurrency() bool`
+
+HasCurrency returns a boolean if a field has been set.
 
 ### GetExchangeRate
 
@@ -279,6 +304,11 @@ and a boolean to check if the value has been set.
 
 SetExchangeRate sets ExchangeRate field to given value.
 
+### HasExchangeRate
+
+`func (o *QbdJournalEntry) HasExchangeRate() bool`
+
+HasExchangeRate returns a boolean if a field has been set.
 
 ### GetExternalId
 
@@ -299,6 +329,11 @@ and a boolean to check if the value has been set.
 
 SetExternalId sets ExternalId field to given value.
 
+### HasExternalId
+
+`func (o *QbdJournalEntry) HasExternalId() bool`
+
+HasExternalId returns a boolean if a field has been set.
 
 ### GetDebitLines
 

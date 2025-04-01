@@ -33460,19 +33460,12 @@ components:
           items:
             $ref: '#/components/schemas/qbd_custom_field'
       required:
-      - areAmountsEnteredInHomeCurrency
       - createdAt
       - creditLines
-      - currency
       - customFields
       - debitLines
-      - exchangeRate
-      - externalId
       - id
-      - isAdjustment
-      - isHomeCurrencyAdjustment
       - objectType
-      - refNumber
       - revisionNumber
       - transactionDate
       - updatedAt
@@ -33533,15 +33526,8 @@ components:
           - not_billable
           example: billable
       required:
-      - account
-      - amount
-      - billingStatus
-      - class
-      - entity
       - id
-      - memo
       - objectType
-      - salesTaxItem
       title: The Journal Debit Line object
       x-conductor-object-type: nested
     qbd_journal_credit_line:
@@ -33596,14 +33582,8 @@ components:
           example: billable
       required:
       - account
-      - amount
-      - billingStatus
-      - class
-      - entity
       - id
-      - memo
       - objectType
-      - salesTaxItem
       title: The Journal Credit Line object
       x-conductor-object-type: nested
     qbd_non_inventory_item:
