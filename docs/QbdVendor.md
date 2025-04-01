@@ -11,56 +11,56 @@ Name | Type | Description | Notes
 **RevisionNumber** | **string** | The current QuickBooks-assigned revision number of this vendor object, which changes each time the object is modified. When updating this object, you must provide the most recent &#x60;revisionNumber&#x60; to ensure you&#39;re working with the latest data; otherwise, the update will return an error. | 
 **Name** | **string** | The case-insensitive unique name of this vendor, unique across all vendors.  **NOTE**: Vendors do not have a &#x60;fullName&#x60; field because they are not hierarchical objects, which is why &#x60;name&#x60; is unique for them but not for objects that have parents. | 
 **IsActive** | **bool** | Indicates whether this vendor is active. Inactive objects are typically hidden from views and reports in QuickBooks. Defaults to &#x60;true&#x60;. | 
-**Class** | [**QbdVendorClass**](QbdVendorClass.md) |  | 
-**CompanyName** | **string** | The name of the company associated with this vendor. This name is used on invoices, checks, and other forms. | 
-**Salutation** | **string** | The formal salutation title that precedes the name of the contact person for this vendor, such as \&quot;Mr.\&quot;, \&quot;Ms.\&quot;, or \&quot;Dr.\&quot;. | 
-**FirstName** | **string** | The first name of the contact person for this vendor. | 
-**MiddleName** | **string** | The middle name of the contact person for this vendor. | 
-**LastName** | **string** | The last name of the contact person for this vendor. | 
-**JobTitle** | **string** | The job title of the contact person for this vendor. | 
-**BillingAddress** | [**QbdVendorBillingAddress**](QbdVendorBillingAddress.md) |  | 
-**ShippingAddress** | [**QbdVendorShippingAddress**](QbdVendorShippingAddress.md) |  | 
-**Phone** | **string** | The vendor&#39;s primary telephone number. | 
-**AlternatePhone** | **string** | The vendor&#39;s alternate telephone number. | 
-**Fax** | **string** | The vendor&#39;s fax number. | 
-**Email** | **string** | The vendor&#39;s email address. | 
-**CcEmail** | **string** | An email address to carbon copy (CC) on communications with this vendor. | 
-**Contact** | **string** | The name of the primary contact person for this vendor. | 
-**AlternateContact** | **string** | The name of a alternate contact person for this vendor. | 
+**Class** | Pointer to [**QbdVendorClass**](QbdVendorClass.md) |  | [optional] 
+**CompanyName** | Pointer to **string** | The name of the company associated with this vendor. This name is used on invoices, checks, and other forms. | [optional] 
+**Salutation** | Pointer to **string** | The formal salutation title that precedes the name of the contact person for this vendor, such as \&quot;Mr.\&quot;, \&quot;Ms.\&quot;, or \&quot;Dr.\&quot;. | [optional] 
+**FirstName** | Pointer to **string** | The first name of the contact person for this vendor. | [optional] 
+**MiddleName** | Pointer to **string** | The middle name of the contact person for this vendor. | [optional] 
+**LastName** | Pointer to **string** | The last name of the contact person for this vendor. | [optional] 
+**JobTitle** | Pointer to **string** | The job title of the contact person for this vendor. | [optional] 
+**BillingAddress** | Pointer to [**QbdVendorBillingAddress**](QbdVendorBillingAddress.md) |  | [optional] 
+**ShippingAddress** | Pointer to [**QbdVendorShippingAddress**](QbdVendorShippingAddress.md) |  | [optional] 
+**Phone** | Pointer to **string** | The vendor&#39;s primary telephone number. | [optional] 
+**AlternatePhone** | Pointer to **string** | The vendor&#39;s alternate telephone number. | [optional] 
+**Fax** | Pointer to **string** | The vendor&#39;s fax number. | [optional] 
+**Email** | Pointer to **string** | The vendor&#39;s email address. | [optional] 
+**CcEmail** | Pointer to **string** | An email address to carbon copy (CC) on communications with this vendor. | [optional] 
+**Contact** | Pointer to **string** | The name of the primary contact person for this vendor. | [optional] 
+**AlternateContact** | Pointer to **string** | The name of a alternate contact person for this vendor. | [optional] 
 **CustomContactFields** | [**[]QbdCustomContactField**](QbdCustomContactField.md) | Additional custom contact fields for this vendor, such as phone numbers or email addresses. | 
 **AdditionalContacts** | [**[]QbdContact**](QbdContact.md) | Additional alternate contacts for this vendor. | 
-**NameOnCheck** | **string** | The vendor&#39;s name as it should appear on checks issued to this vendor. | 
-**AccountNumber** | **string** | The vendor&#39;s account number, which appears in the QuickBooks chart of accounts, reports, and graphs.  Note that if the \&quot;Use Account Numbers\&quot; preference is turned off in QuickBooks, the account number may not be visible in the user interface, but it can still be set and retrieved through the API. | 
-**Note** | **string** | A note or comment about this vendor. | 
+**NameOnCheck** | Pointer to **string** | The vendor&#39;s name as it should appear on checks issued to this vendor. | [optional] 
+**AccountNumber** | Pointer to **string** | The vendor&#39;s account number, which appears in the QuickBooks chart of accounts, reports, and graphs.  Note that if the \&quot;Use Account Numbers\&quot; preference is turned off in QuickBooks, the account number may not be visible in the user interface, but it can still be set and retrieved through the API. | [optional] 
+**Note** | Pointer to **string** | A note or comment about this vendor. | [optional] 
 **AdditionalNotes** | [**[]QbdNote**](QbdNote.md) | Additional notes about this vendor. | 
-**VendorType** | [**QbdVendorVendorType**](QbdVendorVendorType.md) |  | 
-**Terms** | [**QbdVendorTerms**](QbdVendorTerms.md) |  | 
-**CreditLimit** | **string** | The vendor&#39;s credit limit, represented as a decimal string. This is the maximum amount of money that can be spent being before billed by this vendor. If &#x60;null&#x60;, there is no credit limit. | 
-**TaxIdentificationNumber** | **string** | The vendor&#39;s tax identification number (e.g., EIN or SSN). | 
-**IsEligibleFor1099** | **bool** | Indicates whether this vendor is eligible to receive a 1099 form for tax reporting purposes. When &#x60;true&#x60;, then the fields &#x60;taxId&#x60; and &#x60;billingAddress&#x60; are required. | 
-**Balance** | **string** | The current balance owed to this vendor, represented as a decimal string. A positive number indicates money owed to the vendor. | 
-**BillingRate** | [**QbdVendorBillingRate**](QbdVendorBillingRate.md) |  | 
-**ExternalId** | **string** | A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation. | 
-**SalesTaxCode** | [**QbdVendorSalesTaxCode**](QbdVendorSalesTaxCode.md) |  | 
-**SalesTaxCountry** | **string** | The country for which sales tax is collected for this vendor. | 
-**IsSalesTaxAgency** | **bool** | Indicates whether this vendor is a sales tax agency. | 
-**SalesTaxReturn** | [**QbdVendorSalesTaxReturn**](QbdVendorSalesTaxReturn.md) |  | 
-**TaxRegistrationNumber** | **string** | The vendor&#39;s tax registration number, for use in Canada or the UK. | 
-**ReportingPeriod** | **string** | The vendor&#39;s tax reporting period, for use in Canada or the UK. | 
-**IsTrackingPurchaseTax** | **bool** | Indicates whether tax is tracked on purchases for this vendor, for use in Canada or the UK. | 
-**PurchaseTaxAccount** | [**QbdVendorPurchaseTaxAccount**](QbdVendorPurchaseTaxAccount.md) |  | 
-**IsTrackingSalesTax** | **bool** | Indicates whether tax is tracked on sales for this vendor, for use in Canada or the UK. | 
-**SalesTaxAccount** | [**QbdVendorSalesTaxAccount**](QbdVendorSalesTaxAccount.md) |  | 
-**IsCompoundingTax** | **bool** | Indicates whether tax is charged on top of tax for this vendor, for use in Canada or the UK. | 
+**VendorType** | Pointer to [**QbdVendorVendorType**](QbdVendorVendorType.md) |  | [optional] 
+**Terms** | Pointer to [**QbdVendorTerms**](QbdVendorTerms.md) |  | [optional] 
+**CreditLimit** | Pointer to **string** | The vendor&#39;s credit limit, represented as a decimal string. This is the maximum amount of money that can be spent being before billed by this vendor. If &#x60;null&#x60;, there is no credit limit. | [optional] 
+**TaxIdentificationNumber** | Pointer to **string** | The vendor&#39;s tax identification number (e.g., EIN or SSN). | [optional] 
+**IsEligibleFor1099** | Pointer to **bool** | Indicates whether this vendor is eligible to receive a 1099 form for tax reporting purposes. When &#x60;true&#x60;, then the fields &#x60;taxId&#x60; and &#x60;billingAddress&#x60; are required. | [optional] 
+**Balance** | Pointer to **string** | The current balance owed to this vendor, represented as a decimal string. A positive number indicates money owed to the vendor. | [optional] 
+**BillingRate** | Pointer to [**QbdVendorBillingRate**](QbdVendorBillingRate.md) |  | [optional] 
+**ExternalId** | Pointer to **string** | A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation. | [optional] 
+**SalesTaxCode** | Pointer to [**QbdVendorSalesTaxCode**](QbdVendorSalesTaxCode.md) |  | [optional] 
+**SalesTaxCountry** | Pointer to **string** | The country for which sales tax is collected for this vendor. | [optional] 
+**IsSalesTaxAgency** | Pointer to **bool** | Indicates whether this vendor is a sales tax agency. | [optional] 
+**SalesTaxReturn** | Pointer to [**QbdVendorSalesTaxReturn**](QbdVendorSalesTaxReturn.md) |  | [optional] 
+**TaxRegistrationNumber** | Pointer to **string** | The vendor&#39;s tax registration number, for use in Canada or the UK. | [optional] 
+**ReportingPeriod** | Pointer to **string** | The vendor&#39;s tax reporting period, for use in Canada or the UK. | [optional] 
+**IsTrackingPurchaseTax** | Pointer to **bool** | Indicates whether tax is tracked on purchases for this vendor, for use in Canada or the UK. | [optional] 
+**PurchaseTaxAccount** | Pointer to [**QbdVendorPurchaseTaxAccount**](QbdVendorPurchaseTaxAccount.md) |  | [optional] 
+**IsTrackingSalesTax** | Pointer to **bool** | Indicates whether tax is tracked on sales for this vendor, for use in Canada or the UK. | [optional] 
+**SalesTaxAccount** | Pointer to [**QbdVendorSalesTaxAccount**](QbdVendorSalesTaxAccount.md) |  | [optional] 
+**IsCompoundingTax** | Pointer to **bool** | Indicates whether tax is charged on top of tax for this vendor, for use in Canada or the UK. | [optional] 
 **DefaultExpenseAccounts** | [**[]QbdVendorDefaultExpenseAccountsInner**](QbdVendorDefaultExpenseAccountsInner.md) | The expense accounts to prefill when entering bills for this vendor. | 
-**Currency** | [**QbdVendorCurrency**](QbdVendorCurrency.md) |  | 
+**Currency** | Pointer to [**QbdVendorCurrency**](QbdVendorCurrency.md) |  | [optional] 
 **CustomFields** | [**[]QbdCustomField**](QbdCustomField.md) | The custom fields for the vendor object, added as user-defined data extensions, not included in the standard QuickBooks object. | 
 
 ## Methods
 
 ### NewQbdVendor
 
-`func NewQbdVendor(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, isActive bool, class QbdVendorClass, companyName string, salutation string, firstName string, middleName string, lastName string, jobTitle string, billingAddress QbdVendorBillingAddress, shippingAddress QbdVendorShippingAddress, phone string, alternatePhone string, fax string, email string, ccEmail string, contact string, alternateContact string, customContactFields []QbdCustomContactField, additionalContacts []QbdContact, nameOnCheck string, accountNumber string, note string, additionalNotes []QbdNote, vendorType QbdVendorVendorType, terms QbdVendorTerms, creditLimit string, taxIdentificationNumber string, isEligibleFor1099 bool, balance string, billingRate QbdVendorBillingRate, externalId string, salesTaxCode QbdVendorSalesTaxCode, salesTaxCountry string, isSalesTaxAgency bool, salesTaxReturn QbdVendorSalesTaxReturn, taxRegistrationNumber string, reportingPeriod string, isTrackingPurchaseTax bool, purchaseTaxAccount QbdVendorPurchaseTaxAccount, isTrackingSalesTax bool, salesTaxAccount QbdVendorSalesTaxAccount, isCompoundingTax bool, defaultExpenseAccounts []QbdVendorDefaultExpenseAccountsInner, currency QbdVendorCurrency, customFields []QbdCustomField, ) *QbdVendor`
+`func NewQbdVendor(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, isActive bool, customContactFields []QbdCustomContactField, additionalContacts []QbdContact, additionalNotes []QbdNote, defaultExpenseAccounts []QbdVendorDefaultExpenseAccountsInner, customFields []QbdCustomField, ) *QbdVendor`
 
 NewQbdVendor instantiates a new QbdVendor object
 This constructor will assign default values to properties that have it defined,
@@ -234,6 +234,11 @@ and a boolean to check if the value has been set.
 
 SetClass sets Class field to given value.
 
+### HasClass
+
+`func (o *QbdVendor) HasClass() bool`
+
+HasClass returns a boolean if a field has been set.
 
 ### GetCompanyName
 
@@ -254,6 +259,11 @@ and a boolean to check if the value has been set.
 
 SetCompanyName sets CompanyName field to given value.
 
+### HasCompanyName
+
+`func (o *QbdVendor) HasCompanyName() bool`
+
+HasCompanyName returns a boolean if a field has been set.
 
 ### GetSalutation
 
@@ -274,6 +284,11 @@ and a boolean to check if the value has been set.
 
 SetSalutation sets Salutation field to given value.
 
+### HasSalutation
+
+`func (o *QbdVendor) HasSalutation() bool`
+
+HasSalutation returns a boolean if a field has been set.
 
 ### GetFirstName
 
@@ -294,6 +309,11 @@ and a boolean to check if the value has been set.
 
 SetFirstName sets FirstName field to given value.
 
+### HasFirstName
+
+`func (o *QbdVendor) HasFirstName() bool`
+
+HasFirstName returns a boolean if a field has been set.
 
 ### GetMiddleName
 
@@ -314,6 +334,11 @@ and a boolean to check if the value has been set.
 
 SetMiddleName sets MiddleName field to given value.
 
+### HasMiddleName
+
+`func (o *QbdVendor) HasMiddleName() bool`
+
+HasMiddleName returns a boolean if a field has been set.
 
 ### GetLastName
 
@@ -334,6 +359,11 @@ and a boolean to check if the value has been set.
 
 SetLastName sets LastName field to given value.
 
+### HasLastName
+
+`func (o *QbdVendor) HasLastName() bool`
+
+HasLastName returns a boolean if a field has been set.
 
 ### GetJobTitle
 
@@ -354,6 +384,11 @@ and a boolean to check if the value has been set.
 
 SetJobTitle sets JobTitle field to given value.
 
+### HasJobTitle
+
+`func (o *QbdVendor) HasJobTitle() bool`
+
+HasJobTitle returns a boolean if a field has been set.
 
 ### GetBillingAddress
 
@@ -374,6 +409,11 @@ and a boolean to check if the value has been set.
 
 SetBillingAddress sets BillingAddress field to given value.
 
+### HasBillingAddress
+
+`func (o *QbdVendor) HasBillingAddress() bool`
+
+HasBillingAddress returns a boolean if a field has been set.
 
 ### GetShippingAddress
 
@@ -394,6 +434,11 @@ and a boolean to check if the value has been set.
 
 SetShippingAddress sets ShippingAddress field to given value.
 
+### HasShippingAddress
+
+`func (o *QbdVendor) HasShippingAddress() bool`
+
+HasShippingAddress returns a boolean if a field has been set.
 
 ### GetPhone
 
@@ -414,6 +459,11 @@ and a boolean to check if the value has been set.
 
 SetPhone sets Phone field to given value.
 
+### HasPhone
+
+`func (o *QbdVendor) HasPhone() bool`
+
+HasPhone returns a boolean if a field has been set.
 
 ### GetAlternatePhone
 
@@ -434,6 +484,11 @@ and a boolean to check if the value has been set.
 
 SetAlternatePhone sets AlternatePhone field to given value.
 
+### HasAlternatePhone
+
+`func (o *QbdVendor) HasAlternatePhone() bool`
+
+HasAlternatePhone returns a boolean if a field has been set.
 
 ### GetFax
 
@@ -454,6 +509,11 @@ and a boolean to check if the value has been set.
 
 SetFax sets Fax field to given value.
 
+### HasFax
+
+`func (o *QbdVendor) HasFax() bool`
+
+HasFax returns a boolean if a field has been set.
 
 ### GetEmail
 
@@ -474,6 +534,11 @@ and a boolean to check if the value has been set.
 
 SetEmail sets Email field to given value.
 
+### HasEmail
+
+`func (o *QbdVendor) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
 
 ### GetCcEmail
 
@@ -494,6 +559,11 @@ and a boolean to check if the value has been set.
 
 SetCcEmail sets CcEmail field to given value.
 
+### HasCcEmail
+
+`func (o *QbdVendor) HasCcEmail() bool`
+
+HasCcEmail returns a boolean if a field has been set.
 
 ### GetContact
 
@@ -514,6 +584,11 @@ and a boolean to check if the value has been set.
 
 SetContact sets Contact field to given value.
 
+### HasContact
+
+`func (o *QbdVendor) HasContact() bool`
+
+HasContact returns a boolean if a field has been set.
 
 ### GetAlternateContact
 
@@ -534,6 +609,11 @@ and a boolean to check if the value has been set.
 
 SetAlternateContact sets AlternateContact field to given value.
 
+### HasAlternateContact
+
+`func (o *QbdVendor) HasAlternateContact() bool`
+
+HasAlternateContact returns a boolean if a field has been set.
 
 ### GetCustomContactFields
 
@@ -594,6 +674,11 @@ and a boolean to check if the value has been set.
 
 SetNameOnCheck sets NameOnCheck field to given value.
 
+### HasNameOnCheck
+
+`func (o *QbdVendor) HasNameOnCheck() bool`
+
+HasNameOnCheck returns a boolean if a field has been set.
 
 ### GetAccountNumber
 
@@ -614,6 +699,11 @@ and a boolean to check if the value has been set.
 
 SetAccountNumber sets AccountNumber field to given value.
 
+### HasAccountNumber
+
+`func (o *QbdVendor) HasAccountNumber() bool`
+
+HasAccountNumber returns a boolean if a field has been set.
 
 ### GetNote
 
@@ -634,6 +724,11 @@ and a boolean to check if the value has been set.
 
 SetNote sets Note field to given value.
 
+### HasNote
+
+`func (o *QbdVendor) HasNote() bool`
+
+HasNote returns a boolean if a field has been set.
 
 ### GetAdditionalNotes
 
@@ -674,6 +769,11 @@ and a boolean to check if the value has been set.
 
 SetVendorType sets VendorType field to given value.
 
+### HasVendorType
+
+`func (o *QbdVendor) HasVendorType() bool`
+
+HasVendorType returns a boolean if a field has been set.
 
 ### GetTerms
 
@@ -694,6 +794,11 @@ and a boolean to check if the value has been set.
 
 SetTerms sets Terms field to given value.
 
+### HasTerms
+
+`func (o *QbdVendor) HasTerms() bool`
+
+HasTerms returns a boolean if a field has been set.
 
 ### GetCreditLimit
 
@@ -714,6 +819,11 @@ and a boolean to check if the value has been set.
 
 SetCreditLimit sets CreditLimit field to given value.
 
+### HasCreditLimit
+
+`func (o *QbdVendor) HasCreditLimit() bool`
+
+HasCreditLimit returns a boolean if a field has been set.
 
 ### GetTaxIdentificationNumber
 
@@ -734,6 +844,11 @@ and a boolean to check if the value has been set.
 
 SetTaxIdentificationNumber sets TaxIdentificationNumber field to given value.
 
+### HasTaxIdentificationNumber
+
+`func (o *QbdVendor) HasTaxIdentificationNumber() bool`
+
+HasTaxIdentificationNumber returns a boolean if a field has been set.
 
 ### GetIsEligibleFor1099
 
@@ -754,6 +869,11 @@ and a boolean to check if the value has been set.
 
 SetIsEligibleFor1099 sets IsEligibleFor1099 field to given value.
 
+### HasIsEligibleFor1099
+
+`func (o *QbdVendor) HasIsEligibleFor1099() bool`
+
+HasIsEligibleFor1099 returns a boolean if a field has been set.
 
 ### GetBalance
 
@@ -774,6 +894,11 @@ and a boolean to check if the value has been set.
 
 SetBalance sets Balance field to given value.
 
+### HasBalance
+
+`func (o *QbdVendor) HasBalance() bool`
+
+HasBalance returns a boolean if a field has been set.
 
 ### GetBillingRate
 
@@ -794,6 +919,11 @@ and a boolean to check if the value has been set.
 
 SetBillingRate sets BillingRate field to given value.
 
+### HasBillingRate
+
+`func (o *QbdVendor) HasBillingRate() bool`
+
+HasBillingRate returns a boolean if a field has been set.
 
 ### GetExternalId
 
@@ -814,6 +944,11 @@ and a boolean to check if the value has been set.
 
 SetExternalId sets ExternalId field to given value.
 
+### HasExternalId
+
+`func (o *QbdVendor) HasExternalId() bool`
+
+HasExternalId returns a boolean if a field has been set.
 
 ### GetSalesTaxCode
 
@@ -834,6 +969,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxCode sets SalesTaxCode field to given value.
 
+### HasSalesTaxCode
+
+`func (o *QbdVendor) HasSalesTaxCode() bool`
+
+HasSalesTaxCode returns a boolean if a field has been set.
 
 ### GetSalesTaxCountry
 
@@ -854,6 +994,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxCountry sets SalesTaxCountry field to given value.
 
+### HasSalesTaxCountry
+
+`func (o *QbdVendor) HasSalesTaxCountry() bool`
+
+HasSalesTaxCountry returns a boolean if a field has been set.
 
 ### GetIsSalesTaxAgency
 
@@ -874,6 +1019,11 @@ and a boolean to check if the value has been set.
 
 SetIsSalesTaxAgency sets IsSalesTaxAgency field to given value.
 
+### HasIsSalesTaxAgency
+
+`func (o *QbdVendor) HasIsSalesTaxAgency() bool`
+
+HasIsSalesTaxAgency returns a boolean if a field has been set.
 
 ### GetSalesTaxReturn
 
@@ -894,6 +1044,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxReturn sets SalesTaxReturn field to given value.
 
+### HasSalesTaxReturn
+
+`func (o *QbdVendor) HasSalesTaxReturn() bool`
+
+HasSalesTaxReturn returns a boolean if a field has been set.
 
 ### GetTaxRegistrationNumber
 
@@ -914,6 +1069,11 @@ and a boolean to check if the value has been set.
 
 SetTaxRegistrationNumber sets TaxRegistrationNumber field to given value.
 
+### HasTaxRegistrationNumber
+
+`func (o *QbdVendor) HasTaxRegistrationNumber() bool`
+
+HasTaxRegistrationNumber returns a boolean if a field has been set.
 
 ### GetReportingPeriod
 
@@ -934,6 +1094,11 @@ and a boolean to check if the value has been set.
 
 SetReportingPeriod sets ReportingPeriod field to given value.
 
+### HasReportingPeriod
+
+`func (o *QbdVendor) HasReportingPeriod() bool`
+
+HasReportingPeriod returns a boolean if a field has been set.
 
 ### GetIsTrackingPurchaseTax
 
@@ -954,6 +1119,11 @@ and a boolean to check if the value has been set.
 
 SetIsTrackingPurchaseTax sets IsTrackingPurchaseTax field to given value.
 
+### HasIsTrackingPurchaseTax
+
+`func (o *QbdVendor) HasIsTrackingPurchaseTax() bool`
+
+HasIsTrackingPurchaseTax returns a boolean if a field has been set.
 
 ### GetPurchaseTaxAccount
 
@@ -974,6 +1144,11 @@ and a boolean to check if the value has been set.
 
 SetPurchaseTaxAccount sets PurchaseTaxAccount field to given value.
 
+### HasPurchaseTaxAccount
+
+`func (o *QbdVendor) HasPurchaseTaxAccount() bool`
+
+HasPurchaseTaxAccount returns a boolean if a field has been set.
 
 ### GetIsTrackingSalesTax
 
@@ -994,6 +1169,11 @@ and a boolean to check if the value has been set.
 
 SetIsTrackingSalesTax sets IsTrackingSalesTax field to given value.
 
+### HasIsTrackingSalesTax
+
+`func (o *QbdVendor) HasIsTrackingSalesTax() bool`
+
+HasIsTrackingSalesTax returns a boolean if a field has been set.
 
 ### GetSalesTaxAccount
 
@@ -1014,6 +1194,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxAccount sets SalesTaxAccount field to given value.
 
+### HasSalesTaxAccount
+
+`func (o *QbdVendor) HasSalesTaxAccount() bool`
+
+HasSalesTaxAccount returns a boolean if a field has been set.
 
 ### GetIsCompoundingTax
 
@@ -1034,6 +1219,11 @@ and a boolean to check if the value has been set.
 
 SetIsCompoundingTax sets IsCompoundingTax field to given value.
 
+### HasIsCompoundingTax
+
+`func (o *QbdVendor) HasIsCompoundingTax() bool`
+
+HasIsCompoundingTax returns a boolean if a field has been set.
 
 ### GetDefaultExpenseAccounts
 
@@ -1074,6 +1264,11 @@ and a boolean to check if the value has been set.
 
 SetCurrency sets Currency field to given value.
 
+### HasCurrency
+
+`func (o *QbdVendor) HasCurrency() bool`
+
+HasCurrency returns a boolean if a field has been set.
 
 ### GetCustomFields
 

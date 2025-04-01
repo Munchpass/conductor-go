@@ -28535,61 +28535,14 @@ components:
           items:
             $ref: '#/components/schemas/qbd_custom_field'
       required:
-      - accountNumber
-      - additionalContacts
-      - additionalNotes
-      - alternateContact
-      - alternatePhone
-      - alternateShippingAddresses
-      - balance
-      - billingAddress
-      - ccEmail
-      - class
-      - companyName
-      - contact
       - createdAt
-      - creditCard
-      - creditLimit
-      - currency
-      - customContactFields
-      - customFields
-      - customerType
-      - email
-      - externalId
-      - fax
-      - firstName
       - fullName
       - id
       - isActive
-      - jobDescription
-      - jobEndDate
-      - jobProjectedEndDate
-      - jobStartDate
-      - jobStatus
-      - jobTitle
-      - jobType
-      - lastName
-      - middleName
       - name
-      - note
       - objectType
-      - parent
-      - phone
-      - preferredDeliveryMethod
-      - preferredPaymentMethod
-      - priceLevel
-      - resaleNumber
       - revisionNumber
-      - salesRepresentative
-      - salesTaxCode
-      - salesTaxCountry
-      - salesTaxItem
-      - salutation
-      - shippingAddress
       - sublevel
-      - taxRegistrationNumber
-      - terms
-      - totalBalance
       - updatedAt
       title: The Customer object
       x-conductor-object-type: other
@@ -40210,57 +40163,18 @@ components:
           items:
             $ref: '#/components/schemas/qbd_custom_field'
       required:
-      - accountNumber
       - additionalContacts
       - additionalNotes
-      - alternateContact
-      - alternatePhone
-      - balance
-      - billingAddress
-      - billingRate
-      - ccEmail
-      - class
-      - companyName
-      - contact
       - createdAt
-      - creditLimit
-      - currency
       - customContactFields
       - customFields
       - defaultExpenseAccounts
-      - email
-      - externalId
-      - fax
-      - firstName
       - id
       - isActive
-      - isCompoundingTax
-      - isEligibleFor1099
-      - isSalesTaxAgency
-      - isTrackingPurchaseTax
-      - isTrackingSalesTax
-      - jobTitle
-      - lastName
-      - middleName
       - name
-      - nameOnCheck
-      - note
       - objectType
-      - phone
-      - purchaseTaxAccount
-      - reportingPeriod
       - revisionNumber
-      - salesTaxAccount
-      - salesTaxCode
-      - salesTaxCountry
-      - salesTaxReturn
-      - salutation
-      - shippingAddress
-      - taxIdentificationNumber
-      - taxRegistrationNumber
-      - terms
       - updatedAt
-      - vendorType
       title: The Vendor object
       x-conductor-object-type: other
       summary: A vendor is any person or company from whom a small business owner

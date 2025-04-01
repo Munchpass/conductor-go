@@ -34,81 +34,81 @@ type QbdVendor struct {
 	Name string `json:"name"`
 	// Indicates whether this vendor is active. Inactive objects are typically hidden from views and reports in QuickBooks. Defaults to `true`.
 	IsActive bool `json:"isActive"`
-	Class QbdVendorClass `json:"class"`
+	Class *QbdVendorClass `json:"class,omitempty"`
 	// The name of the company associated with this vendor. This name is used on invoices, checks, and other forms.
-	CompanyName string `json:"companyName"`
+	CompanyName *string `json:"companyName,omitempty"`
 	// The formal salutation title that precedes the name of the contact person for this vendor, such as \"Mr.\", \"Ms.\", or \"Dr.\".
-	Salutation string `json:"salutation"`
+	Salutation *string `json:"salutation,omitempty"`
 	// The first name of the contact person for this vendor.
-	FirstName string `json:"firstName"`
+	FirstName *string `json:"firstName,omitempty"`
 	// The middle name of the contact person for this vendor.
-	MiddleName string `json:"middleName"`
+	MiddleName *string `json:"middleName,omitempty"`
 	// The last name of the contact person for this vendor.
-	LastName string `json:"lastName"`
+	LastName *string `json:"lastName,omitempty"`
 	// The job title of the contact person for this vendor.
-	JobTitle string `json:"jobTitle"`
-	BillingAddress QbdVendorBillingAddress `json:"billingAddress"`
-	ShippingAddress QbdVendorShippingAddress `json:"shippingAddress"`
+	JobTitle *string `json:"jobTitle,omitempty"`
+	BillingAddress *QbdVendorBillingAddress `json:"billingAddress,omitempty"`
+	ShippingAddress *QbdVendorShippingAddress `json:"shippingAddress,omitempty"`
 	// The vendor's primary telephone number.
-	Phone string `json:"phone"`
+	Phone *string `json:"phone,omitempty"`
 	// The vendor's alternate telephone number.
-	AlternatePhone string `json:"alternatePhone"`
+	AlternatePhone *string `json:"alternatePhone,omitempty"`
 	// The vendor's fax number.
-	Fax string `json:"fax"`
+	Fax *string `json:"fax,omitempty"`
 	// The vendor's email address.
-	Email string `json:"email"`
+	Email *string `json:"email,omitempty"`
 	// An email address to carbon copy (CC) on communications with this vendor.
-	CcEmail string `json:"ccEmail"`
+	CcEmail *string `json:"ccEmail,omitempty"`
 	// The name of the primary contact person for this vendor.
-	Contact string `json:"contact"`
+	Contact *string `json:"contact,omitempty"`
 	// The name of a alternate contact person for this vendor.
-	AlternateContact string `json:"alternateContact"`
+	AlternateContact *string `json:"alternateContact,omitempty"`
 	// Additional custom contact fields for this vendor, such as phone numbers or email addresses.
 	CustomContactFields []QbdCustomContactField `json:"customContactFields"`
 	// Additional alternate contacts for this vendor.
 	AdditionalContacts []QbdContact `json:"additionalContacts"`
 	// The vendor's name as it should appear on checks issued to this vendor.
-	NameOnCheck string `json:"nameOnCheck"`
+	NameOnCheck *string `json:"nameOnCheck,omitempty"`
 	// The vendor's account number, which appears in the QuickBooks chart of accounts, reports, and graphs.  Note that if the \"Use Account Numbers\" preference is turned off in QuickBooks, the account number may not be visible in the user interface, but it can still be set and retrieved through the API.
-	AccountNumber string `json:"accountNumber"`
+	AccountNumber *string `json:"accountNumber,omitempty"`
 	// A note or comment about this vendor.
-	Note string `json:"note"`
+	Note *string `json:"note,omitempty"`
 	// Additional notes about this vendor.
 	AdditionalNotes []QbdNote `json:"additionalNotes"`
-	VendorType QbdVendorVendorType `json:"vendorType"`
-	Terms QbdVendorTerms `json:"terms"`
+	VendorType *QbdVendorVendorType `json:"vendorType,omitempty"`
+	Terms *QbdVendorTerms `json:"terms,omitempty"`
 	// The vendor's credit limit, represented as a decimal string. This is the maximum amount of money that can be spent being before billed by this vendor. If `null`, there is no credit limit.
-	CreditLimit string `json:"creditLimit"`
+	CreditLimit *string `json:"creditLimit,omitempty"`
 	// The vendor's tax identification number (e.g., EIN or SSN).
-	TaxIdentificationNumber string `json:"taxIdentificationNumber"`
+	TaxIdentificationNumber *string `json:"taxIdentificationNumber,omitempty"`
 	// Indicates whether this vendor is eligible to receive a 1099 form for tax reporting purposes. When `true`, then the fields `taxId` and `billingAddress` are required.
-	IsEligibleFor1099 bool `json:"isEligibleFor1099"`
+	IsEligibleFor1099 *bool `json:"isEligibleFor1099,omitempty"`
 	// The current balance owed to this vendor, represented as a decimal string. A positive number indicates money owed to the vendor.
-	Balance string `json:"balance"`
-	BillingRate QbdVendorBillingRate `json:"billingRate"`
+	Balance *string `json:"balance,omitempty"`
+	BillingRate *QbdVendorBillingRate `json:"billingRate,omitempty"`
 	// A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation.
-	ExternalId string `json:"externalId"`
-	SalesTaxCode QbdVendorSalesTaxCode `json:"salesTaxCode"`
+	ExternalId *string `json:"externalId,omitempty"`
+	SalesTaxCode *QbdVendorSalesTaxCode `json:"salesTaxCode,omitempty"`
 	// The country for which sales tax is collected for this vendor.
-	SalesTaxCountry string `json:"salesTaxCountry"`
+	SalesTaxCountry *string `json:"salesTaxCountry,omitempty"`
 	// Indicates whether this vendor is a sales tax agency.
-	IsSalesTaxAgency bool `json:"isSalesTaxAgency"`
-	SalesTaxReturn QbdVendorSalesTaxReturn `json:"salesTaxReturn"`
+	IsSalesTaxAgency *bool `json:"isSalesTaxAgency,omitempty"`
+	SalesTaxReturn *QbdVendorSalesTaxReturn `json:"salesTaxReturn,omitempty"`
 	// The vendor's tax registration number, for use in Canada or the UK.
-	TaxRegistrationNumber string `json:"taxRegistrationNumber"`
+	TaxRegistrationNumber *string `json:"taxRegistrationNumber,omitempty"`
 	// The vendor's tax reporting period, for use in Canada or the UK.
-	ReportingPeriod string `json:"reportingPeriod"`
+	ReportingPeriod *string `json:"reportingPeriod,omitempty"`
 	// Indicates whether tax is tracked on purchases for this vendor, for use in Canada or the UK.
-	IsTrackingPurchaseTax bool `json:"isTrackingPurchaseTax"`
-	PurchaseTaxAccount QbdVendorPurchaseTaxAccount `json:"purchaseTaxAccount"`
+	IsTrackingPurchaseTax *bool `json:"isTrackingPurchaseTax,omitempty"`
+	PurchaseTaxAccount *QbdVendorPurchaseTaxAccount `json:"purchaseTaxAccount,omitempty"`
 	// Indicates whether tax is tracked on sales for this vendor, for use in Canada or the UK.
-	IsTrackingSalesTax bool `json:"isTrackingSalesTax"`
-	SalesTaxAccount QbdVendorSalesTaxAccount `json:"salesTaxAccount"`
+	IsTrackingSalesTax *bool `json:"isTrackingSalesTax,omitempty"`
+	SalesTaxAccount *QbdVendorSalesTaxAccount `json:"salesTaxAccount,omitempty"`
 	// Indicates whether tax is charged on top of tax for this vendor, for use in Canada or the UK.
-	IsCompoundingTax bool `json:"isCompoundingTax"`
+	IsCompoundingTax *bool `json:"isCompoundingTax,omitempty"`
 	// The expense accounts to prefill when entering bills for this vendor.
 	DefaultExpenseAccounts []QbdVendorDefaultExpenseAccountsInner `json:"defaultExpenseAccounts"`
-	Currency QbdVendorCurrency `json:"currency"`
+	Currency *QbdVendorCurrency `json:"currency,omitempty"`
 	// The custom fields for the vendor object, added as user-defined data extensions, not included in the standard QuickBooks object.
 	CustomFields []QbdCustomField `json:"customFields"`
 	AdditionalProperties map[string]interface{}
@@ -120,7 +120,7 @@ type _QbdVendor QbdVendor
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewQbdVendor(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, isActive bool, class QbdVendorClass, companyName string, salutation string, firstName string, middleName string, lastName string, jobTitle string, billingAddress QbdVendorBillingAddress, shippingAddress QbdVendorShippingAddress, phone string, alternatePhone string, fax string, email string, ccEmail string, contact string, alternateContact string, customContactFields []QbdCustomContactField, additionalContacts []QbdContact, nameOnCheck string, accountNumber string, note string, additionalNotes []QbdNote, vendorType QbdVendorVendorType, terms QbdVendorTerms, creditLimit string, taxIdentificationNumber string, isEligibleFor1099 bool, balance string, billingRate QbdVendorBillingRate, externalId string, salesTaxCode QbdVendorSalesTaxCode, salesTaxCountry string, isSalesTaxAgency bool, salesTaxReturn QbdVendorSalesTaxReturn, taxRegistrationNumber string, reportingPeriod string, isTrackingPurchaseTax bool, purchaseTaxAccount QbdVendorPurchaseTaxAccount, isTrackingSalesTax bool, salesTaxAccount QbdVendorSalesTaxAccount, isCompoundingTax bool, defaultExpenseAccounts []QbdVendorDefaultExpenseAccountsInner, currency QbdVendorCurrency, customFields []QbdCustomField) *QbdVendor {
+func NewQbdVendor(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, isActive bool, customContactFields []QbdCustomContactField, additionalContacts []QbdContact, additionalNotes []QbdNote, defaultExpenseAccounts []QbdVendorDefaultExpenseAccountsInner, customFields []QbdCustomField) *QbdVendor {
 	this := QbdVendor{}
 	this.Id = id
 	this.ObjectType = objectType
@@ -129,49 +129,10 @@ func NewQbdVendor(id string, objectType string, createdAt string, updatedAt stri
 	this.RevisionNumber = revisionNumber
 	this.Name = name
 	this.IsActive = isActive
-	this.Class = class
-	this.CompanyName = companyName
-	this.Salutation = salutation
-	this.FirstName = firstName
-	this.MiddleName = middleName
-	this.LastName = lastName
-	this.JobTitle = jobTitle
-	this.BillingAddress = billingAddress
-	this.ShippingAddress = shippingAddress
-	this.Phone = phone
-	this.AlternatePhone = alternatePhone
-	this.Fax = fax
-	this.Email = email
-	this.CcEmail = ccEmail
-	this.Contact = contact
-	this.AlternateContact = alternateContact
 	this.CustomContactFields = customContactFields
 	this.AdditionalContacts = additionalContacts
-	this.NameOnCheck = nameOnCheck
-	this.AccountNumber = accountNumber
-	this.Note = note
 	this.AdditionalNotes = additionalNotes
-	this.VendorType = vendorType
-	this.Terms = terms
-	this.CreditLimit = creditLimit
-	this.TaxIdentificationNumber = taxIdentificationNumber
-	this.IsEligibleFor1099 = isEligibleFor1099
-	this.Balance = balance
-	this.BillingRate = billingRate
-	this.ExternalId = externalId
-	this.SalesTaxCode = salesTaxCode
-	this.SalesTaxCountry = salesTaxCountry
-	this.IsSalesTaxAgency = isSalesTaxAgency
-	this.SalesTaxReturn = salesTaxReturn
-	this.TaxRegistrationNumber = taxRegistrationNumber
-	this.ReportingPeriod = reportingPeriod
-	this.IsTrackingPurchaseTax = isTrackingPurchaseTax
-	this.PurchaseTaxAccount = purchaseTaxAccount
-	this.IsTrackingSalesTax = isTrackingSalesTax
-	this.SalesTaxAccount = salesTaxAccount
-	this.IsCompoundingTax = isCompoundingTax
 	this.DefaultExpenseAccounts = defaultExpenseAccounts
-	this.Currency = currency
 	this.CustomFields = customFields
 	return &this
 }
@@ -352,388 +313,516 @@ func (o *QbdVendor) SetIsActive(v bool) {
 	o.IsActive = v
 }
 
-// GetClass returns the Class field value
+// GetClass returns the Class field value if set, zero value otherwise.
 func (o *QbdVendor) GetClass() QbdVendorClass {
-	if o == nil {
+	if o == nil || IsNil(o.Class) {
 		var ret QbdVendorClass
 		return ret
 	}
-
-	return o.Class
+	return *o.Class
 }
 
-// GetClassOk returns a tuple with the Class field value
+// GetClassOk returns a tuple with the Class field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetClassOk() (*QbdVendorClass, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Class) {
 		return nil, false
 	}
-	return &o.Class, true
+	return o.Class, true
 }
 
-// SetClass sets field value
+// HasClass returns a boolean if a field has been set.
+func (o *QbdVendor) HasClass() bool {
+	if o != nil && !IsNil(o.Class) {
+		return true
+	}
+
+	return false
+}
+
+// SetClass gets a reference to the given QbdVendorClass and assigns it to the Class field.
 func (o *QbdVendor) SetClass(v QbdVendorClass) {
-	o.Class = v
+	o.Class = &v
 }
 
-// GetCompanyName returns the CompanyName field value
+// GetCompanyName returns the CompanyName field value if set, zero value otherwise.
 func (o *QbdVendor) GetCompanyName() string {
-	if o == nil {
+	if o == nil || IsNil(o.CompanyName) {
 		var ret string
 		return ret
 	}
-
-	return o.CompanyName
+	return *o.CompanyName
 }
 
-// GetCompanyNameOk returns a tuple with the CompanyName field value
+// GetCompanyNameOk returns a tuple with the CompanyName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetCompanyNameOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.CompanyName) {
 		return nil, false
 	}
-	return &o.CompanyName, true
+	return o.CompanyName, true
 }
 
-// SetCompanyName sets field value
+// HasCompanyName returns a boolean if a field has been set.
+func (o *QbdVendor) HasCompanyName() bool {
+	if o != nil && !IsNil(o.CompanyName) {
+		return true
+	}
+
+	return false
+}
+
+// SetCompanyName gets a reference to the given string and assigns it to the CompanyName field.
 func (o *QbdVendor) SetCompanyName(v string) {
-	o.CompanyName = v
+	o.CompanyName = &v
 }
 
-// GetSalutation returns the Salutation field value
+// GetSalutation returns the Salutation field value if set, zero value otherwise.
 func (o *QbdVendor) GetSalutation() string {
-	if o == nil {
+	if o == nil || IsNil(o.Salutation) {
 		var ret string
 		return ret
 	}
-
-	return o.Salutation
+	return *o.Salutation
 }
 
-// GetSalutationOk returns a tuple with the Salutation field value
+// GetSalutationOk returns a tuple with the Salutation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetSalutationOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Salutation) {
 		return nil, false
 	}
-	return &o.Salutation, true
+	return o.Salutation, true
 }
 
-// SetSalutation sets field value
+// HasSalutation returns a boolean if a field has been set.
+func (o *QbdVendor) HasSalutation() bool {
+	if o != nil && !IsNil(o.Salutation) {
+		return true
+	}
+
+	return false
+}
+
+// SetSalutation gets a reference to the given string and assigns it to the Salutation field.
 func (o *QbdVendor) SetSalutation(v string) {
-	o.Salutation = v
+	o.Salutation = &v
 }
 
-// GetFirstName returns the FirstName field value
+// GetFirstName returns the FirstName field value if set, zero value otherwise.
 func (o *QbdVendor) GetFirstName() string {
-	if o == nil {
+	if o == nil || IsNil(o.FirstName) {
 		var ret string
 		return ret
 	}
-
-	return o.FirstName
+	return *o.FirstName
 }
 
-// GetFirstNameOk returns a tuple with the FirstName field value
+// GetFirstNameOk returns a tuple with the FirstName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetFirstNameOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.FirstName) {
 		return nil, false
 	}
-	return &o.FirstName, true
+	return o.FirstName, true
 }
 
-// SetFirstName sets field value
+// HasFirstName returns a boolean if a field has been set.
+func (o *QbdVendor) HasFirstName() bool {
+	if o != nil && !IsNil(o.FirstName) {
+		return true
+	}
+
+	return false
+}
+
+// SetFirstName gets a reference to the given string and assigns it to the FirstName field.
 func (o *QbdVendor) SetFirstName(v string) {
-	o.FirstName = v
+	o.FirstName = &v
 }
 
-// GetMiddleName returns the MiddleName field value
+// GetMiddleName returns the MiddleName field value if set, zero value otherwise.
 func (o *QbdVendor) GetMiddleName() string {
-	if o == nil {
+	if o == nil || IsNil(o.MiddleName) {
 		var ret string
 		return ret
 	}
-
-	return o.MiddleName
+	return *o.MiddleName
 }
 
-// GetMiddleNameOk returns a tuple with the MiddleName field value
+// GetMiddleNameOk returns a tuple with the MiddleName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetMiddleNameOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.MiddleName) {
 		return nil, false
 	}
-	return &o.MiddleName, true
+	return o.MiddleName, true
 }
 
-// SetMiddleName sets field value
+// HasMiddleName returns a boolean if a field has been set.
+func (o *QbdVendor) HasMiddleName() bool {
+	if o != nil && !IsNil(o.MiddleName) {
+		return true
+	}
+
+	return false
+}
+
+// SetMiddleName gets a reference to the given string and assigns it to the MiddleName field.
 func (o *QbdVendor) SetMiddleName(v string) {
-	o.MiddleName = v
+	o.MiddleName = &v
 }
 
-// GetLastName returns the LastName field value
+// GetLastName returns the LastName field value if set, zero value otherwise.
 func (o *QbdVendor) GetLastName() string {
-	if o == nil {
+	if o == nil || IsNil(o.LastName) {
 		var ret string
 		return ret
 	}
-
-	return o.LastName
+	return *o.LastName
 }
 
-// GetLastNameOk returns a tuple with the LastName field value
+// GetLastNameOk returns a tuple with the LastName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetLastNameOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.LastName) {
 		return nil, false
 	}
-	return &o.LastName, true
+	return o.LastName, true
 }
 
-// SetLastName sets field value
+// HasLastName returns a boolean if a field has been set.
+func (o *QbdVendor) HasLastName() bool {
+	if o != nil && !IsNil(o.LastName) {
+		return true
+	}
+
+	return false
+}
+
+// SetLastName gets a reference to the given string and assigns it to the LastName field.
 func (o *QbdVendor) SetLastName(v string) {
-	o.LastName = v
+	o.LastName = &v
 }
 
-// GetJobTitle returns the JobTitle field value
+// GetJobTitle returns the JobTitle field value if set, zero value otherwise.
 func (o *QbdVendor) GetJobTitle() string {
-	if o == nil {
+	if o == nil || IsNil(o.JobTitle) {
 		var ret string
 		return ret
 	}
-
-	return o.JobTitle
+	return *o.JobTitle
 }
 
-// GetJobTitleOk returns a tuple with the JobTitle field value
+// GetJobTitleOk returns a tuple with the JobTitle field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetJobTitleOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.JobTitle) {
 		return nil, false
 	}
-	return &o.JobTitle, true
+	return o.JobTitle, true
 }
 
-// SetJobTitle sets field value
+// HasJobTitle returns a boolean if a field has been set.
+func (o *QbdVendor) HasJobTitle() bool {
+	if o != nil && !IsNil(o.JobTitle) {
+		return true
+	}
+
+	return false
+}
+
+// SetJobTitle gets a reference to the given string and assigns it to the JobTitle field.
 func (o *QbdVendor) SetJobTitle(v string) {
-	o.JobTitle = v
+	o.JobTitle = &v
 }
 
-// GetBillingAddress returns the BillingAddress field value
+// GetBillingAddress returns the BillingAddress field value if set, zero value otherwise.
 func (o *QbdVendor) GetBillingAddress() QbdVendorBillingAddress {
-	if o == nil {
+	if o == nil || IsNil(o.BillingAddress) {
 		var ret QbdVendorBillingAddress
 		return ret
 	}
-
-	return o.BillingAddress
+	return *o.BillingAddress
 }
 
-// GetBillingAddressOk returns a tuple with the BillingAddress field value
+// GetBillingAddressOk returns a tuple with the BillingAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetBillingAddressOk() (*QbdVendorBillingAddress, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.BillingAddress) {
 		return nil, false
 	}
-	return &o.BillingAddress, true
+	return o.BillingAddress, true
 }
 
-// SetBillingAddress sets field value
+// HasBillingAddress returns a boolean if a field has been set.
+func (o *QbdVendor) HasBillingAddress() bool {
+	if o != nil && !IsNil(o.BillingAddress) {
+		return true
+	}
+
+	return false
+}
+
+// SetBillingAddress gets a reference to the given QbdVendorBillingAddress and assigns it to the BillingAddress field.
 func (o *QbdVendor) SetBillingAddress(v QbdVendorBillingAddress) {
-	o.BillingAddress = v
+	o.BillingAddress = &v
 }
 
-// GetShippingAddress returns the ShippingAddress field value
+// GetShippingAddress returns the ShippingAddress field value if set, zero value otherwise.
 func (o *QbdVendor) GetShippingAddress() QbdVendorShippingAddress {
-	if o == nil {
+	if o == nil || IsNil(o.ShippingAddress) {
 		var ret QbdVendorShippingAddress
 		return ret
 	}
-
-	return o.ShippingAddress
+	return *o.ShippingAddress
 }
 
-// GetShippingAddressOk returns a tuple with the ShippingAddress field value
+// GetShippingAddressOk returns a tuple with the ShippingAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetShippingAddressOk() (*QbdVendorShippingAddress, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ShippingAddress) {
 		return nil, false
 	}
-	return &o.ShippingAddress, true
+	return o.ShippingAddress, true
 }
 
-// SetShippingAddress sets field value
+// HasShippingAddress returns a boolean if a field has been set.
+func (o *QbdVendor) HasShippingAddress() bool {
+	if o != nil && !IsNil(o.ShippingAddress) {
+		return true
+	}
+
+	return false
+}
+
+// SetShippingAddress gets a reference to the given QbdVendorShippingAddress and assigns it to the ShippingAddress field.
 func (o *QbdVendor) SetShippingAddress(v QbdVendorShippingAddress) {
-	o.ShippingAddress = v
+	o.ShippingAddress = &v
 }
 
-// GetPhone returns the Phone field value
+// GetPhone returns the Phone field value if set, zero value otherwise.
 func (o *QbdVendor) GetPhone() string {
-	if o == nil {
+	if o == nil || IsNil(o.Phone) {
 		var ret string
 		return ret
 	}
-
-	return o.Phone
+	return *o.Phone
 }
 
-// GetPhoneOk returns a tuple with the Phone field value
+// GetPhoneOk returns a tuple with the Phone field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetPhoneOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Phone) {
 		return nil, false
 	}
-	return &o.Phone, true
+	return o.Phone, true
 }
 
-// SetPhone sets field value
+// HasPhone returns a boolean if a field has been set.
+func (o *QbdVendor) HasPhone() bool {
+	if o != nil && !IsNil(o.Phone) {
+		return true
+	}
+
+	return false
+}
+
+// SetPhone gets a reference to the given string and assigns it to the Phone field.
 func (o *QbdVendor) SetPhone(v string) {
-	o.Phone = v
+	o.Phone = &v
 }
 
-// GetAlternatePhone returns the AlternatePhone field value
+// GetAlternatePhone returns the AlternatePhone field value if set, zero value otherwise.
 func (o *QbdVendor) GetAlternatePhone() string {
-	if o == nil {
+	if o == nil || IsNil(o.AlternatePhone) {
 		var ret string
 		return ret
 	}
-
-	return o.AlternatePhone
+	return *o.AlternatePhone
 }
 
-// GetAlternatePhoneOk returns a tuple with the AlternatePhone field value
+// GetAlternatePhoneOk returns a tuple with the AlternatePhone field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetAlternatePhoneOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.AlternatePhone) {
 		return nil, false
 	}
-	return &o.AlternatePhone, true
+	return o.AlternatePhone, true
 }
 
-// SetAlternatePhone sets field value
+// HasAlternatePhone returns a boolean if a field has been set.
+func (o *QbdVendor) HasAlternatePhone() bool {
+	if o != nil && !IsNil(o.AlternatePhone) {
+		return true
+	}
+
+	return false
+}
+
+// SetAlternatePhone gets a reference to the given string and assigns it to the AlternatePhone field.
 func (o *QbdVendor) SetAlternatePhone(v string) {
-	o.AlternatePhone = v
+	o.AlternatePhone = &v
 }
 
-// GetFax returns the Fax field value
+// GetFax returns the Fax field value if set, zero value otherwise.
 func (o *QbdVendor) GetFax() string {
-	if o == nil {
+	if o == nil || IsNil(o.Fax) {
 		var ret string
 		return ret
 	}
-
-	return o.Fax
+	return *o.Fax
 }
 
-// GetFaxOk returns a tuple with the Fax field value
+// GetFaxOk returns a tuple with the Fax field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetFaxOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Fax) {
 		return nil, false
 	}
-	return &o.Fax, true
+	return o.Fax, true
 }
 
-// SetFax sets field value
+// HasFax returns a boolean if a field has been set.
+func (o *QbdVendor) HasFax() bool {
+	if o != nil && !IsNil(o.Fax) {
+		return true
+	}
+
+	return false
+}
+
+// SetFax gets a reference to the given string and assigns it to the Fax field.
 func (o *QbdVendor) SetFax(v string) {
-	o.Fax = v
+	o.Fax = &v
 }
 
-// GetEmail returns the Email field value
+// GetEmail returns the Email field value if set, zero value otherwise.
 func (o *QbdVendor) GetEmail() string {
-	if o == nil {
+	if o == nil || IsNil(o.Email) {
 		var ret string
 		return ret
 	}
-
-	return o.Email
+	return *o.Email
 }
 
-// GetEmailOk returns a tuple with the Email field value
+// GetEmailOk returns a tuple with the Email field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetEmailOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Email) {
 		return nil, false
 	}
-	return &o.Email, true
+	return o.Email, true
 }
 
-// SetEmail sets field value
+// HasEmail returns a boolean if a field has been set.
+func (o *QbdVendor) HasEmail() bool {
+	if o != nil && !IsNil(o.Email) {
+		return true
+	}
+
+	return false
+}
+
+// SetEmail gets a reference to the given string and assigns it to the Email field.
 func (o *QbdVendor) SetEmail(v string) {
-	o.Email = v
+	o.Email = &v
 }
 
-// GetCcEmail returns the CcEmail field value
+// GetCcEmail returns the CcEmail field value if set, zero value otherwise.
 func (o *QbdVendor) GetCcEmail() string {
-	if o == nil {
+	if o == nil || IsNil(o.CcEmail) {
 		var ret string
 		return ret
 	}
-
-	return o.CcEmail
+	return *o.CcEmail
 }
 
-// GetCcEmailOk returns a tuple with the CcEmail field value
+// GetCcEmailOk returns a tuple with the CcEmail field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetCcEmailOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.CcEmail) {
 		return nil, false
 	}
-	return &o.CcEmail, true
+	return o.CcEmail, true
 }
 
-// SetCcEmail sets field value
+// HasCcEmail returns a boolean if a field has been set.
+func (o *QbdVendor) HasCcEmail() bool {
+	if o != nil && !IsNil(o.CcEmail) {
+		return true
+	}
+
+	return false
+}
+
+// SetCcEmail gets a reference to the given string and assigns it to the CcEmail field.
 func (o *QbdVendor) SetCcEmail(v string) {
-	o.CcEmail = v
+	o.CcEmail = &v
 }
 
-// GetContact returns the Contact field value
+// GetContact returns the Contact field value if set, zero value otherwise.
 func (o *QbdVendor) GetContact() string {
-	if o == nil {
+	if o == nil || IsNil(o.Contact) {
 		var ret string
 		return ret
 	}
-
-	return o.Contact
+	return *o.Contact
 }
 
-// GetContactOk returns a tuple with the Contact field value
+// GetContactOk returns a tuple with the Contact field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetContactOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Contact) {
 		return nil, false
 	}
-	return &o.Contact, true
+	return o.Contact, true
 }
 
-// SetContact sets field value
+// HasContact returns a boolean if a field has been set.
+func (o *QbdVendor) HasContact() bool {
+	if o != nil && !IsNil(o.Contact) {
+		return true
+	}
+
+	return false
+}
+
+// SetContact gets a reference to the given string and assigns it to the Contact field.
 func (o *QbdVendor) SetContact(v string) {
-	o.Contact = v
+	o.Contact = &v
 }
 
-// GetAlternateContact returns the AlternateContact field value
+// GetAlternateContact returns the AlternateContact field value if set, zero value otherwise.
 func (o *QbdVendor) GetAlternateContact() string {
-	if o == nil {
+	if o == nil || IsNil(o.AlternateContact) {
 		var ret string
 		return ret
 	}
-
-	return o.AlternateContact
+	return *o.AlternateContact
 }
 
-// GetAlternateContactOk returns a tuple with the AlternateContact field value
+// GetAlternateContactOk returns a tuple with the AlternateContact field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetAlternateContactOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.AlternateContact) {
 		return nil, false
 	}
-	return &o.AlternateContact, true
+	return o.AlternateContact, true
 }
 
-// SetAlternateContact sets field value
+// HasAlternateContact returns a boolean if a field has been set.
+func (o *QbdVendor) HasAlternateContact() bool {
+	if o != nil && !IsNil(o.AlternateContact) {
+		return true
+	}
+
+	return false
+}
+
+// SetAlternateContact gets a reference to the given string and assigns it to the AlternateContact field.
 func (o *QbdVendor) SetAlternateContact(v string) {
-	o.AlternateContact = v
+	o.AlternateContact = &v
 }
 
 // GetCustomContactFields returns the CustomContactFields field value
@@ -784,76 +873,100 @@ func (o *QbdVendor) SetAdditionalContacts(v []QbdContact) {
 	o.AdditionalContacts = v
 }
 
-// GetNameOnCheck returns the NameOnCheck field value
+// GetNameOnCheck returns the NameOnCheck field value if set, zero value otherwise.
 func (o *QbdVendor) GetNameOnCheck() string {
-	if o == nil {
+	if o == nil || IsNil(o.NameOnCheck) {
 		var ret string
 		return ret
 	}
-
-	return o.NameOnCheck
+	return *o.NameOnCheck
 }
 
-// GetNameOnCheckOk returns a tuple with the NameOnCheck field value
+// GetNameOnCheckOk returns a tuple with the NameOnCheck field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetNameOnCheckOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.NameOnCheck) {
 		return nil, false
 	}
-	return &o.NameOnCheck, true
+	return o.NameOnCheck, true
 }
 
-// SetNameOnCheck sets field value
+// HasNameOnCheck returns a boolean if a field has been set.
+func (o *QbdVendor) HasNameOnCheck() bool {
+	if o != nil && !IsNil(o.NameOnCheck) {
+		return true
+	}
+
+	return false
+}
+
+// SetNameOnCheck gets a reference to the given string and assigns it to the NameOnCheck field.
 func (o *QbdVendor) SetNameOnCheck(v string) {
-	o.NameOnCheck = v
+	o.NameOnCheck = &v
 }
 
-// GetAccountNumber returns the AccountNumber field value
+// GetAccountNumber returns the AccountNumber field value if set, zero value otherwise.
 func (o *QbdVendor) GetAccountNumber() string {
-	if o == nil {
+	if o == nil || IsNil(o.AccountNumber) {
 		var ret string
 		return ret
 	}
-
-	return o.AccountNumber
+	return *o.AccountNumber
 }
 
-// GetAccountNumberOk returns a tuple with the AccountNumber field value
+// GetAccountNumberOk returns a tuple with the AccountNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetAccountNumberOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.AccountNumber) {
 		return nil, false
 	}
-	return &o.AccountNumber, true
+	return o.AccountNumber, true
 }
 
-// SetAccountNumber sets field value
+// HasAccountNumber returns a boolean if a field has been set.
+func (o *QbdVendor) HasAccountNumber() bool {
+	if o != nil && !IsNil(o.AccountNumber) {
+		return true
+	}
+
+	return false
+}
+
+// SetAccountNumber gets a reference to the given string and assigns it to the AccountNumber field.
 func (o *QbdVendor) SetAccountNumber(v string) {
-	o.AccountNumber = v
+	o.AccountNumber = &v
 }
 
-// GetNote returns the Note field value
+// GetNote returns the Note field value if set, zero value otherwise.
 func (o *QbdVendor) GetNote() string {
-	if o == nil {
+	if o == nil || IsNil(o.Note) {
 		var ret string
 		return ret
 	}
-
-	return o.Note
+	return *o.Note
 }
 
-// GetNoteOk returns a tuple with the Note field value
+// GetNoteOk returns a tuple with the Note field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetNoteOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Note) {
 		return nil, false
 	}
-	return &o.Note, true
+	return o.Note, true
 }
 
-// SetNote sets field value
+// HasNote returns a boolean if a field has been set.
+func (o *QbdVendor) HasNote() bool {
+	if o != nil && !IsNil(o.Note) {
+		return true
+	}
+
+	return false
+}
+
+// SetNote gets a reference to the given string and assigns it to the Note field.
 func (o *QbdVendor) SetNote(v string) {
-	o.Note = v
+	o.Note = &v
 }
 
 // GetAdditionalNotes returns the AdditionalNotes field value
@@ -880,460 +993,612 @@ func (o *QbdVendor) SetAdditionalNotes(v []QbdNote) {
 	o.AdditionalNotes = v
 }
 
-// GetVendorType returns the VendorType field value
+// GetVendorType returns the VendorType field value if set, zero value otherwise.
 func (o *QbdVendor) GetVendorType() QbdVendorVendorType {
-	if o == nil {
+	if o == nil || IsNil(o.VendorType) {
 		var ret QbdVendorVendorType
 		return ret
 	}
-
-	return o.VendorType
+	return *o.VendorType
 }
 
-// GetVendorTypeOk returns a tuple with the VendorType field value
+// GetVendorTypeOk returns a tuple with the VendorType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetVendorTypeOk() (*QbdVendorVendorType, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.VendorType) {
 		return nil, false
 	}
-	return &o.VendorType, true
+	return o.VendorType, true
 }
 
-// SetVendorType sets field value
+// HasVendorType returns a boolean if a field has been set.
+func (o *QbdVendor) HasVendorType() bool {
+	if o != nil && !IsNil(o.VendorType) {
+		return true
+	}
+
+	return false
+}
+
+// SetVendorType gets a reference to the given QbdVendorVendorType and assigns it to the VendorType field.
 func (o *QbdVendor) SetVendorType(v QbdVendorVendorType) {
-	o.VendorType = v
+	o.VendorType = &v
 }
 
-// GetTerms returns the Terms field value
+// GetTerms returns the Terms field value if set, zero value otherwise.
 func (o *QbdVendor) GetTerms() QbdVendorTerms {
-	if o == nil {
+	if o == nil || IsNil(o.Terms) {
 		var ret QbdVendorTerms
 		return ret
 	}
-
-	return o.Terms
+	return *o.Terms
 }
 
-// GetTermsOk returns a tuple with the Terms field value
+// GetTermsOk returns a tuple with the Terms field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetTermsOk() (*QbdVendorTerms, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Terms) {
 		return nil, false
 	}
-	return &o.Terms, true
+	return o.Terms, true
 }
 
-// SetTerms sets field value
+// HasTerms returns a boolean if a field has been set.
+func (o *QbdVendor) HasTerms() bool {
+	if o != nil && !IsNil(o.Terms) {
+		return true
+	}
+
+	return false
+}
+
+// SetTerms gets a reference to the given QbdVendorTerms and assigns it to the Terms field.
 func (o *QbdVendor) SetTerms(v QbdVendorTerms) {
-	o.Terms = v
+	o.Terms = &v
 }
 
-// GetCreditLimit returns the CreditLimit field value
+// GetCreditLimit returns the CreditLimit field value if set, zero value otherwise.
 func (o *QbdVendor) GetCreditLimit() string {
-	if o == nil {
+	if o == nil || IsNil(o.CreditLimit) {
 		var ret string
 		return ret
 	}
-
-	return o.CreditLimit
+	return *o.CreditLimit
 }
 
-// GetCreditLimitOk returns a tuple with the CreditLimit field value
+// GetCreditLimitOk returns a tuple with the CreditLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetCreditLimitOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.CreditLimit) {
 		return nil, false
 	}
-	return &o.CreditLimit, true
+	return o.CreditLimit, true
 }
 
-// SetCreditLimit sets field value
+// HasCreditLimit returns a boolean if a field has been set.
+func (o *QbdVendor) HasCreditLimit() bool {
+	if o != nil && !IsNil(o.CreditLimit) {
+		return true
+	}
+
+	return false
+}
+
+// SetCreditLimit gets a reference to the given string and assigns it to the CreditLimit field.
 func (o *QbdVendor) SetCreditLimit(v string) {
-	o.CreditLimit = v
+	o.CreditLimit = &v
 }
 
-// GetTaxIdentificationNumber returns the TaxIdentificationNumber field value
+// GetTaxIdentificationNumber returns the TaxIdentificationNumber field value if set, zero value otherwise.
 func (o *QbdVendor) GetTaxIdentificationNumber() string {
-	if o == nil {
+	if o == nil || IsNil(o.TaxIdentificationNumber) {
 		var ret string
 		return ret
 	}
-
-	return o.TaxIdentificationNumber
+	return *o.TaxIdentificationNumber
 }
 
-// GetTaxIdentificationNumberOk returns a tuple with the TaxIdentificationNumber field value
+// GetTaxIdentificationNumberOk returns a tuple with the TaxIdentificationNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetTaxIdentificationNumberOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.TaxIdentificationNumber) {
 		return nil, false
 	}
-	return &o.TaxIdentificationNumber, true
+	return o.TaxIdentificationNumber, true
 }
 
-// SetTaxIdentificationNumber sets field value
+// HasTaxIdentificationNumber returns a boolean if a field has been set.
+func (o *QbdVendor) HasTaxIdentificationNumber() bool {
+	if o != nil && !IsNil(o.TaxIdentificationNumber) {
+		return true
+	}
+
+	return false
+}
+
+// SetTaxIdentificationNumber gets a reference to the given string and assigns it to the TaxIdentificationNumber field.
 func (o *QbdVendor) SetTaxIdentificationNumber(v string) {
-	o.TaxIdentificationNumber = v
+	o.TaxIdentificationNumber = &v
 }
 
-// GetIsEligibleFor1099 returns the IsEligibleFor1099 field value
+// GetIsEligibleFor1099 returns the IsEligibleFor1099 field value if set, zero value otherwise.
 func (o *QbdVendor) GetIsEligibleFor1099() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsEligibleFor1099) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsEligibleFor1099
+	return *o.IsEligibleFor1099
 }
 
-// GetIsEligibleFor1099Ok returns a tuple with the IsEligibleFor1099 field value
+// GetIsEligibleFor1099Ok returns a tuple with the IsEligibleFor1099 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetIsEligibleFor1099Ok() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsEligibleFor1099) {
 		return nil, false
 	}
-	return &o.IsEligibleFor1099, true
+	return o.IsEligibleFor1099, true
 }
 
-// SetIsEligibleFor1099 sets field value
+// HasIsEligibleFor1099 returns a boolean if a field has been set.
+func (o *QbdVendor) HasIsEligibleFor1099() bool {
+	if o != nil && !IsNil(o.IsEligibleFor1099) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsEligibleFor1099 gets a reference to the given bool and assigns it to the IsEligibleFor1099 field.
 func (o *QbdVendor) SetIsEligibleFor1099(v bool) {
-	o.IsEligibleFor1099 = v
+	o.IsEligibleFor1099 = &v
 }
 
-// GetBalance returns the Balance field value
+// GetBalance returns the Balance field value if set, zero value otherwise.
 func (o *QbdVendor) GetBalance() string {
-	if o == nil {
+	if o == nil || IsNil(o.Balance) {
 		var ret string
 		return ret
 	}
-
-	return o.Balance
+	return *o.Balance
 }
 
-// GetBalanceOk returns a tuple with the Balance field value
+// GetBalanceOk returns a tuple with the Balance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetBalanceOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Balance) {
 		return nil, false
 	}
-	return &o.Balance, true
+	return o.Balance, true
 }
 
-// SetBalance sets field value
+// HasBalance returns a boolean if a field has been set.
+func (o *QbdVendor) HasBalance() bool {
+	if o != nil && !IsNil(o.Balance) {
+		return true
+	}
+
+	return false
+}
+
+// SetBalance gets a reference to the given string and assigns it to the Balance field.
 func (o *QbdVendor) SetBalance(v string) {
-	o.Balance = v
+	o.Balance = &v
 }
 
-// GetBillingRate returns the BillingRate field value
+// GetBillingRate returns the BillingRate field value if set, zero value otherwise.
 func (o *QbdVendor) GetBillingRate() QbdVendorBillingRate {
-	if o == nil {
+	if o == nil || IsNil(o.BillingRate) {
 		var ret QbdVendorBillingRate
 		return ret
 	}
-
-	return o.BillingRate
+	return *o.BillingRate
 }
 
-// GetBillingRateOk returns a tuple with the BillingRate field value
+// GetBillingRateOk returns a tuple with the BillingRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetBillingRateOk() (*QbdVendorBillingRate, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.BillingRate) {
 		return nil, false
 	}
-	return &o.BillingRate, true
+	return o.BillingRate, true
 }
 
-// SetBillingRate sets field value
+// HasBillingRate returns a boolean if a field has been set.
+func (o *QbdVendor) HasBillingRate() bool {
+	if o != nil && !IsNil(o.BillingRate) {
+		return true
+	}
+
+	return false
+}
+
+// SetBillingRate gets a reference to the given QbdVendorBillingRate and assigns it to the BillingRate field.
 func (o *QbdVendor) SetBillingRate(v QbdVendorBillingRate) {
-	o.BillingRate = v
+	o.BillingRate = &v
 }
 
-// GetExternalId returns the ExternalId field value
+// GetExternalId returns the ExternalId field value if set, zero value otherwise.
 func (o *QbdVendor) GetExternalId() string {
-	if o == nil {
+	if o == nil || IsNil(o.ExternalId) {
 		var ret string
 		return ret
 	}
-
-	return o.ExternalId
+	return *o.ExternalId
 }
 
-// GetExternalIdOk returns a tuple with the ExternalId field value
+// GetExternalIdOk returns a tuple with the ExternalId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetExternalIdOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ExternalId) {
 		return nil, false
 	}
-	return &o.ExternalId, true
+	return o.ExternalId, true
 }
 
-// SetExternalId sets field value
+// HasExternalId returns a boolean if a field has been set.
+func (o *QbdVendor) HasExternalId() bool {
+	if o != nil && !IsNil(o.ExternalId) {
+		return true
+	}
+
+	return false
+}
+
+// SetExternalId gets a reference to the given string and assigns it to the ExternalId field.
 func (o *QbdVendor) SetExternalId(v string) {
-	o.ExternalId = v
+	o.ExternalId = &v
 }
 
-// GetSalesTaxCode returns the SalesTaxCode field value
+// GetSalesTaxCode returns the SalesTaxCode field value if set, zero value otherwise.
 func (o *QbdVendor) GetSalesTaxCode() QbdVendorSalesTaxCode {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxCode) {
 		var ret QbdVendorSalesTaxCode
 		return ret
 	}
-
-	return o.SalesTaxCode
+	return *o.SalesTaxCode
 }
 
-// GetSalesTaxCodeOk returns a tuple with the SalesTaxCode field value
+// GetSalesTaxCodeOk returns a tuple with the SalesTaxCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetSalesTaxCodeOk() (*QbdVendorSalesTaxCode, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxCode) {
 		return nil, false
 	}
-	return &o.SalesTaxCode, true
+	return o.SalesTaxCode, true
 }
 
-// SetSalesTaxCode sets field value
+// HasSalesTaxCode returns a boolean if a field has been set.
+func (o *QbdVendor) HasSalesTaxCode() bool {
+	if o != nil && !IsNil(o.SalesTaxCode) {
+		return true
+	}
+
+	return false
+}
+
+// SetSalesTaxCode gets a reference to the given QbdVendorSalesTaxCode and assigns it to the SalesTaxCode field.
 func (o *QbdVendor) SetSalesTaxCode(v QbdVendorSalesTaxCode) {
-	o.SalesTaxCode = v
+	o.SalesTaxCode = &v
 }
 
-// GetSalesTaxCountry returns the SalesTaxCountry field value
+// GetSalesTaxCountry returns the SalesTaxCountry field value if set, zero value otherwise.
 func (o *QbdVendor) GetSalesTaxCountry() string {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxCountry) {
 		var ret string
 		return ret
 	}
-
-	return o.SalesTaxCountry
+	return *o.SalesTaxCountry
 }
 
-// GetSalesTaxCountryOk returns a tuple with the SalesTaxCountry field value
+// GetSalesTaxCountryOk returns a tuple with the SalesTaxCountry field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetSalesTaxCountryOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxCountry) {
 		return nil, false
 	}
-	return &o.SalesTaxCountry, true
+	return o.SalesTaxCountry, true
 }
 
-// SetSalesTaxCountry sets field value
+// HasSalesTaxCountry returns a boolean if a field has been set.
+func (o *QbdVendor) HasSalesTaxCountry() bool {
+	if o != nil && !IsNil(o.SalesTaxCountry) {
+		return true
+	}
+
+	return false
+}
+
+// SetSalesTaxCountry gets a reference to the given string and assigns it to the SalesTaxCountry field.
 func (o *QbdVendor) SetSalesTaxCountry(v string) {
-	o.SalesTaxCountry = v
+	o.SalesTaxCountry = &v
 }
 
-// GetIsSalesTaxAgency returns the IsSalesTaxAgency field value
+// GetIsSalesTaxAgency returns the IsSalesTaxAgency field value if set, zero value otherwise.
 func (o *QbdVendor) GetIsSalesTaxAgency() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsSalesTaxAgency) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsSalesTaxAgency
+	return *o.IsSalesTaxAgency
 }
 
-// GetIsSalesTaxAgencyOk returns a tuple with the IsSalesTaxAgency field value
+// GetIsSalesTaxAgencyOk returns a tuple with the IsSalesTaxAgency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetIsSalesTaxAgencyOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsSalesTaxAgency) {
 		return nil, false
 	}
-	return &o.IsSalesTaxAgency, true
+	return o.IsSalesTaxAgency, true
 }
 
-// SetIsSalesTaxAgency sets field value
+// HasIsSalesTaxAgency returns a boolean if a field has been set.
+func (o *QbdVendor) HasIsSalesTaxAgency() bool {
+	if o != nil && !IsNil(o.IsSalesTaxAgency) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsSalesTaxAgency gets a reference to the given bool and assigns it to the IsSalesTaxAgency field.
 func (o *QbdVendor) SetIsSalesTaxAgency(v bool) {
-	o.IsSalesTaxAgency = v
+	o.IsSalesTaxAgency = &v
 }
 
-// GetSalesTaxReturn returns the SalesTaxReturn field value
+// GetSalesTaxReturn returns the SalesTaxReturn field value if set, zero value otherwise.
 func (o *QbdVendor) GetSalesTaxReturn() QbdVendorSalesTaxReturn {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxReturn) {
 		var ret QbdVendorSalesTaxReturn
 		return ret
 	}
-
-	return o.SalesTaxReturn
+	return *o.SalesTaxReturn
 }
 
-// GetSalesTaxReturnOk returns a tuple with the SalesTaxReturn field value
+// GetSalesTaxReturnOk returns a tuple with the SalesTaxReturn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetSalesTaxReturnOk() (*QbdVendorSalesTaxReturn, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxReturn) {
 		return nil, false
 	}
-	return &o.SalesTaxReturn, true
+	return o.SalesTaxReturn, true
 }
 
-// SetSalesTaxReturn sets field value
+// HasSalesTaxReturn returns a boolean if a field has been set.
+func (o *QbdVendor) HasSalesTaxReturn() bool {
+	if o != nil && !IsNil(o.SalesTaxReturn) {
+		return true
+	}
+
+	return false
+}
+
+// SetSalesTaxReturn gets a reference to the given QbdVendorSalesTaxReturn and assigns it to the SalesTaxReturn field.
 func (o *QbdVendor) SetSalesTaxReturn(v QbdVendorSalesTaxReturn) {
-	o.SalesTaxReturn = v
+	o.SalesTaxReturn = &v
 }
 
-// GetTaxRegistrationNumber returns the TaxRegistrationNumber field value
+// GetTaxRegistrationNumber returns the TaxRegistrationNumber field value if set, zero value otherwise.
 func (o *QbdVendor) GetTaxRegistrationNumber() string {
-	if o == nil {
+	if o == nil || IsNil(o.TaxRegistrationNumber) {
 		var ret string
 		return ret
 	}
-
-	return o.TaxRegistrationNumber
+	return *o.TaxRegistrationNumber
 }
 
-// GetTaxRegistrationNumberOk returns a tuple with the TaxRegistrationNumber field value
+// GetTaxRegistrationNumberOk returns a tuple with the TaxRegistrationNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetTaxRegistrationNumberOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.TaxRegistrationNumber) {
 		return nil, false
 	}
-	return &o.TaxRegistrationNumber, true
+	return o.TaxRegistrationNumber, true
 }
 
-// SetTaxRegistrationNumber sets field value
+// HasTaxRegistrationNumber returns a boolean if a field has been set.
+func (o *QbdVendor) HasTaxRegistrationNumber() bool {
+	if o != nil && !IsNil(o.TaxRegistrationNumber) {
+		return true
+	}
+
+	return false
+}
+
+// SetTaxRegistrationNumber gets a reference to the given string and assigns it to the TaxRegistrationNumber field.
 func (o *QbdVendor) SetTaxRegistrationNumber(v string) {
-	o.TaxRegistrationNumber = v
+	o.TaxRegistrationNumber = &v
 }
 
-// GetReportingPeriod returns the ReportingPeriod field value
+// GetReportingPeriod returns the ReportingPeriod field value if set, zero value otherwise.
 func (o *QbdVendor) GetReportingPeriod() string {
-	if o == nil {
+	if o == nil || IsNil(o.ReportingPeriod) {
 		var ret string
 		return ret
 	}
-
-	return o.ReportingPeriod
+	return *o.ReportingPeriod
 }
 
-// GetReportingPeriodOk returns a tuple with the ReportingPeriod field value
+// GetReportingPeriodOk returns a tuple with the ReportingPeriod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetReportingPeriodOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ReportingPeriod) {
 		return nil, false
 	}
-	return &o.ReportingPeriod, true
+	return o.ReportingPeriod, true
 }
 
-// SetReportingPeriod sets field value
+// HasReportingPeriod returns a boolean if a field has been set.
+func (o *QbdVendor) HasReportingPeriod() bool {
+	if o != nil && !IsNil(o.ReportingPeriod) {
+		return true
+	}
+
+	return false
+}
+
+// SetReportingPeriod gets a reference to the given string and assigns it to the ReportingPeriod field.
 func (o *QbdVendor) SetReportingPeriod(v string) {
-	o.ReportingPeriod = v
+	o.ReportingPeriod = &v
 }
 
-// GetIsTrackingPurchaseTax returns the IsTrackingPurchaseTax field value
+// GetIsTrackingPurchaseTax returns the IsTrackingPurchaseTax field value if set, zero value otherwise.
 func (o *QbdVendor) GetIsTrackingPurchaseTax() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsTrackingPurchaseTax) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsTrackingPurchaseTax
+	return *o.IsTrackingPurchaseTax
 }
 
-// GetIsTrackingPurchaseTaxOk returns a tuple with the IsTrackingPurchaseTax field value
+// GetIsTrackingPurchaseTaxOk returns a tuple with the IsTrackingPurchaseTax field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetIsTrackingPurchaseTaxOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsTrackingPurchaseTax) {
 		return nil, false
 	}
-	return &o.IsTrackingPurchaseTax, true
+	return o.IsTrackingPurchaseTax, true
 }
 
-// SetIsTrackingPurchaseTax sets field value
+// HasIsTrackingPurchaseTax returns a boolean if a field has been set.
+func (o *QbdVendor) HasIsTrackingPurchaseTax() bool {
+	if o != nil && !IsNil(o.IsTrackingPurchaseTax) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsTrackingPurchaseTax gets a reference to the given bool and assigns it to the IsTrackingPurchaseTax field.
 func (o *QbdVendor) SetIsTrackingPurchaseTax(v bool) {
-	o.IsTrackingPurchaseTax = v
+	o.IsTrackingPurchaseTax = &v
 }
 
-// GetPurchaseTaxAccount returns the PurchaseTaxAccount field value
+// GetPurchaseTaxAccount returns the PurchaseTaxAccount field value if set, zero value otherwise.
 func (o *QbdVendor) GetPurchaseTaxAccount() QbdVendorPurchaseTaxAccount {
-	if o == nil {
+	if o == nil || IsNil(o.PurchaseTaxAccount) {
 		var ret QbdVendorPurchaseTaxAccount
 		return ret
 	}
-
-	return o.PurchaseTaxAccount
+	return *o.PurchaseTaxAccount
 }
 
-// GetPurchaseTaxAccountOk returns a tuple with the PurchaseTaxAccount field value
+// GetPurchaseTaxAccountOk returns a tuple with the PurchaseTaxAccount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetPurchaseTaxAccountOk() (*QbdVendorPurchaseTaxAccount, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.PurchaseTaxAccount) {
 		return nil, false
 	}
-	return &o.PurchaseTaxAccount, true
+	return o.PurchaseTaxAccount, true
 }
 
-// SetPurchaseTaxAccount sets field value
+// HasPurchaseTaxAccount returns a boolean if a field has been set.
+func (o *QbdVendor) HasPurchaseTaxAccount() bool {
+	if o != nil && !IsNil(o.PurchaseTaxAccount) {
+		return true
+	}
+
+	return false
+}
+
+// SetPurchaseTaxAccount gets a reference to the given QbdVendorPurchaseTaxAccount and assigns it to the PurchaseTaxAccount field.
 func (o *QbdVendor) SetPurchaseTaxAccount(v QbdVendorPurchaseTaxAccount) {
-	o.PurchaseTaxAccount = v
+	o.PurchaseTaxAccount = &v
 }
 
-// GetIsTrackingSalesTax returns the IsTrackingSalesTax field value
+// GetIsTrackingSalesTax returns the IsTrackingSalesTax field value if set, zero value otherwise.
 func (o *QbdVendor) GetIsTrackingSalesTax() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsTrackingSalesTax) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsTrackingSalesTax
+	return *o.IsTrackingSalesTax
 }
 
-// GetIsTrackingSalesTaxOk returns a tuple with the IsTrackingSalesTax field value
+// GetIsTrackingSalesTaxOk returns a tuple with the IsTrackingSalesTax field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetIsTrackingSalesTaxOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsTrackingSalesTax) {
 		return nil, false
 	}
-	return &o.IsTrackingSalesTax, true
+	return o.IsTrackingSalesTax, true
 }
 
-// SetIsTrackingSalesTax sets field value
+// HasIsTrackingSalesTax returns a boolean if a field has been set.
+func (o *QbdVendor) HasIsTrackingSalesTax() bool {
+	if o != nil && !IsNil(o.IsTrackingSalesTax) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsTrackingSalesTax gets a reference to the given bool and assigns it to the IsTrackingSalesTax field.
 func (o *QbdVendor) SetIsTrackingSalesTax(v bool) {
-	o.IsTrackingSalesTax = v
+	o.IsTrackingSalesTax = &v
 }
 
-// GetSalesTaxAccount returns the SalesTaxAccount field value
+// GetSalesTaxAccount returns the SalesTaxAccount field value if set, zero value otherwise.
 func (o *QbdVendor) GetSalesTaxAccount() QbdVendorSalesTaxAccount {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxAccount) {
 		var ret QbdVendorSalesTaxAccount
 		return ret
 	}
-
-	return o.SalesTaxAccount
+	return *o.SalesTaxAccount
 }
 
-// GetSalesTaxAccountOk returns a tuple with the SalesTaxAccount field value
+// GetSalesTaxAccountOk returns a tuple with the SalesTaxAccount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetSalesTaxAccountOk() (*QbdVendorSalesTaxAccount, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.SalesTaxAccount) {
 		return nil, false
 	}
-	return &o.SalesTaxAccount, true
+	return o.SalesTaxAccount, true
 }
 
-// SetSalesTaxAccount sets field value
+// HasSalesTaxAccount returns a boolean if a field has been set.
+func (o *QbdVendor) HasSalesTaxAccount() bool {
+	if o != nil && !IsNil(o.SalesTaxAccount) {
+		return true
+	}
+
+	return false
+}
+
+// SetSalesTaxAccount gets a reference to the given QbdVendorSalesTaxAccount and assigns it to the SalesTaxAccount field.
 func (o *QbdVendor) SetSalesTaxAccount(v QbdVendorSalesTaxAccount) {
-	o.SalesTaxAccount = v
+	o.SalesTaxAccount = &v
 }
 
-// GetIsCompoundingTax returns the IsCompoundingTax field value
+// GetIsCompoundingTax returns the IsCompoundingTax field value if set, zero value otherwise.
 func (o *QbdVendor) GetIsCompoundingTax() bool {
-	if o == nil {
+	if o == nil || IsNil(o.IsCompoundingTax) {
 		var ret bool
 		return ret
 	}
-
-	return o.IsCompoundingTax
+	return *o.IsCompoundingTax
 }
 
-// GetIsCompoundingTaxOk returns a tuple with the IsCompoundingTax field value
+// GetIsCompoundingTaxOk returns a tuple with the IsCompoundingTax field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetIsCompoundingTaxOk() (*bool, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.IsCompoundingTax) {
 		return nil, false
 	}
-	return &o.IsCompoundingTax, true
+	return o.IsCompoundingTax, true
 }
 
-// SetIsCompoundingTax sets field value
+// HasIsCompoundingTax returns a boolean if a field has been set.
+func (o *QbdVendor) HasIsCompoundingTax() bool {
+	if o != nil && !IsNil(o.IsCompoundingTax) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsCompoundingTax gets a reference to the given bool and assigns it to the IsCompoundingTax field.
 func (o *QbdVendor) SetIsCompoundingTax(v bool) {
-	o.IsCompoundingTax = v
+	o.IsCompoundingTax = &v
 }
 
 // GetDefaultExpenseAccounts returns the DefaultExpenseAccounts field value
@@ -1360,28 +1625,36 @@ func (o *QbdVendor) SetDefaultExpenseAccounts(v []QbdVendorDefaultExpenseAccount
 	o.DefaultExpenseAccounts = v
 }
 
-// GetCurrency returns the Currency field value
+// GetCurrency returns the Currency field value if set, zero value otherwise.
 func (o *QbdVendor) GetCurrency() QbdVendorCurrency {
-	if o == nil {
+	if o == nil || IsNil(o.Currency) {
 		var ret QbdVendorCurrency
 		return ret
 	}
-
-	return o.Currency
+	return *o.Currency
 }
 
-// GetCurrencyOk returns a tuple with the Currency field value
+// GetCurrencyOk returns a tuple with the Currency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *QbdVendor) GetCurrencyOk() (*QbdVendorCurrency, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Currency) {
 		return nil, false
 	}
-	return &o.Currency, true
+	return o.Currency, true
 }
 
-// SetCurrency sets field value
+// HasCurrency returns a boolean if a field has been set.
+func (o *QbdVendor) HasCurrency() bool {
+	if o != nil && !IsNil(o.Currency) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrency gets a reference to the given QbdVendorCurrency and assigns it to the Currency field.
 func (o *QbdVendor) SetCurrency(v QbdVendorCurrency) {
-	o.Currency = v
+	o.Currency = &v
 }
 
 // GetCustomFields returns the CustomFields field value
@@ -1425,49 +1698,127 @@ func (o QbdVendor) ToMap() (map[string]interface{}, error) {
 	toSerialize["revisionNumber"] = o.RevisionNumber
 	toSerialize["name"] = o.Name
 	toSerialize["isActive"] = o.IsActive
-	toSerialize["class"] = o.Class
-	toSerialize["companyName"] = o.CompanyName
-	toSerialize["salutation"] = o.Salutation
-	toSerialize["firstName"] = o.FirstName
-	toSerialize["middleName"] = o.MiddleName
-	toSerialize["lastName"] = o.LastName
-	toSerialize["jobTitle"] = o.JobTitle
-	toSerialize["billingAddress"] = o.BillingAddress
-	toSerialize["shippingAddress"] = o.ShippingAddress
-	toSerialize["phone"] = o.Phone
-	toSerialize["alternatePhone"] = o.AlternatePhone
-	toSerialize["fax"] = o.Fax
-	toSerialize["email"] = o.Email
-	toSerialize["ccEmail"] = o.CcEmail
-	toSerialize["contact"] = o.Contact
-	toSerialize["alternateContact"] = o.AlternateContact
+	if !IsNil(o.Class) {
+		toSerialize["class"] = o.Class
+	}
+	if !IsNil(o.CompanyName) {
+		toSerialize["companyName"] = o.CompanyName
+	}
+	if !IsNil(o.Salutation) {
+		toSerialize["salutation"] = o.Salutation
+	}
+	if !IsNil(o.FirstName) {
+		toSerialize["firstName"] = o.FirstName
+	}
+	if !IsNil(o.MiddleName) {
+		toSerialize["middleName"] = o.MiddleName
+	}
+	if !IsNil(o.LastName) {
+		toSerialize["lastName"] = o.LastName
+	}
+	if !IsNil(o.JobTitle) {
+		toSerialize["jobTitle"] = o.JobTitle
+	}
+	if !IsNil(o.BillingAddress) {
+		toSerialize["billingAddress"] = o.BillingAddress
+	}
+	if !IsNil(o.ShippingAddress) {
+		toSerialize["shippingAddress"] = o.ShippingAddress
+	}
+	if !IsNil(o.Phone) {
+		toSerialize["phone"] = o.Phone
+	}
+	if !IsNil(o.AlternatePhone) {
+		toSerialize["alternatePhone"] = o.AlternatePhone
+	}
+	if !IsNil(o.Fax) {
+		toSerialize["fax"] = o.Fax
+	}
+	if !IsNil(o.Email) {
+		toSerialize["email"] = o.Email
+	}
+	if !IsNil(o.CcEmail) {
+		toSerialize["ccEmail"] = o.CcEmail
+	}
+	if !IsNil(o.Contact) {
+		toSerialize["contact"] = o.Contact
+	}
+	if !IsNil(o.AlternateContact) {
+		toSerialize["alternateContact"] = o.AlternateContact
+	}
 	toSerialize["customContactFields"] = o.CustomContactFields
 	toSerialize["additionalContacts"] = o.AdditionalContacts
-	toSerialize["nameOnCheck"] = o.NameOnCheck
-	toSerialize["accountNumber"] = o.AccountNumber
-	toSerialize["note"] = o.Note
+	if !IsNil(o.NameOnCheck) {
+		toSerialize["nameOnCheck"] = o.NameOnCheck
+	}
+	if !IsNil(o.AccountNumber) {
+		toSerialize["accountNumber"] = o.AccountNumber
+	}
+	if !IsNil(o.Note) {
+		toSerialize["note"] = o.Note
+	}
 	toSerialize["additionalNotes"] = o.AdditionalNotes
-	toSerialize["vendorType"] = o.VendorType
-	toSerialize["terms"] = o.Terms
-	toSerialize["creditLimit"] = o.CreditLimit
-	toSerialize["taxIdentificationNumber"] = o.TaxIdentificationNumber
-	toSerialize["isEligibleFor1099"] = o.IsEligibleFor1099
-	toSerialize["balance"] = o.Balance
-	toSerialize["billingRate"] = o.BillingRate
-	toSerialize["externalId"] = o.ExternalId
-	toSerialize["salesTaxCode"] = o.SalesTaxCode
-	toSerialize["salesTaxCountry"] = o.SalesTaxCountry
-	toSerialize["isSalesTaxAgency"] = o.IsSalesTaxAgency
-	toSerialize["salesTaxReturn"] = o.SalesTaxReturn
-	toSerialize["taxRegistrationNumber"] = o.TaxRegistrationNumber
-	toSerialize["reportingPeriod"] = o.ReportingPeriod
-	toSerialize["isTrackingPurchaseTax"] = o.IsTrackingPurchaseTax
-	toSerialize["purchaseTaxAccount"] = o.PurchaseTaxAccount
-	toSerialize["isTrackingSalesTax"] = o.IsTrackingSalesTax
-	toSerialize["salesTaxAccount"] = o.SalesTaxAccount
-	toSerialize["isCompoundingTax"] = o.IsCompoundingTax
+	if !IsNil(o.VendorType) {
+		toSerialize["vendorType"] = o.VendorType
+	}
+	if !IsNil(o.Terms) {
+		toSerialize["terms"] = o.Terms
+	}
+	if !IsNil(o.CreditLimit) {
+		toSerialize["creditLimit"] = o.CreditLimit
+	}
+	if !IsNil(o.TaxIdentificationNumber) {
+		toSerialize["taxIdentificationNumber"] = o.TaxIdentificationNumber
+	}
+	if !IsNil(o.IsEligibleFor1099) {
+		toSerialize["isEligibleFor1099"] = o.IsEligibleFor1099
+	}
+	if !IsNil(o.Balance) {
+		toSerialize["balance"] = o.Balance
+	}
+	if !IsNil(o.BillingRate) {
+		toSerialize["billingRate"] = o.BillingRate
+	}
+	if !IsNil(o.ExternalId) {
+		toSerialize["externalId"] = o.ExternalId
+	}
+	if !IsNil(o.SalesTaxCode) {
+		toSerialize["salesTaxCode"] = o.SalesTaxCode
+	}
+	if !IsNil(o.SalesTaxCountry) {
+		toSerialize["salesTaxCountry"] = o.SalesTaxCountry
+	}
+	if !IsNil(o.IsSalesTaxAgency) {
+		toSerialize["isSalesTaxAgency"] = o.IsSalesTaxAgency
+	}
+	if !IsNil(o.SalesTaxReturn) {
+		toSerialize["salesTaxReturn"] = o.SalesTaxReturn
+	}
+	if !IsNil(o.TaxRegistrationNumber) {
+		toSerialize["taxRegistrationNumber"] = o.TaxRegistrationNumber
+	}
+	if !IsNil(o.ReportingPeriod) {
+		toSerialize["reportingPeriod"] = o.ReportingPeriod
+	}
+	if !IsNil(o.IsTrackingPurchaseTax) {
+		toSerialize["isTrackingPurchaseTax"] = o.IsTrackingPurchaseTax
+	}
+	if !IsNil(o.PurchaseTaxAccount) {
+		toSerialize["purchaseTaxAccount"] = o.PurchaseTaxAccount
+	}
+	if !IsNil(o.IsTrackingSalesTax) {
+		toSerialize["isTrackingSalesTax"] = o.IsTrackingSalesTax
+	}
+	if !IsNil(o.SalesTaxAccount) {
+		toSerialize["salesTaxAccount"] = o.SalesTaxAccount
+	}
+	if !IsNil(o.IsCompoundingTax) {
+		toSerialize["isCompoundingTax"] = o.IsCompoundingTax
+	}
 	toSerialize["defaultExpenseAccounts"] = o.DefaultExpenseAccounts
-	toSerialize["currency"] = o.Currency
+	if !IsNil(o.Currency) {
+		toSerialize["currency"] = o.Currency
+	}
 	toSerialize["customFields"] = o.CustomFields
 
 	for key, value := range o.AdditionalProperties {
@@ -1489,49 +1840,10 @@ func (o *QbdVendor) UnmarshalJSON(data []byte) (err error) {
 		"revisionNumber",
 		"name",
 		"isActive",
-		"class",
-		"companyName",
-		"salutation",
-		"firstName",
-		"middleName",
-		"lastName",
-		"jobTitle",
-		"billingAddress",
-		"shippingAddress",
-		"phone",
-		"alternatePhone",
-		"fax",
-		"email",
-		"ccEmail",
-		"contact",
-		"alternateContact",
 		"customContactFields",
 		"additionalContacts",
-		"nameOnCheck",
-		"accountNumber",
-		"note",
 		"additionalNotes",
-		"vendorType",
-		"terms",
-		"creditLimit",
-		"taxIdentificationNumber",
-		"isEligibleFor1099",
-		"balance",
-		"billingRate",
-		"externalId",
-		"salesTaxCode",
-		"salesTaxCountry",
-		"isSalesTaxAgency",
-		"salesTaxReturn",
-		"taxRegistrationNumber",
-		"reportingPeriod",
-		"isTrackingPurchaseTax",
-		"purchaseTaxAccount",
-		"isTrackingSalesTax",
-		"salesTaxAccount",
-		"isCompoundingTax",
 		"defaultExpenseAccounts",
-		"currency",
 		"customFields",
 	}
 

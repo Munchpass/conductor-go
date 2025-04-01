@@ -12,60 +12,60 @@ Name | Type | Description | Notes
 **Name** | **string** | The case-insensitive name of this customer. Not guaranteed to be unique because it does not include the names of its hierarchical parent objects like &#x60;fullName&#x60; does. For example, two customers could both have the &#x60;name&#x60; \&quot;Website Redesign Project\&quot;, but they could have unique &#x60;fullName&#x60; values, such as \&quot;ABC Corporation:Website Redesign Project\&quot; and \&quot;Baker:Website Redesign Project\&quot;. | 
 **FullName** | **string** | The case-insensitive fully-qualified unique name of this customer, formed by combining the names of its hierarchical parent objects with its own &#x60;name&#x60;, separated by colons. For example, if a customer is under \&quot;ABC Corporation\&quot; and has the &#x60;name&#x60; \&quot;Website Redesign Project\&quot;, its &#x60;fullName&#x60; would be \&quot;ABC Corporation:Website Redesign Project\&quot;.  **NOTE**: Unlike &#x60;name&#x60;, &#x60;fullName&#x60; is guaranteed to be unique across all customer objects. However, &#x60;fullName&#x60; can still be arbitrarily changed by the QuickBooks user when they modify the underlying &#x60;name&#x60; field.  **IMPORTANT**: If this object is a job (i.e., a sub-customer), this value would likely be the job&#39;s &#x60;name&#x60; prefixed by the customer&#39;s &#x60;name&#x60;. | 
 **IsActive** | **bool** | Indicates whether this customer is active. Inactive objects are typically hidden from views and reports in QuickBooks. Defaults to &#x60;true&#x60;. | 
-**Class** | [**QbdCustomerClass**](QbdCustomerClass.md) |  | 
-**Parent** | [**QbdCustomerParent**](QbdCustomerParent.md) |  | 
+**Class** | Pointer to [**QbdCustomerClass**](QbdCustomerClass.md) |  | [optional] 
+**Parent** | Pointer to [**QbdCustomerParent**](QbdCustomerParent.md) |  | [optional] 
 **Sublevel** | **float32** | The depth level of this customer in the hierarchy. A top-level customer has a &#x60;sublevel&#x60; of 0; each subsequent sublevel increases this number by 1. For example, a customer with a &#x60;fullName&#x60; of \&quot;ABC Corporation:Website Redesign Project\&quot; would have a &#x60;sublevel&#x60; of 1. When &#x60;sublevel&#x60; is 0, this object is a customer; when &#x60;sublevel&#x60; is greater than 0, this object is typically a job (i.e., a sub-customer). | 
-**CompanyName** | **string** | The name of the company associated with this customer. This name is used on invoices, checks, and other forms. | 
-**Salutation** | **string** | The formal salutation title that precedes the name of the contact person for this customer, such as \&quot;Mr.\&quot;, \&quot;Ms.\&quot;, or \&quot;Dr.\&quot;. | 
-**FirstName** | **string** | The first name of the contact person for this customer. | 
-**MiddleName** | **string** | The middle name of the contact person for this customer. | 
-**LastName** | **string** | The last name of the contact person for this customer. | 
-**JobTitle** | **string** | The job title of the contact person for this customer. | 
-**BillingAddress** | [**QbdCustomerBillingAddress**](QbdCustomerBillingAddress.md) |  | 
-**ShippingAddress** | [**QbdCustomerShippingAddress**](QbdCustomerShippingAddress.md) |  | 
-**AlternateShippingAddresses** | [**[]QbdShippingAddress**](QbdShippingAddress.md) | A list of additional shipping addresses for this customer. Useful when the customer has multiple shipping locations. | 
-**Phone** | **string** | The customer&#39;s primary telephone number. | 
-**AlternatePhone** | **string** | The customer&#39;s alternate telephone number. | 
-**Fax** | **string** | The customer&#39;s fax number. | 
-**Email** | **string** | The customer&#39;s email address. | 
-**CcEmail** | **string** | An email address to carbon copy (CC) on communications with this customer. | 
-**Contact** | **string** | The name of the primary contact person for this customer. | 
-**AlternateContact** | **string** | The name of a alternate contact person for this customer. | 
-**CustomContactFields** | [**[]QbdCustomContactField**](QbdCustomContactField.md) | Additional custom contact fields for this customer, such as phone numbers or email addresses. | 
-**AdditionalContacts** | [**[]QbdContact**](QbdContact.md) | Additional alternate contacts for this customer. | 
-**CustomerType** | [**QbdCustomerCustomerType**](QbdCustomerCustomerType.md) |  | 
-**Terms** | [**QbdCustomerTerms**](QbdCustomerTerms.md) |  | 
-**SalesRepresentative** | [**QbdCustomerSalesRepresentative**](QbdCustomerSalesRepresentative.md) |  | 
-**Balance** | **string** | The current balance owed by this customer, excluding balances from any jobs (i.e., sub-customers), represented as a decimal string. Compare with &#x60;totalBalance&#x60;. A positive number indicates money owed by the customer. | 
-**TotalBalance** | **string** | The combined balance of this customer and all of this customer&#39;s jobs (i.e., sub-customers), represented as a decimal string. If there are no sub-customers, &#x60;totalBalance&#x60; and &#x60;balance&#x60; are equal. A positive number indicates money owed by the customer. | 
-**SalesTaxCode** | [**QbdCustomerSalesTaxCode**](QbdCustomerSalesTaxCode.md) |  | 
-**SalesTaxItem** | [**QbdCustomerSalesTaxItem**](QbdCustomerSalesTaxItem.md) |  | 
-**SalesTaxCountry** | **string** | The country for which sales tax is collected for this customer. | 
-**ResaleNumber** | **string** | The customer&#39;s resale number, used if the customer is purchasing items for resale. This number does not affect sales tax calculations or reports in QuickBooks. | 
-**AccountNumber** | **string** | The customer&#39;s account number, which appears in the QuickBooks chart of accounts, reports, and graphs.  Note that if the \&quot;Use Account Numbers\&quot; preference is turned off in QuickBooks, the account number may not be visible in the user interface, but it can still be set and retrieved through the API. | 
-**CreditLimit** | **string** | The customer&#39;s credit limit, represented as a decimal string. This is the maximum amount of money this customer can spend before being billed. If &#x60;null&#x60;, there is no credit limit. | 
-**PreferredPaymentMethod** | [**QbdCustomerPreferredPaymentMethod**](QbdCustomerPreferredPaymentMethod.md) |  | 
-**CreditCard** | [**QbdCustomerCreditCard**](QbdCustomerCreditCard.md) |  | 
-**JobStatus** | **string** | The status of this customer&#39;s job, if this object is a job (i.e., sub-customer). | 
-**JobStartDate** | **string** | The date when work on this customer&#39;s job began, if applicable, in ISO 8601 format (YYYY-MM-DD). | 
-**JobProjectedEndDate** | **string** | The projected completion date for this customer&#39;s job, if applicable, in ISO 8601 format (YYYY-MM-DD). | 
-**JobEndDate** | **string** | The actual completion date of this customer&#39;s job, if applicable, in ISO 8601 format (YYYY-MM-DD). | 
-**JobDescription** | **string** | A brief description of this customer&#39;s job, if this object is a job (i.e., sub-customer). | 
-**JobType** | [**QbdCustomerJobType**](QbdCustomerJobType.md) |  | 
-**Note** | **string** | A note or comment about this customer. | 
-**AdditionalNotes** | [**[]QbdNote**](QbdNote.md) | Additional notes about this customer. | 
-**PreferredDeliveryMethod** | **string** | The preferred method for delivering invoices and other documents to this customer. | 
-**PriceLevel** | [**QbdCustomerPriceLevel**](QbdCustomerPriceLevel.md) |  | 
-**ExternalId** | **string** | A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation. | 
-**TaxRegistrationNumber** | **string** | The customer&#39;s tax registration number, for use in Canada or the UK. | 
-**Currency** | [**QbdCustomerCurrency**](QbdCustomerCurrency.md) |  | 
-**CustomFields** | [**[]QbdCustomField**](QbdCustomField.md) | The custom fields for the customer object, added as user-defined data extensions, not included in the standard QuickBooks object. | 
+**CompanyName** | Pointer to **string** | The name of the company associated with this customer. This name is used on invoices, checks, and other forms. | [optional] 
+**Salutation** | Pointer to **string** | The formal salutation title that precedes the name of the contact person for this customer, such as \&quot;Mr.\&quot;, \&quot;Ms.\&quot;, or \&quot;Dr.\&quot;. | [optional] 
+**FirstName** | Pointer to **string** | The first name of the contact person for this customer. | [optional] 
+**MiddleName** | Pointer to **string** | The middle name of the contact person for this customer. | [optional] 
+**LastName** | Pointer to **string** | The last name of the contact person for this customer. | [optional] 
+**JobTitle** | Pointer to **string** | The job title of the contact person for this customer. | [optional] 
+**BillingAddress** | Pointer to [**QbdCustomerBillingAddress**](QbdCustomerBillingAddress.md) |  | [optional] 
+**ShippingAddress** | Pointer to [**QbdCustomerShippingAddress**](QbdCustomerShippingAddress.md) |  | [optional] 
+**AlternateShippingAddresses** | Pointer to [**[]QbdShippingAddress**](QbdShippingAddress.md) | A list of additional shipping addresses for this customer. Useful when the customer has multiple shipping locations. | [optional] 
+**Phone** | Pointer to **string** | The customer&#39;s primary telephone number. | [optional] 
+**AlternatePhone** | Pointer to **string** | The customer&#39;s alternate telephone number. | [optional] 
+**Fax** | Pointer to **string** | The customer&#39;s fax number. | [optional] 
+**Email** | Pointer to **string** | The customer&#39;s email address. | [optional] 
+**CcEmail** | Pointer to **string** | An email address to carbon copy (CC) on communications with this customer. | [optional] 
+**Contact** | Pointer to **string** | The name of the primary contact person for this customer. | [optional] 
+**AlternateContact** | Pointer to **string** | The name of a alternate contact person for this customer. | [optional] 
+**CustomContactFields** | Pointer to [**[]QbdCustomContactField**](QbdCustomContactField.md) | Additional custom contact fields for this customer, such as phone numbers or email addresses. | [optional] 
+**AdditionalContacts** | Pointer to [**[]QbdContact**](QbdContact.md) | Additional alternate contacts for this customer. | [optional] 
+**CustomerType** | Pointer to [**QbdCustomerCustomerType**](QbdCustomerCustomerType.md) |  | [optional] 
+**Terms** | Pointer to [**QbdCustomerTerms**](QbdCustomerTerms.md) |  | [optional] 
+**SalesRepresentative** | Pointer to [**QbdCustomerSalesRepresentative**](QbdCustomerSalesRepresentative.md) |  | [optional] 
+**Balance** | Pointer to **string** | The current balance owed by this customer, excluding balances from any jobs (i.e., sub-customers), represented as a decimal string. Compare with &#x60;totalBalance&#x60;. A positive number indicates money owed by the customer. | [optional] 
+**TotalBalance** | Pointer to **string** | The combined balance of this customer and all of this customer&#39;s jobs (i.e., sub-customers), represented as a decimal string. If there are no sub-customers, &#x60;totalBalance&#x60; and &#x60;balance&#x60; are equal. A positive number indicates money owed by the customer. | [optional] 
+**SalesTaxCode** | Pointer to [**QbdCustomerSalesTaxCode**](QbdCustomerSalesTaxCode.md) |  | [optional] 
+**SalesTaxItem** | Pointer to [**QbdCustomerSalesTaxItem**](QbdCustomerSalesTaxItem.md) |  | [optional] 
+**SalesTaxCountry** | Pointer to **string** | The country for which sales tax is collected for this customer. | [optional] 
+**ResaleNumber** | Pointer to **string** | The customer&#39;s resale number, used if the customer is purchasing items for resale. This number does not affect sales tax calculations or reports in QuickBooks. | [optional] 
+**AccountNumber** | Pointer to **string** | The customer&#39;s account number, which appears in the QuickBooks chart of accounts, reports, and graphs.  Note that if the \&quot;Use Account Numbers\&quot; preference is turned off in QuickBooks, the account number may not be visible in the user interface, but it can still be set and retrieved through the API. | [optional] 
+**CreditLimit** | Pointer to **string** | The customer&#39;s credit limit, represented as a decimal string. This is the maximum amount of money this customer can spend before being billed. If &#x60;null&#x60;, there is no credit limit. | [optional] 
+**PreferredPaymentMethod** | Pointer to [**QbdCustomerPreferredPaymentMethod**](QbdCustomerPreferredPaymentMethod.md) |  | [optional] 
+**CreditCard** | Pointer to [**QbdCustomerCreditCard**](QbdCustomerCreditCard.md) |  | [optional] 
+**JobStatus** | Pointer to **string** | The status of this customer&#39;s job, if this object is a job (i.e., sub-customer). | [optional] 
+**JobStartDate** | Pointer to **string** | The date when work on this customer&#39;s job began, if applicable, in ISO 8601 format (YYYY-MM-DD). | [optional] 
+**JobProjectedEndDate** | Pointer to **string** | The projected completion date for this customer&#39;s job, if applicable, in ISO 8601 format (YYYY-MM-DD). | [optional] 
+**JobEndDate** | Pointer to **string** | The actual completion date of this customer&#39;s job, if applicable, in ISO 8601 format (YYYY-MM-DD). | [optional] 
+**JobDescription** | Pointer to **string** | A brief description of this customer&#39;s job, if this object is a job (i.e., sub-customer). | [optional] 
+**JobType** | Pointer to [**QbdCustomerJobType**](QbdCustomerJobType.md) |  | [optional] 
+**Note** | Pointer to **string** | A note or comment about this customer. | [optional] 
+**AdditionalNotes** | Pointer to [**[]QbdNote**](QbdNote.md) | Additional notes about this customer. | [optional] 
+**PreferredDeliveryMethod** | Pointer to **string** | The preferred method for delivering invoices and other documents to this customer. | [optional] 
+**PriceLevel** | Pointer to [**QbdCustomerPriceLevel**](QbdCustomerPriceLevel.md) |  | [optional] 
+**ExternalId** | Pointer to **string** | A globally unique identifier (GUID) you, the developer, can provide for tracking this object in your external system. This field is immutable and can only be set during object creation. | [optional] 
+**TaxRegistrationNumber** | Pointer to **string** | The customer&#39;s tax registration number, for use in Canada or the UK. | [optional] 
+**Currency** | Pointer to [**QbdCustomerCurrency**](QbdCustomerCurrency.md) |  | [optional] 
+**CustomFields** | Pointer to [**[]QbdCustomField**](QbdCustomField.md) | The custom fields for the customer object, added as user-defined data extensions, not included in the standard QuickBooks object. | [optional] 
 
 ## Methods
 
 ### NewQbdCustomer
 
-`func NewQbdCustomer(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, class QbdCustomerClass, parent QbdCustomerParent, sublevel float32, companyName string, salutation string, firstName string, middleName string, lastName string, jobTitle string, billingAddress QbdCustomerBillingAddress, shippingAddress QbdCustomerShippingAddress, alternateShippingAddresses []QbdShippingAddress, phone string, alternatePhone string, fax string, email string, ccEmail string, contact string, alternateContact string, customContactFields []QbdCustomContactField, additionalContacts []QbdContact, customerType QbdCustomerCustomerType, terms QbdCustomerTerms, salesRepresentative QbdCustomerSalesRepresentative, balance string, totalBalance string, salesTaxCode QbdCustomerSalesTaxCode, salesTaxItem QbdCustomerSalesTaxItem, salesTaxCountry string, resaleNumber string, accountNumber string, creditLimit string, preferredPaymentMethod QbdCustomerPreferredPaymentMethod, creditCard QbdCustomerCreditCard, jobStatus string, jobStartDate string, jobProjectedEndDate string, jobEndDate string, jobDescription string, jobType QbdCustomerJobType, note string, additionalNotes []QbdNote, preferredDeliveryMethod string, priceLevel QbdCustomerPriceLevel, externalId string, taxRegistrationNumber string, currency QbdCustomerCurrency, customFields []QbdCustomField, ) *QbdCustomer`
+`func NewQbdCustomer(id string, objectType string, createdAt string, updatedAt string, revisionNumber string, name string, fullName string, isActive bool, sublevel float32, ) *QbdCustomer`
 
 NewQbdCustomer instantiates a new QbdCustomer object
 This constructor will assign default values to properties that have it defined,
@@ -259,6 +259,11 @@ and a boolean to check if the value has been set.
 
 SetClass sets Class field to given value.
 
+### HasClass
+
+`func (o *QbdCustomer) HasClass() bool`
+
+HasClass returns a boolean if a field has been set.
 
 ### GetParent
 
@@ -279,6 +284,11 @@ and a boolean to check if the value has been set.
 
 SetParent sets Parent field to given value.
 
+### HasParent
+
+`func (o *QbdCustomer) HasParent() bool`
+
+HasParent returns a boolean if a field has been set.
 
 ### GetSublevel
 
@@ -319,6 +329,11 @@ and a boolean to check if the value has been set.
 
 SetCompanyName sets CompanyName field to given value.
 
+### HasCompanyName
+
+`func (o *QbdCustomer) HasCompanyName() bool`
+
+HasCompanyName returns a boolean if a field has been set.
 
 ### GetSalutation
 
@@ -339,6 +354,11 @@ and a boolean to check if the value has been set.
 
 SetSalutation sets Salutation field to given value.
 
+### HasSalutation
+
+`func (o *QbdCustomer) HasSalutation() bool`
+
+HasSalutation returns a boolean if a field has been set.
 
 ### GetFirstName
 
@@ -359,6 +379,11 @@ and a boolean to check if the value has been set.
 
 SetFirstName sets FirstName field to given value.
 
+### HasFirstName
+
+`func (o *QbdCustomer) HasFirstName() bool`
+
+HasFirstName returns a boolean if a field has been set.
 
 ### GetMiddleName
 
@@ -379,6 +404,11 @@ and a boolean to check if the value has been set.
 
 SetMiddleName sets MiddleName field to given value.
 
+### HasMiddleName
+
+`func (o *QbdCustomer) HasMiddleName() bool`
+
+HasMiddleName returns a boolean if a field has been set.
 
 ### GetLastName
 
@@ -399,6 +429,11 @@ and a boolean to check if the value has been set.
 
 SetLastName sets LastName field to given value.
 
+### HasLastName
+
+`func (o *QbdCustomer) HasLastName() bool`
+
+HasLastName returns a boolean if a field has been set.
 
 ### GetJobTitle
 
@@ -419,6 +454,11 @@ and a boolean to check if the value has been set.
 
 SetJobTitle sets JobTitle field to given value.
 
+### HasJobTitle
+
+`func (o *QbdCustomer) HasJobTitle() bool`
+
+HasJobTitle returns a boolean if a field has been set.
 
 ### GetBillingAddress
 
@@ -439,6 +479,11 @@ and a boolean to check if the value has been set.
 
 SetBillingAddress sets BillingAddress field to given value.
 
+### HasBillingAddress
+
+`func (o *QbdCustomer) HasBillingAddress() bool`
+
+HasBillingAddress returns a boolean if a field has been set.
 
 ### GetShippingAddress
 
@@ -459,6 +504,11 @@ and a boolean to check if the value has been set.
 
 SetShippingAddress sets ShippingAddress field to given value.
 
+### HasShippingAddress
+
+`func (o *QbdCustomer) HasShippingAddress() bool`
+
+HasShippingAddress returns a boolean if a field has been set.
 
 ### GetAlternateShippingAddresses
 
@@ -479,6 +529,11 @@ and a boolean to check if the value has been set.
 
 SetAlternateShippingAddresses sets AlternateShippingAddresses field to given value.
 
+### HasAlternateShippingAddresses
+
+`func (o *QbdCustomer) HasAlternateShippingAddresses() bool`
+
+HasAlternateShippingAddresses returns a boolean if a field has been set.
 
 ### GetPhone
 
@@ -499,6 +554,11 @@ and a boolean to check if the value has been set.
 
 SetPhone sets Phone field to given value.
 
+### HasPhone
+
+`func (o *QbdCustomer) HasPhone() bool`
+
+HasPhone returns a boolean if a field has been set.
 
 ### GetAlternatePhone
 
@@ -519,6 +579,11 @@ and a boolean to check if the value has been set.
 
 SetAlternatePhone sets AlternatePhone field to given value.
 
+### HasAlternatePhone
+
+`func (o *QbdCustomer) HasAlternatePhone() bool`
+
+HasAlternatePhone returns a boolean if a field has been set.
 
 ### GetFax
 
@@ -539,6 +604,11 @@ and a boolean to check if the value has been set.
 
 SetFax sets Fax field to given value.
 
+### HasFax
+
+`func (o *QbdCustomer) HasFax() bool`
+
+HasFax returns a boolean if a field has been set.
 
 ### GetEmail
 
@@ -559,6 +629,11 @@ and a boolean to check if the value has been set.
 
 SetEmail sets Email field to given value.
 
+### HasEmail
+
+`func (o *QbdCustomer) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
 
 ### GetCcEmail
 
@@ -579,6 +654,11 @@ and a boolean to check if the value has been set.
 
 SetCcEmail sets CcEmail field to given value.
 
+### HasCcEmail
+
+`func (o *QbdCustomer) HasCcEmail() bool`
+
+HasCcEmail returns a boolean if a field has been set.
 
 ### GetContact
 
@@ -599,6 +679,11 @@ and a boolean to check if the value has been set.
 
 SetContact sets Contact field to given value.
 
+### HasContact
+
+`func (o *QbdCustomer) HasContact() bool`
+
+HasContact returns a boolean if a field has been set.
 
 ### GetAlternateContact
 
@@ -619,6 +704,11 @@ and a boolean to check if the value has been set.
 
 SetAlternateContact sets AlternateContact field to given value.
 
+### HasAlternateContact
+
+`func (o *QbdCustomer) HasAlternateContact() bool`
+
+HasAlternateContact returns a boolean if a field has been set.
 
 ### GetCustomContactFields
 
@@ -639,6 +729,11 @@ and a boolean to check if the value has been set.
 
 SetCustomContactFields sets CustomContactFields field to given value.
 
+### HasCustomContactFields
+
+`func (o *QbdCustomer) HasCustomContactFields() bool`
+
+HasCustomContactFields returns a boolean if a field has been set.
 
 ### GetAdditionalContacts
 
@@ -659,6 +754,11 @@ and a boolean to check if the value has been set.
 
 SetAdditionalContacts sets AdditionalContacts field to given value.
 
+### HasAdditionalContacts
+
+`func (o *QbdCustomer) HasAdditionalContacts() bool`
+
+HasAdditionalContacts returns a boolean if a field has been set.
 
 ### GetCustomerType
 
@@ -679,6 +779,11 @@ and a boolean to check if the value has been set.
 
 SetCustomerType sets CustomerType field to given value.
 
+### HasCustomerType
+
+`func (o *QbdCustomer) HasCustomerType() bool`
+
+HasCustomerType returns a boolean if a field has been set.
 
 ### GetTerms
 
@@ -699,6 +804,11 @@ and a boolean to check if the value has been set.
 
 SetTerms sets Terms field to given value.
 
+### HasTerms
+
+`func (o *QbdCustomer) HasTerms() bool`
+
+HasTerms returns a boolean if a field has been set.
 
 ### GetSalesRepresentative
 
@@ -719,6 +829,11 @@ and a boolean to check if the value has been set.
 
 SetSalesRepresentative sets SalesRepresentative field to given value.
 
+### HasSalesRepresentative
+
+`func (o *QbdCustomer) HasSalesRepresentative() bool`
+
+HasSalesRepresentative returns a boolean if a field has been set.
 
 ### GetBalance
 
@@ -739,6 +854,11 @@ and a boolean to check if the value has been set.
 
 SetBalance sets Balance field to given value.
 
+### HasBalance
+
+`func (o *QbdCustomer) HasBalance() bool`
+
+HasBalance returns a boolean if a field has been set.
 
 ### GetTotalBalance
 
@@ -759,6 +879,11 @@ and a boolean to check if the value has been set.
 
 SetTotalBalance sets TotalBalance field to given value.
 
+### HasTotalBalance
+
+`func (o *QbdCustomer) HasTotalBalance() bool`
+
+HasTotalBalance returns a boolean if a field has been set.
 
 ### GetSalesTaxCode
 
@@ -779,6 +904,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxCode sets SalesTaxCode field to given value.
 
+### HasSalesTaxCode
+
+`func (o *QbdCustomer) HasSalesTaxCode() bool`
+
+HasSalesTaxCode returns a boolean if a field has been set.
 
 ### GetSalesTaxItem
 
@@ -799,6 +929,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxItem sets SalesTaxItem field to given value.
 
+### HasSalesTaxItem
+
+`func (o *QbdCustomer) HasSalesTaxItem() bool`
+
+HasSalesTaxItem returns a boolean if a field has been set.
 
 ### GetSalesTaxCountry
 
@@ -819,6 +954,11 @@ and a boolean to check if the value has been set.
 
 SetSalesTaxCountry sets SalesTaxCountry field to given value.
 
+### HasSalesTaxCountry
+
+`func (o *QbdCustomer) HasSalesTaxCountry() bool`
+
+HasSalesTaxCountry returns a boolean if a field has been set.
 
 ### GetResaleNumber
 
@@ -839,6 +979,11 @@ and a boolean to check if the value has been set.
 
 SetResaleNumber sets ResaleNumber field to given value.
 
+### HasResaleNumber
+
+`func (o *QbdCustomer) HasResaleNumber() bool`
+
+HasResaleNumber returns a boolean if a field has been set.
 
 ### GetAccountNumber
 
@@ -859,6 +1004,11 @@ and a boolean to check if the value has been set.
 
 SetAccountNumber sets AccountNumber field to given value.
 
+### HasAccountNumber
+
+`func (o *QbdCustomer) HasAccountNumber() bool`
+
+HasAccountNumber returns a boolean if a field has been set.
 
 ### GetCreditLimit
 
@@ -879,6 +1029,11 @@ and a boolean to check if the value has been set.
 
 SetCreditLimit sets CreditLimit field to given value.
 
+### HasCreditLimit
+
+`func (o *QbdCustomer) HasCreditLimit() bool`
+
+HasCreditLimit returns a boolean if a field has been set.
 
 ### GetPreferredPaymentMethod
 
@@ -899,6 +1054,11 @@ and a boolean to check if the value has been set.
 
 SetPreferredPaymentMethod sets PreferredPaymentMethod field to given value.
 
+### HasPreferredPaymentMethod
+
+`func (o *QbdCustomer) HasPreferredPaymentMethod() bool`
+
+HasPreferredPaymentMethod returns a boolean if a field has been set.
 
 ### GetCreditCard
 
@@ -919,6 +1079,11 @@ and a boolean to check if the value has been set.
 
 SetCreditCard sets CreditCard field to given value.
 
+### HasCreditCard
+
+`func (o *QbdCustomer) HasCreditCard() bool`
+
+HasCreditCard returns a boolean if a field has been set.
 
 ### GetJobStatus
 
@@ -939,6 +1104,11 @@ and a boolean to check if the value has been set.
 
 SetJobStatus sets JobStatus field to given value.
 
+### HasJobStatus
+
+`func (o *QbdCustomer) HasJobStatus() bool`
+
+HasJobStatus returns a boolean if a field has been set.
 
 ### GetJobStartDate
 
@@ -959,6 +1129,11 @@ and a boolean to check if the value has been set.
 
 SetJobStartDate sets JobStartDate field to given value.
 
+### HasJobStartDate
+
+`func (o *QbdCustomer) HasJobStartDate() bool`
+
+HasJobStartDate returns a boolean if a field has been set.
 
 ### GetJobProjectedEndDate
 
@@ -979,6 +1154,11 @@ and a boolean to check if the value has been set.
 
 SetJobProjectedEndDate sets JobProjectedEndDate field to given value.
 
+### HasJobProjectedEndDate
+
+`func (o *QbdCustomer) HasJobProjectedEndDate() bool`
+
+HasJobProjectedEndDate returns a boolean if a field has been set.
 
 ### GetJobEndDate
 
@@ -999,6 +1179,11 @@ and a boolean to check if the value has been set.
 
 SetJobEndDate sets JobEndDate field to given value.
 
+### HasJobEndDate
+
+`func (o *QbdCustomer) HasJobEndDate() bool`
+
+HasJobEndDate returns a boolean if a field has been set.
 
 ### GetJobDescription
 
@@ -1019,6 +1204,11 @@ and a boolean to check if the value has been set.
 
 SetJobDescription sets JobDescription field to given value.
 
+### HasJobDescription
+
+`func (o *QbdCustomer) HasJobDescription() bool`
+
+HasJobDescription returns a boolean if a field has been set.
 
 ### GetJobType
 
@@ -1039,6 +1229,11 @@ and a boolean to check if the value has been set.
 
 SetJobType sets JobType field to given value.
 
+### HasJobType
+
+`func (o *QbdCustomer) HasJobType() bool`
+
+HasJobType returns a boolean if a field has been set.
 
 ### GetNote
 
@@ -1059,6 +1254,11 @@ and a boolean to check if the value has been set.
 
 SetNote sets Note field to given value.
 
+### HasNote
+
+`func (o *QbdCustomer) HasNote() bool`
+
+HasNote returns a boolean if a field has been set.
 
 ### GetAdditionalNotes
 
@@ -1079,6 +1279,11 @@ and a boolean to check if the value has been set.
 
 SetAdditionalNotes sets AdditionalNotes field to given value.
 
+### HasAdditionalNotes
+
+`func (o *QbdCustomer) HasAdditionalNotes() bool`
+
+HasAdditionalNotes returns a boolean if a field has been set.
 
 ### GetPreferredDeliveryMethod
 
@@ -1099,6 +1304,11 @@ and a boolean to check if the value has been set.
 
 SetPreferredDeliveryMethod sets PreferredDeliveryMethod field to given value.
 
+### HasPreferredDeliveryMethod
+
+`func (o *QbdCustomer) HasPreferredDeliveryMethod() bool`
+
+HasPreferredDeliveryMethod returns a boolean if a field has been set.
 
 ### GetPriceLevel
 
@@ -1119,6 +1329,11 @@ and a boolean to check if the value has been set.
 
 SetPriceLevel sets PriceLevel field to given value.
 
+### HasPriceLevel
+
+`func (o *QbdCustomer) HasPriceLevel() bool`
+
+HasPriceLevel returns a boolean if a field has been set.
 
 ### GetExternalId
 
@@ -1139,6 +1354,11 @@ and a boolean to check if the value has been set.
 
 SetExternalId sets ExternalId field to given value.
 
+### HasExternalId
+
+`func (o *QbdCustomer) HasExternalId() bool`
+
+HasExternalId returns a boolean if a field has been set.
 
 ### GetTaxRegistrationNumber
 
@@ -1159,6 +1379,11 @@ and a boolean to check if the value has been set.
 
 SetTaxRegistrationNumber sets TaxRegistrationNumber field to given value.
 
+### HasTaxRegistrationNumber
+
+`func (o *QbdCustomer) HasTaxRegistrationNumber() bool`
+
+HasTaxRegistrationNumber returns a boolean if a field has been set.
 
 ### GetCurrency
 
@@ -1179,6 +1404,11 @@ and a boolean to check if the value has been set.
 
 SetCurrency sets Currency field to given value.
 
+### HasCurrency
+
+`func (o *QbdCustomer) HasCurrency() bool`
+
+HasCurrency returns a boolean if a field has been set.
 
 ### GetCustomFields
 
@@ -1199,6 +1429,11 @@ and a boolean to check if the value has been set.
 
 SetCustomFields sets CustomFields field to given value.
 
+### HasCustomFields
+
+`func (o *QbdCustomer) HasCustomFields() bool`
+
+HasCustomFields returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
